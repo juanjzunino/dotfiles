@@ -1,0 +1,12 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Juanjo Zunino
+	email = juanj.zunino@gmail.com
+	mail = juanj.zunino@gmail.com
+
+[alias]
+    graph = log --all --graph --decorate
