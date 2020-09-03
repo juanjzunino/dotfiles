@@ -15,5 +15,4 @@ unset __conda_setup
 
 
 # Aliases
-alias ls="ls -G"
-alias l="ls -lafG"
+source ~/.aliases

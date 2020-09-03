@@ -1,0 +1,15 @@
+# Listing options
+alias ls="ls -G"
+alias l="ls -lafG"
+
+# Send files to trash
+alias ts="trash"
+
+# Git
+alias gs="git status"
+alias gg="git graph"
+alias gu="git pull"
+
+
+# Jupyter Notebooks
+alias jn="jupyter notebook"
