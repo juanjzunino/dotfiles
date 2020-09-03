@@ -12,3 +12,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+# Aliases
+alias ls="ls -G"
+alias l="ls -lafG"
