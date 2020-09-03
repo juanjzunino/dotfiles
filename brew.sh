@@ -27,3 +27,4 @@ brew cask install gephi           # Graph visualization
 brew cask install cleanmymac      # MacBook malware and trash removal
 brew cask install mactex          # LaTex in your max
 brew cask install malwarebytes    # Antivirus
+brew cask install discord         # Video chat
