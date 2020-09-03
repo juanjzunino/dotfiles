@@ -1,27 +1,28 @@
 #!/bin/sh
 
 # Install Brew Packages
-brew install git
-brew install tree
-brew install wget
-brew install htop
-brew install tldr
-brew install trash
+brew install git     # Version control
+brew install tree    # Display folder structure
+brew install wget    # Download files
+brew install htop    # Monitor system processes
+brew install tldr    # Command's examples
+brew install trash   # Replace rm with trash
 
 # Install MacOS Applications with Brew Cask
-brew cask install sublime-text
-brew cask install pycharm
-brew cask install datagrip
-brew cask install rstudio
-brew cask install vagrant
-brew cask install virtualbox
-brew cask install notion
-brew cask install obsidian
-brew cask install google-chrome
-brew cask install flux
-brew cask install 1password
-brew cask install whatsapp
-brew cask install spotify
-brew cask install slack
-brew cask install gephi
-brew cask install cleanmymac
+brew cask install sublime-text    # Text editor
+brew cask install pycharm         # Python IDE - JetBrains
+brew cask install datagrip        # DataBases IDE - Jet Brains
+brew cask install rstudio         # IDE for R
+brew cask install vagrant         # Set up remote machines
+brew cask install virtualbox      # Set up remote machines
+brew cask install notion          # Daily planner | Data collection | Notebook
+brew cask install obsidian        # Second brain
+brew cask install google-chrome   # Main browser
+brew cask install flux            # Adjust screen brightness
+brew cask install 1passwora       # Password manager
+brew cask install whatsapp        # Mr. Zuck
+brew cask install spotify         # Be Still - The Killers
+brew cask install slack           # WhatsApp for nerds
+brew cask install gephi           # Graph visualization
+brew cask install cleanmymac      # MacBook malware and trash removal
+brew cask install mactex          # LaTex in your max
