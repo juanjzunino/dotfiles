@@ -19,7 +19,7 @@ brew cask install notion          # Daily planner | Data collection | Notebook
 brew cask install obsidian        # Second brain
 brew cask install google-chrome   # Main browser
 brew cask install flux            # Adjust screen brightness
-brew cask install 1passwora       # Password manager
+brew cask install 1password       # Password manager
 brew cask install whatsapp        # Mr. Zuck
 brew cask install spotify         # Be Still - The Killers
 brew cask install slack           # WhatsApp for nerds
