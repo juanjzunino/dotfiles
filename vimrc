@@ -9,7 +9,7 @@ set expandtab "Convert tabs into spaces
 set smartindent
 
 "Remap leader key
-let mapleader = ","
+let mapleader = " "
 
 "Lines (relative) numbers
 set number
