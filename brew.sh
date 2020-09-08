@@ -3,6 +3,7 @@
 # Install Brew Packages
 brew install git     # Version control
 brew install tree    # Display folder structure
+brew install stow    # Symlinks manager
 brew install wget    # Download files
 brew install htop    # Monitor system processes
 brew install tldr    # Command's examples
