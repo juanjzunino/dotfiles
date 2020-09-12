@@ -8,6 +8,7 @@ brew install wget    # Download files
 brew install htop    # Monitor system processes
 brew install tldr    # Command's examples
 brew install trash   # Replace rm with trash
+brew install neofetch
 
 # Install MacOS Applications with Brew Cask
 brew cask install sublime-text    # Text editor
