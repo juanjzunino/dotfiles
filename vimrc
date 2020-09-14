@@ -9,7 +9,7 @@ set expandtab "Convert tabs into spaces
 set smartindent
 
 "Remap leader key
-let mapleader = " "
+let mapleader = ","
 
 "Lines (relative) numbers
 set number
@@ -50,6 +50,7 @@ set nowb
 "Plugings (vim-plug)
 call plug#begin('~/.vim/plugged')
 
+Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax'
 Plug 'tpope/vim-fugitive'
@@ -58,8 +59,8 @@ Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "Colorscheme
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+"let g:gruvbox_contrast_dark = 'hard'
+colorscheme onedark
 set background=dark
 
 "Python highlighting
