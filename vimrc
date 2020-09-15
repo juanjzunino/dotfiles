@@ -61,7 +61,7 @@ call plug#end()
 "Colorscheme
 "let g:gruvbox_contrast_dark = 'hard'
 colorscheme onedark
-set background=dark
+"set background=dark
 
 "Python highlighting
 let g:python_highlight_all = 1
