@@ -58,10 +58,18 @@ Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+  augroup END
+endif
+
 "Colorscheme
-"let g:gruvbox_contrast_dark = 'hard'
+set termguicolors
+set background=dark
 colorscheme onedark
-"set background=dark
 
 "Python highlighting
 let g:python_highlight_all = 1
