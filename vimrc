@@ -104,3 +104,7 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 "NerdTREE
 noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>f :NERDTreeFind<CR>
+
+
+vnoremap <Tab> >
+vnoremap <S-Tab> <
