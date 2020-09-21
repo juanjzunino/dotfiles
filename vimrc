@@ -43,6 +43,9 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+"File type detection
+filetype plugin indent on
+
 "No swap files
 set noswapfile
 set nobackup
@@ -96,3 +99,8 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+
+"NerdTREE
+noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>f :NERDTreeFind<CR>
