@@ -9,7 +9,7 @@ set expandtab "Convert tabs into spaces
 set smartindent
 
 "Remap leader key
-let mapleader = ","
+let mapleader = " "
 
 "Lines (relative) numbers
 set number
@@ -51,6 +51,9 @@ set noswapfile
 set nobackup
 set nowb
 
+"Hidden buffers
+set hidden
+
 "Undo
 set undofile
 set undodir=~/.vim/undodir
@@ -58,6 +61,8 @@ set undodir=~/.vim/undodir
 "Plugings (vim-plug)
 call plug#begin('~/.vim/plugged')
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " FZF plugin, makes Ctrl-P unnecessary
+Plug 'junegunn/fzf.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax'
@@ -105,6 +110,17 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>f :NERDTreeFind<CR>
 
+"Modifiers
 
+"Tab key indentation
 vnoremap <Tab> >
 vnoremap <S-Tab> <
+
+"Split panes tmux style
+nnoremap <Leader>- :sp<CR>
+nnoremap <Leader>\| :vsp<CR>
+
+
+" FZF
+map <C-p> :Files<CR>
+nmap <leader>; :Buffers<CR>
