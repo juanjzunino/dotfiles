@@ -23,6 +23,7 @@ set wrap
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 
 "Keys bindings
 nmap Q <Nop> "Disable Ex Mode
@@ -64,6 +65,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'ciaranm/securemodelines'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'romainl/vim-cool'
 
 call plug#end()
 
