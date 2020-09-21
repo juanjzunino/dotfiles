@@ -16,3 +16,5 @@ unset __conda_setup
 
 # Aliases
 source ~/.aliases
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
