@@ -30,10 +30,10 @@ set backspace=indent,eol,start
 set mouse+=a
 
 "GUI
-set nowrap
 set laststatus=2
 set showmode
 set scrolloff=8
+set nofoldenable
 
 "Splits
 set splitbelow splitright
@@ -47,14 +47,23 @@ set noswapfile
 set nobackup
 set nowb
 
+"Undo
+set undofile
+set undodir=~/.vim/undodir
+
 "Plugings (vim-plug)
 call plug#begin('~/.vim/plugged')
 
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
+Plug 'ciaranm/securemodelines'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
