@@ -63,8 +63,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " FZF plugin, makes Ctrl-P unnecessary
 Plug 'junegunn/fzf.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -74,6 +72,14 @@ Plug 'ciaranm/securemodelines'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'romainl/vim-cool'
+Plug 'machakann/vim-highlightedyank'
+
+" Semantic language support
+
+" Color schemes
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
+
 
 call plug#end()
 
