@@ -1,5 +1,4 @@
-# Dotfiles config sources
-----
+# Dotfiles sources
 ## Where to start
 - [Missing semester](https://missing.csail.mit.edu/)
 - [Unofficial guide to dotfiles](https://dotfiles.github.io/)
