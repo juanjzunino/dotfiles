@@ -2,59 +2,61 @@ syntax on
 
 set nocompatible
 
-"Tabs settings
+" Tabs settings (Python PEP8)
 set tabstop=4 softtabstop=4
 set shiftwidth=4 
 set expandtab "Convert tabs into spaces
 set smartindent
 
-"Remap leader key
+" Set leader key
 let mapleader = " "
 
-"Lines (relative) numbers
+" Lines (relative) numbers
 set number
-set rnu
+set relativenumber
 
-"Soft wrapping text
+" Soft wrapping text
 set linebreak
 set wrap
 
-"Search settings
+" Search settings
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
 
-"Keys bindings
+" Keys bindings
 nmap Q <Nop> "Disable Ex Mode
 set backspace=indent,eol,start
 set mouse+=a
 
-"GUI
+" GUI
 set laststatus=2
 set showmode
 set scrolloff=8
 set nofoldenable
+set ttyfast
+set wildmenu
 
-"Splits
+" Splits
 set splitbelow splitright
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-"File type detection
+" File type detection
 filetype plugin indent on
 
-"No swap files
+" No swap files
 set noswapfile
 set nobackup
 set nowb
 
-"Hidden buffers
+" Buffers
 set hidden
 
-"Undo
+" Undo
 set undofile
 set undodir=~/.vim/undodir
 
@@ -75,6 +77,7 @@ Plug 'romainl/vim-cool'
 Plug 'machakann/vim-highlightedyank'
 
 " Semantic language support
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Color schemes
 Plug 'joshdick/onedark.vim'
@@ -82,6 +85,9 @@ Plug 'morhetz/gruvbox'
 
 
 call plug#end()
+
+source ~/.vim/coc.vim
+
 
 if (has("autocmd") && !has("gui_running"))
   augroup colorset
@@ -114,7 +120,6 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 "NerdTREE
 noremap <Leader>n :NERDTreeToggle<CR>
-noremap <Leader>f :NERDTreeFind<CR>
 
 "Modifiers
 
