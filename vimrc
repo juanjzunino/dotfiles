@@ -65,9 +65,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " FZF plugin, makes Ctrl-P unnecessary
 Plug 'junegunn/fzf.vim'
-Plug 'vim-python/python-syntax'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'ciaranm/securemodelines'
@@ -78,6 +75,12 @@ Plug 'machakann/vim-highlightedyank'
 
 " Semantic language support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Syntatic language support
+Plug 'stephpy/vim-yaml'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-python/python-syntax'
 
 " Color schemes
 Plug 'joshdick/onedark.vim'
@@ -121,7 +124,8 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 "NerdTREE
 noremap <Leader>n :NERDTreeToggle<CR>
 
-"Modifiers
+" Toggles between buffers
+nnoremap <leader><leader> <c-^>
 
 "Tab key indentation
 vnoremap <Tab> >
