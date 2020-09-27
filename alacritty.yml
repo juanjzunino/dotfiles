@@ -66,7 +66,7 @@ font:
     style: Italic
 
   # Point size
-  size: 12
+  size: 11.5
 
   # Offset 
   offset:
@@ -96,6 +96,7 @@ colors:
   primary:
     background: '#24272e'
     foreground: '#abb2bf'
+
   # Cursor colors
   cursor:
     text:   '#0b0b0b' 

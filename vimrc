@@ -63,15 +63,20 @@ set undodir=~/.vim/undodir
 "Plugings (vim-plug)
 call plug#begin('~/.vim/plugged')
 
+" Vim enhacements
+Plug 'ciaranm/securemodelines'
+
+" GUI enhacements
+Plug 'vim-airline/vim-airline'
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+
+" Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " FZF plugin, makes Ctrl-P unnecessary
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'ciaranm/securemodelines'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'romainl/vim-cool'
-Plug 'machakann/vim-highlightedyank'
+
+" Writing
 
 " Semantic language support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -86,6 +91,9 @@ Plug 'vim-python/python-syntax'
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -139,3 +147,28 @@ nnoremap <Leader>\| :vsp<CR>
 " FZF
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
+
+let g:fzf_layout = { 'down': '~20%' }
+
+
+
+" Plugin settings
+let g:secure_modelines_allowed_items = [
+                \ "textwidth",   "tw",
+                \ "softtabstop", "sts",
+                \ "tabstop",     "ts",
+                \ "shiftwidth",  "sw",
+                \ "expandtab",   "et",   "noexpandtab", "noet",
+                \ "filetype",    "ft",
+                \ "foldmethod",  "fdm",
+                \ "readonly",    "ro",   "noreadonly", "noro",
+                \ "rightleft",   "rl",   "norightleft", "norl",
+                \ "colorcolumn"
+                \ ]
+
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
