@@ -2,6 +2,11 @@
 alias ls="ls -G"
 alias l="ls -lafG"
 
+# Sane defaults
+alias cp="cp -i"
+alias mv="mv -i"
+
+
 # Send files to trash
 alias ts="trash"
 
