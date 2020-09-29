@@ -65,6 +65,8 @@ call plug#begin('~/.vim/plugged')
 
 " Vim enhacements
 Plug 'ciaranm/securemodelines'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'justinmk/vim-sneak'
 
 " GUI enhacements
 Plug 'vim-airline/vim-airline'
@@ -77,6 +79,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'romainl/vim-cool'
 
 " Writing
+Plug 'junegunn/goyo.vim'
 
 " Semantic language support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -172,3 +175,10 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+
+" Sneak.vim
+let g:sneak#label = 1
+
+" goyo
+nnoremap <C-g> :Goyo<CR>
