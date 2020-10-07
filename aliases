@@ -6,7 +6,6 @@ alias l="ls -lafG"
 alias cp="cp -i"
 alias mv="mv -i"
 
-
 # Send files to trash
 alias ts="trash"
 
