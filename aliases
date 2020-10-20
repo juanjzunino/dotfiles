@@ -17,3 +17,6 @@ alias gu="git pull"
 
 # Jupyter Notebooks
 alias jn="jupyter notebook"
+
+# MiM+Analytics
+alias mim='cd ~/Documents/business-analytics'
