@@ -105,7 +105,7 @@ source ~/.vim/coc.vim
 "Colorscheme
 set termguicolors
 set background=dark
-let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
 
 "Python highlighting
@@ -145,7 +145,8 @@ nmap <leader>; :Buffers<CR>
 
 let g:fzf_layout = { 'down': '~20%' }
 
-
+" Markdown
+let g:vim_markdown_frontmatter = 1
 
 " Plugin settings
 let g:secure_modelines_allowed_items = [

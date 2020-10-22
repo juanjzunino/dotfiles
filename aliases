@@ -1,6 +1,6 @@
 # Listing options
-alias ls="ls -G"
-alias l="ls -lafG"
+alias ls="exa"
+alias l="exa -la"
 
 # Sane defaults
 alias cp="cp -i"
