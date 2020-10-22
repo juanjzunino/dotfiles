@@ -5,6 +5,7 @@ alias l="ls -lafG"
 # Sane defaults
 alias cp="cp -i"
 alias mv="mv -i"
+alias rm="rm -i"
 
 # Send files to trash
 alias ts="trash"
@@ -14,9 +15,13 @@ alias gs="git status"
 alias gg="git graph"
 alias gu="git pull"
 
-
 # Jupyter Notebooks
 alias jn="jupyter notebook"
 
-# MiM+Analytics
-alias mim='cd ~/Documents/business-analytics'
+# Folders
+alias mim="cd ~/Documents/business-analytics"
+alias book="cd ~/Documents/Books"
+
+# Web Browsers
+alias chrome="/Applications/Google Chrome.app"
+alias firefox="/Applications/Firefox.app"

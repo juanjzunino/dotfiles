@@ -90,53 +90,36 @@ custom_cursor_colors: false
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (One Dark)
+# Colors (Gruvbox dark)
 colors:
   # Default colors
   primary:
-    background: '#24272e'
-    foreground: '#abb2bf'
+    # hard contrast: background = '#1d2021'
+    background: '#32302f'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
 
-  # Cursor colors
-  cursor:
-    text:   '#0b0b0b' 
-    cursor: '#528bff'
-
-  # Selections colors
-  selection:
-    text:       '#abb2bf'
-    background: '#3e4452' 
-
-  # Search colors 
-  search:
-    matches:
-        foreground: '#3e4452'
-        background: '#e5c07b'
-    bar:
-        background: '#282c34'
-        foreground: '#abb2bf'
- 
   # Normal colors
   normal:
-    black:   '#24272e'
-    red:     '#e06c75'
-    green:   '#98c379'
-    yellow:  '#e5c07b'
-    blue:    '#61afef'
-    magenta: '#c678dd'
-    cyan:    '#56b6c2'
-    white:   '#abb2bf'
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
 
   # Bright colors
   bright:
-    black:   '#3e4452'
-    red:     '#be5046'
-    green:   '#98c379'
-    yellow:  '#d19a66'
-    blue:    '#61afef'
-    magenta: '#c678dd'
-    cyan:    '#56b6c2'
-    white:   '#5c6370'
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
 
   # Indexed Colors
   #
@@ -172,7 +155,7 @@ bell:
   duration: 0
 
 # Background opacity
-background_opacity: 0.97
+background_opacity: 1
 
 
 # Mouse bindings
