@@ -11,6 +11,8 @@ brew install trash    # Replace rm with trash
 brew install neofetch # Notebook specs
 brew install pandoc   # Swiss-army knife
 brew install exa      # A modern replacement for ls
+brew install bash
+brew install zsh
 
 # Install MacOS Applications with Brew Cask
 brew cask install sublime-text       # Text editor
