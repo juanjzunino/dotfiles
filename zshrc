@@ -1,9 +1,17 @@
+# Enable colors
+autoload -U colors && colors
+
+# Prompt
+autoload -Uz promptinit
+promptinit
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%} $%b "
+
+PS1="%{$fg[cyan]%}[%{$fg[blue]%}%n@%m %{$fg[green]%}%1~%{$fg[cyan]%}] %B%{$fg[yellow]%}>%b "
+
 # Aliases
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
-
-# Prompt
 
 # Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -13,6 +21,7 @@ if type brew &>/dev/null; then
  FPATH=/usr/local/share/zsh-completions:$FPATH
  autoload -Uz compinit && compinit
 fi
+
 
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
