@@ -3,8 +3,16 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+# Prompt
+
 # Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Completions
+if type brew &>/dev/null; then
+ FPATH=/usr/local/share/zsh-completions:$FPATH
+ autoload -Uz compinit && compinit
+fi
 
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -26,3 +34,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Syntax highlighting (must be at the end of the file)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
