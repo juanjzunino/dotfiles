@@ -1,8 +1,7 @@
 # Prompt
 PS1="\[\033[36m\][\[\033[m\]\[\033[34m\]\u@\h\[\033[m\] \[\033[32m\]\W\[\033[m\]\[\033[36m\]]\[\033[m\] $ "
 
-# Preppend PATH
-export PATH="/usr/local/bin:$PATH"
+# Python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Source aliases
