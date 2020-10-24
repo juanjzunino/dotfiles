@@ -105,7 +105,7 @@ source ~/.vim/coc.vim
 "Colorscheme
 set termguicolors
 set background=dark
-let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
 
 "Python highlighting
