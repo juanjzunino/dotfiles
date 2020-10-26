@@ -1,3 +1,6 @@
+# Editor
+alias vim='nvim'
+
 # Listing options
 alias ls="exa"
 alias l="exa -la"
@@ -23,6 +26,3 @@ alias mim="cd ~/Documents/business-analytics"
 alias book="cd ~/Documents/Books"
 alias thesis="cd ~/Documents/GitHub/thesis"
 
-# Web Browsers
-alias chrome="/Applications/Google Chrome.app"
-alias firefox="/Applications/Firefox.app"

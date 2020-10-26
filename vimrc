@@ -1,19 +1,61 @@
-syntax on
-
+" Neovim config file
 set nocompatible
 
-" Tabs settings (Python PEP8)
-set tabstop=4 softtabstop=4
-set shiftwidth=4 
-set expandtab "Convert tabs into spaces
-set smartindent
+"============================ Plugins ============================
 
-" Set leader key
+call plug#begin('~/.vim/plugged')
+
+" VIM enhacements
+Plug 'ciaranm/securemodelines'
+Plug 'editorconfig/editorconfig-vim'
+
+" GUI enhacements
+Plug 'vim-airline/vim-airline'
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'romainl/vim-cool'
+
+" Semantic language support
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Syntatic language support
+Plug 'stephpy/vim-yaml'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-python/python-syntax'
+Plug 'dag/vim-fish'
+
+" Color schemes
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+
+
+"======================= Editor Settings =========================
+
+" Syntax highlighting
+syntax on
+
+" Leader key
 let mapleader = " "
 
 " Lines (relative) numbers
 set number
 set relativenumber
+
+" Tabs settings
+set tabstop=4 softtabstop=4
+set shiftwidth=4 
+set expandtab "Convert tabs into spaces
+set smartindent
 
 " Soft wrapping text
 set linebreak
@@ -56,62 +98,22 @@ set nowb
 " Buffers
 set hidden
 
+" Completions
+set updatetime=300
+
 " Undo
 set undofile
 set undodir=~/.vim/undodir
 
-"Plugings (vim-plug)
-call plug#begin('~/.vim/plugged')
-
-" Vim enhacements
-Plug 'ciaranm/securemodelines'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'justinmk/vim-sneak'
-
-" GUI enhacements
-Plug 'vim-airline/vim-airline'
-Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdtree'
-
-" Search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " FZF plugin, makes Ctrl-P unnecessary
-Plug 'junegunn/fzf.vim'
-Plug 'romainl/vim-cool'
-
-" Writing
-Plug 'junegunn/goyo.vim'
-
-" Semantic language support
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Syntatic language support
-Plug 'stephpy/vim-yaml'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'vim-python/python-syntax'
-
-" Color schemes
-Plug 'joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
-
-" Git
-Plug 'tpope/vim-fugitive'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-call plug#end()
-
-source ~/.vim/coc.vim
-
-"Colorscheme
+" Colorscheme
 set termguicolors
 set background=dark
-let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
 
-"Python highlighting
-let g:python_highlight_all = 1
-let g:python_highlight_indent_errors = 0
-let g:python_highlight_space_errors = 0
+" Autocompletions
+source ~/.config/nvim/coc.vim
+
+"===================== Keyboard Shortcuts ========================
 
 "Avoid bad habits
 nnoremap <Left>  :echoe "Use h"<CR>
@@ -123,9 +125,9 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-
-"NerdTREE
-noremap <Leader>n :NERDTreeToggle<CR>
+" Move by line
+nnoremap j gj
+nnoremap k gk
 
 " Toggles between buffers
 nnoremap <leader><leader> <c-^>
@@ -138,17 +140,14 @@ vnoremap <S-Tab> <
 nnoremap <Leader>- :sp<CR>
 nnoremap <Leader>\| :vsp<CR>
 
+"========================= Autocommands ==========================
 
-" FZF
-map <C-p> :Files<CR>
-nmap <leader>; :Buffers<CR>
+"======================== Plugin Settings ========================
 
-let g:fzf_layout = { 'down': '~20%' }
+"NerdTREE
+noremap <Leader>n :NERDTreeToggle<CR>
 
-" Markdown
-let g:vim_markdown_frontmatter = 1
-
-" Plugin settings
+" Secure modeline
 let g:secure_modelines_allowed_items = [
                 \ "textwidth",   "tw",
                 \ "softtabstop", "sts",
@@ -162,16 +161,16 @@ let g:secure_modelines_allowed_items = [
                 \ "colorcolumn"
                 \ ]
 
+" FZF
+map <C-p> :Files<CR>
+nmap <leader>; :Buffers<CR>
+let g:fzf_layout = { 'down': '~20%' }
 
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" Markdown
+let g:vim_markdown_frontmatter = 1
 
+"Python highlighting
+let g:python_highlight_all = 1
+let g:python_highlight_indent_errors = 0
+let g:python_highlight_space_errors = 0
 
-" Sneak.vim
-let g:sneak#label = 1
-
-" goyo
-nnoremap <C-g> :Goyo<CR>
