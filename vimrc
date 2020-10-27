@@ -3,7 +3,7 @@ set nocompatible
 
 "============================ Plugins ============================
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " VIM enhacements
 Plug 'ciaranm/securemodelines'
@@ -18,10 +18,16 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" Writing
+Plug 'junegunn/goyo.vim'  
+
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'romainl/vim-cool'
+
+" Text manipulation
+Plug 'tpope/vim-commentary'
 
 " Semantic language support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -79,6 +85,7 @@ set scrolloff=8
 set nofoldenable
 set ttyfast
 set wildmenu
+set shortmess+=c
 
 " Splits
 set splitbelow splitright
@@ -93,7 +100,7 @@ filetype plugin indent on
 " No swap files
 set noswapfile
 set nobackup
-set nowb
+set nowritebackup
 
 " Buffers
 set hidden
@@ -174,3 +181,5 @@ let g:python_highlight_all = 1
 let g:python_highlight_indent_errors = 0
 let g:python_highlight_space_errors = 0
 
+"Goyo
+nnoremap <C-g> :Goyo<CR>
