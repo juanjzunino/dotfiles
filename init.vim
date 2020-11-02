@@ -1,7 +1,7 @@
 " Neovim config file
 set nocompatible
 
-" --------------------------------- Plugins ----------------------------------
+" -------------------------------- Plugins -----------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
 " VIM enhacements
@@ -45,7 +45,7 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-" ----------------------------- Editor Settings ------------------------------
+" ---------------------------- Editor Settings -------------------------------
 " Syntax highlighting
 syntax on
 
@@ -122,7 +122,7 @@ colorscheme gruvbox
 " Autocompletions
 source ~/.config/nvim/coc.vim
 
-" ------------------------------- Key Bindings -------------------------------
+" ------------------------------ Key Bindings --------------------------------
 "Avoid bad habits
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -155,7 +155,7 @@ vnoremap <S-Tab> <
 nnoremap <Leader>- :sp<CR>
 nnoremap <Leader>\| :vsp<CR>
 
-" ------------------------------- Autocommands -------------------------------
+" ------------------------------ Autocommands --------------------------------
 
 " ----------------------------- Plugin Settings ------------------------------
 "NerdTREE
