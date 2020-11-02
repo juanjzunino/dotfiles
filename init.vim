@@ -119,6 +119,9 @@ set termguicolors
 set background=dark
 colorscheme gruvbox
 
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+
 " Autocompletions
 source ~/.config/nvim/coc.vim
 

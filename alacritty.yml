@@ -1,7 +1,7 @@
 # Configuration for Alacritty
 
 # Background configuration
-background_opacity: 1
+background_opacity: 0.95
 
 # Window configuration
 window:
@@ -51,7 +51,7 @@ colors:
   primary:
     # hard contrast: background = '#1d2021'
     # medium contrast: background = '#282828'
-    background: '#282828'
+    background: '#1d2021'
     foreground: '#ebdbb2'
 
   normal:
