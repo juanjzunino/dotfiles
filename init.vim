@@ -117,10 +117,11 @@ set undodir=~/.config/nvim/undodir
 " Colorscheme
 set termguicolors
 set background=dark
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 
-hi! Normal ctermbg=NONE guibg=NONE 
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+" hi! Normal ctermbg=NONE guibg=NONE 
+" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 " Autocompletions
 source ~/.config/nvim/coc.vim
@@ -179,7 +180,6 @@ let g:secure_modelines_allowed_items = [
                 \ ]
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-
 
 " FZF
 map <C-p> :Files<CR>

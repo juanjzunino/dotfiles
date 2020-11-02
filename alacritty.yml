@@ -49,8 +49,6 @@ font:
 # Colors (Gruvbox)
 colors:
   primary:
-    # hard contrast: background = '#1d2021'
-    # medium contrast: background = '#282828'
     background: '#1d2021'
     foreground: '#ebdbb2'
 
