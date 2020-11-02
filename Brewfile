@@ -28,6 +28,7 @@ brew 'trash'    # Replace rm with trash
 brew 'neofetch' # Notebook specs
 brew 'pandoc'   # Swiss-army knife
 brew 'exa'      # A modern replacement for ls
+brew 'bat'      # Cat clone with syntax highlighting
 
 # Fonts
 cask 'font-sauce-code-pro-nerd-font'
@@ -54,6 +55,7 @@ cask 'slack'              # WhatsApp for nerds
 cask 'gephi'              # Graph visualization
 cask 'cleanmymac'         # MacBook malware and trash removal
 cask 'mactex'             # LaTex in your max
-cask 'malwarebytes'       # Antivirus
-cask 'discord'            # Video chat
 cask 'karabiner-elements' # Keyboard remappings
+cask 'dozer'              # Menu bar customization
+cask 'rectangle'          # Window manager
+
