@@ -11,6 +11,10 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+# Settings
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+
 # Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
