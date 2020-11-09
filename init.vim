@@ -140,6 +140,9 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " Disable Ex Mode
 nmap Q <Nop>
 
+" Yank to clipboard
+vnoremap y "*y
+
 " Move by line
 nnoremap j gj
 nnoremap k gk
