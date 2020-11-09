@@ -1,7 +1,7 @@
 # Configuration for Alacritty
 
 # Background configuration
-background_opacity: 0.95
+background_opacity: 0.97
 
 # Window configuration
 window:
