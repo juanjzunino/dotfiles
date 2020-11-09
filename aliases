@@ -24,7 +24,7 @@ alias jn="jupyter notebook"
 # Folders
 alias docs="cd ~/Documents"
 alias desk="cd ~/Desktop"
-alias basa="cd ~/Documents/Obsidian"
+alias basb="cd ~/Documents/Obsidian"
 alias mim="cd ~/Documents/business-analytics"
 alias book="cd ~/Documents/Books"
 alias books="cd ~/Documents/Books"
