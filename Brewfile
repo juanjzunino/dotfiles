@@ -45,6 +45,7 @@ cask 'rstudio'            # IDE for R
 cask 'vagrant'            # Set up remote machines
 cask 'virtualbox'         # Set up remote machines
 cask 'notion'             # Daily planner | Data collection | Notebook
+cask 'evernote'           # Note-taking app
 cask 'obsidian'           # Second brain
 cask 'google-chrome'      # Main browser
 cask 'flux'               # Adjust screen brightness
