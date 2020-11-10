@@ -56,7 +56,6 @@ cask 'slack'              # WhatsApp for nerds
 cask 'gephi'              # Graph visualization
 cask 'cleanmymac'         # MacBook malware and trash removal
 cask 'mactex'             # LaTex in your max
-cask 'karabiner-elements' # Keyboard remappings
 cask 'dozer'              # Menu bar customization
 cask 'rectangle'          # Window manager
 
