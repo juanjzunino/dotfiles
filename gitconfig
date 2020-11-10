@@ -7,7 +7,6 @@
 [user]
 	name = Juanjo Zunino
 	email = juanj.zunino@gmail.com
-	mail = juanj.zunino@gmail.com
 
 [alias]
     graph = log --all --graph --decorate
