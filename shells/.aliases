@@ -2,7 +2,7 @@
 alias vim='nvim'
 
 # Listing options
-alias ls="exa"
+alias ls="exa -a"
 alias l="exa -la"
 
 # Sane defaults
