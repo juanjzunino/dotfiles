@@ -29,6 +29,7 @@ brew 'neofetch' # Notebook specs
 brew 'pandoc'   # Swiss-army knife
 brew 'exa'      # A modern replacement for ls
 brew 'bat'      # Cat clone with syntax highlighting
+brew 'ranger'   # Console file manager
 
 # Fonts
 cask 'font-sauce-code-pro-nerd-font'
