@@ -88,6 +88,7 @@ set wildmenu
 set shortmess+=c
 set cursorline
 set mouse+=a
+set signcolumn=yes
 
 " Splits
 set splitbelow splitright
@@ -143,6 +144,10 @@ nmap Q <Nop>
 " Yank to clipboard
 vnoremap y "*y
 
+" Jump to start and end of line using the home row keys
+map H ^
+map L $
+
 " Move by line
 nnoremap j gj
 nnoremap k gk
@@ -154,18 +159,29 @@ xnoremap J :move '>+1<CR>gv-gv
 " Toggles between buffers
 nnoremap <leader><leader> <c-^>
 
-"Tab key indentation
+" Tab key indentation
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 
-"Split panes tmux style
+" Split panes tmux style
 nnoremap <Leader>- :sp<CR>
 nnoremap <Leader>\| :vsp<CR>
 
+" Search results centered
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
 " ------------------------------ Autocommands --------------------------------
+" Help filetype detection
+autocmd BufRead *.md set filetype=markdown
+autocmd BufRead *.tex set filetype=tex
+
 
 " ----------------------------- Plugin Settings ------------------------------
-"NerdTREE
+" NerdTREE
 noremap <Leader>n :NERDTreeToggle<CR>
 
 " Secure modeline
