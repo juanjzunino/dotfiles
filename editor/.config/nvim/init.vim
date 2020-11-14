@@ -127,8 +127,11 @@ colorscheme gruvbox
 " Autocompletions
 source ~/.config/nvim/coc.vim
 
-" ------------------------------ Key Bindings --------------------------------
-"Avoid bad habits
+" -------------------------------- Mappings ----------------------------------
+" Open config file
+nnoremap <leader>cf :e $MYVIMRC<cr>
+
+" Avoid bad habits
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
