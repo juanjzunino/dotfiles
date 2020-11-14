@@ -35,6 +35,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntatic language support
 Plug 'stephpy/vim-yaml'
+Plug 'elzr/vim-json'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-python/python-syntax'
@@ -69,6 +70,11 @@ set smartindent
 set linebreak
 set wrap
 
+" Fold
+set foldenable
+set foldlevelstart=10
+set foldmethod=indent
+
 " Search settings
 set ignorecase
 set smartcase
@@ -89,6 +95,7 @@ set shortmess+=c
 set cursorline
 set mouse+=a
 set signcolumn=yes
+set colorcolumn=79
 
 " Splits
 set splitbelow splitright
@@ -147,6 +154,10 @@ nmap Q <Nop>
 " Yank to clipboard
 vnoremap y "*y
 
+" Unbind for tmux
+map <C-a> <Nop>
+map <C-x> <Nop>
+
 " Jump to start and end of line using the home row keys
 map H ^
 map L $
@@ -178,9 +189,16 @@ nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
 " ------------------------------ Autocommands --------------------------------
+" Prevent accidental writes to buffers that shouldn't be edited
+autocmd BufRead *.orig set readonly
+autocmd BufRead *.pacnew set readonly
+
 " Help filetype detection
 autocmd BufRead *.md set filetype=markdown
 autocmd BufRead *.tex set filetype=tex
+
+" Disable colorcolumn for writing
+autocmd Filetype markdown,tex set colorcolumn=
 
 
 " ----------------------------- Plugin Settings ------------------------------
@@ -213,8 +231,6 @@ let g:vim_markdown_frontmatter = 1
 
 "Python highlighting
 let g:python_highlight_all = 1
-let g:python_highlight_indent_errors = 0
-let g:python_highlight_space_errors = 0
 
 " Goyo
 nnoremap <C-g> :Goyo<CR>
