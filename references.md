@@ -1,11 +1,13 @@
 # Dotfiles sources
-## Where to start
+Resources to get started with dotfiles
+
+### Motivation
 - [Missing semester](https://missing.csail.mit.edu/)
+
+### Bootstraping methods
 - [Unofficial guide to dotfiles](https://dotfiles.github.io/)
 
-## Stow
-- https://www.youtube.com/watch?v=CFzEuBGPPPg
+### Stow
+- [Stow tutorial by DevInsideYou](https://www.youtube.com/watch?v=CFzEuBGPPPg)
 
-
-## Vim
-- https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+### Vim
