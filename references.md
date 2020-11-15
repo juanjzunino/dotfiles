@@ -1,4 +1,4 @@
-# Dotfiles sources
+# Dotfiles resources
 Resources to get started with dotfiles
 
 ### Motivation
