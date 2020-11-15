@@ -11,7 +11,6 @@ Plug 'editorconfig/editorconfig-vim'
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
 Plug 'machakann/vim-highlightedyank'
-Plug 'romainl/vim-cool'
 Plug 'preservim/nerdtree'
 
 " Git
@@ -58,6 +57,7 @@ set encoding=utf-8
 
 " Set spelling
 set nospell
+set spelllang=en,es
 
 " Lines (relative) numbers
 set number
@@ -73,11 +73,6 @@ set smartindent
 set linebreak
 set wrap
 
-" Fold
-set foldenable
-set foldlevelstart=10
-set foldmethod=indent
-
 " Search settings
 set ignorecase
 set smartcase
@@ -89,7 +84,7 @@ set backspace=indent,eol,start
 
 " GUI
 set laststatus=2
-set showmode
+set noshowmode
 set scrolloff=8
 set nofoldenable
 set ttyfast
@@ -122,8 +117,8 @@ set hidden
 set updatetime=300
 
 " Undo
-set undofile
 set undodir=~/.config/nvim/undodir
+set undofile
 
 " Colorscheme
 set termguicolors
@@ -141,25 +136,17 @@ source ~/.config/nvim/coc.vim
 " Open config file
 nnoremap <leader>cf :e $MYVIMRC<cr>
 
-" Avoid bad habits
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
-
 " Disable Ex Mode
 nmap Q <Nop>
 
+" Quit w/ q:
+map q: :q
+
+" Set spell check
+nnoremap <Leader>sc :set spell!<CR>
+
 " Yank to clipboard
 vnoremap y "*y
-
-" Unbind for tmux
-map <C-a> <Nop>
-map <C-x> <Nop>
 
 " Jump to start and end of line using the home row keys
 map H ^
@@ -176,13 +163,28 @@ xnoremap J :move '>+1<CR>gv-gv
 " Toggles between buffers
 nnoremap <leader><leader> <c-^>
 
+" Close buffer
+nnoremap <leader>cb :bd<cr>
+
 " Tab key indentation
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 
+" Unbind for tmux
+map <C-a> <Nop>
+map <C-x> <Nop>
+
 " Split panes tmux style
 nnoremap <Leader>- :sp<CR>
 nnoremap <Leader>\| :vsp<CR>
+
+" Ctrl+h to stop searching
+vnoremap <C-h> :nohlsearch<cr>
+nnoremap <C-h> :nohlsearch<cr>
+
+" Very magic by default
+nnoremap ? ?\v
+nnoremap / /\v
 
 " Search results centered
 nnoremap <silent> n nzz
@@ -190,6 +192,16 @@ nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
+
+" Avoid bad habits
+nnoremap <Left>  <nop>
+nnoremap <Right> <nop>
+nnoremap <Up>    <nop>
+nnoremap <Down>  <nop>
+inoremap <Left>  <nop>
+inoremap <Right> <nop>
+inoremap <Up>    <nop>
+inoremap <Down>  <nop>
 
 " ------------------------------ Autocommands --------------------------------
 " Prevent accidental writes to buffers that shouldn't be edited
@@ -200,9 +212,12 @@ autocmd BufRead *.pacnew set readonly
 autocmd BufRead *.md set filetype=markdown
 autocmd BufRead *.tex set filetype=tex
 
-" Disable colorcolumn for writing
-autocmd Filetype markdown,tex set colorcolumn=
-
+" Default for writing files
+augroup writing
+    autocmd!
+    autocmd Filetype markdown,tex set colorcolumn=
+    autocmd Filetype markdown,tex set spell
+augroup END
 
 " ----------------------------- Plugin Settings ------------------------------
 " NerdTREE
