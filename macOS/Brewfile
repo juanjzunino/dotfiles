@@ -3,8 +3,8 @@ tap 'homebrew/cask-fonts'
 
 # Shells
 brew 'bash'
-brew 'zsh'
 brew 'fish'
+brew 'zsh'
 
 # Shell enhacements
 brew 'bash-completion'
@@ -19,17 +19,17 @@ brew 'neovim'
 brew 'git'
 
 # Binaries
-brew 'tree'     # Display folder structure
-brew 'stow'     # Symlinks manager
-brew 'wget'     # Download files
+brew 'bat'      # Cat clone with syntax highlighting
+brew 'exa'      # A modern replacement for ls
 brew 'htop'     # Monitor system processes
-brew 'tldr'     # Command's examples
-brew 'trash'    # Replace rm with trash
 brew 'neofetch' # Notebook specs
 brew 'pandoc'   # Swiss-army knife
-brew 'exa'      # A modern replacement for ls
-brew 'bat'      # Cat clone with syntax highlighting
 brew 'ranger'   # Console file manager
+brew 'stow'     # Symlinks manager
+brew 'tldr'     # Command's examples
+brew 'trash'    # Replace rm with trash
+brew 'tree'     # Display folder structure
+brew 'wget'     # Download files
 
 # Fonts
 cask 'font-sauce-code-pro-nerd-font'
@@ -39,24 +39,24 @@ cask 'alacritty'
 cask 'iterm2'
 
 # Apps
-cask 'sublime-text'       # Alternative text editor
-cask 'pycharm'            # Python IDE - JetBrains
+cask '1password'          # Password manager
+cask 'cleanmymac'         # MacBook malware and trash removal
 cask 'datagrip'           # DataBases IDE - Jet Brains
+cask 'dozer'              # Menu bar customization
+cask 'evernote'           # Note-taking app
+cask 'flux'               # Adjust screen brightness
+cask 'gephi'              # Graph visualization
+cask 'google-chrome'      # Main browser
+cask 'mactex'             # LaTex in your max
+cask 'notion'             # Daily planner | Data collection | Notebook
+cask 'obsidian'           # Second brain
+cask 'pycharm'            # Python IDE - JetBrains
+cask 'rectangle'          # Window manager
 cask 'rstudio'            # IDE for R
+cask 'slack'              # WhatsApp for nerds
+cask 'spotify'            # Be Still - The Killers
+cask 'sublime-text'       # Alternative text editor
 cask 'vagrant'            # Set up remote machines
 cask 'virtualbox'         # Set up remote machines
-cask 'notion'             # Daily planner | Data collection | Notebook
-cask 'evernote'           # Note-taking app
-cask 'obsidian'           # Second brain
-cask 'google-chrome'      # Main browser
-cask 'flux'               # Adjust screen brightness
-cask '1password'          # Password manager
 cask 'whatsapp'           # Mr. Zuck
-cask 'spotify'            # Be Still - The Killers
-cask 'slack'              # WhatsApp for nerds
-cask 'gephi'              # Graph visualization
-cask 'cleanmymac'         # MacBook malware and trash removal
-cask 'mactex'             # LaTex in your max
-cask 'dozer'              # Menu bar customization
-cask 'rectangle'          # Window manager
 

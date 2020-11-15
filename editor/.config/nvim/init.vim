@@ -4,11 +4,11 @@ set nocompatible
 " -------------------------------- Plugins -----------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
-" VIM enhacements
+" VIM enhancements
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 
-" GUI enhacements
+" GUI enhancements
 Plug 'vim-airline/vim-airline'
 Plug 'machakann/vim-highlightedyank'
 Plug 'romainl/vim-cool'
@@ -33,7 +33,7 @@ Plug 'tpope/vim-commentary'
 " Semantic language support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Syntatic language support
+" Syntactic language support
 Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
 Plug 'godlygeek/tabular'
@@ -56,6 +56,9 @@ let mapleader = " "
 " Set encoding
 set encoding=utf-8
 
+" Set spelling
+set nospell
+
 " Lines (relative) numbers
 set number
 set relativenumber
@@ -63,7 +66,7 @@ set relativenumber
 " Tabs settings
 set tabstop=4 softtabstop=4
 set shiftwidth=4 
-set expandtab "Convert tabs into spaces
+set expandtab
 set smartindent
 
 " Soft wrapping text
