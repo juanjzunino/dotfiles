@@ -37,7 +37,6 @@ brew 'pandoc'   # Swiss-army knife
 brew 'ranger'   # Console file manager
 brew 'stow'     # Symlinks manager
 brew 'tldr'     # Command's examples
-brew 'trash'    # Replace rm with trash
 brew 'tree'     # Display folder structure
 brew 'wget'     # Download files
 
