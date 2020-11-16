@@ -5,6 +5,10 @@ alias vim='nvim'
 alias ls="exa -a"
 alias l="exa -la"
 
+# Tree options
+alias tree="exa --tree"
+alias mtree="exa --tree --long"
+
 # Sane defaults
 alias cp="cp -i"
 alias mv="mv -i"

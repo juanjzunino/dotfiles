@@ -1,0 +1,7 @@
+#!/usr/bin/env  bash
+
+# Update all brew related files
+brew update && brew upgrade && brew cleanup && brew cask cleanup
+
+# Update conda python environment
+conda update --all

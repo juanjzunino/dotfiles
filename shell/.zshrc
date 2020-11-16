@@ -31,6 +31,9 @@ fi
 # Python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
+# Local scripts
+export PATH="$PATH:$HOME/bin"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
