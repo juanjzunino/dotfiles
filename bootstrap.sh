@@ -72,3 +72,4 @@ sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
 
 # Source macOS settings
 source $HOME/dotfiles/macOS/.macos
+
