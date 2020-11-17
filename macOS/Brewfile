@@ -1,4 +1,6 @@
 # Taps
+tap 'homebrew/cask'
+tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
 
 # Shells
@@ -11,6 +13,9 @@ brew 'bash-completion'
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
+
+# Development
+brew 'python'
 
 # Editor
 brew 'vim'                # Update vim version
