@@ -52,6 +52,9 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # Sort by Name by default
 defaults write com.apple.finder FXArrangeGroupViewBy -string "Name"
 
+# Finder > View > As List
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
 ##############################################################################
 # Dock and hot corners                                                       #
 ##############################################################################
