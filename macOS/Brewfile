@@ -16,6 +16,7 @@ brew 'zsh-syntax-highlighting'
 
 # Development
 brew 'python'
+brew 'node'
 
 # Editor
 brew 'vim'                # Update vim version
@@ -52,7 +53,7 @@ cask 'dozer'              # Menu bar customization
 cask 'evernote'           # Note-taking app
 cask 'flux'               # Adjust screen brightness
 cask 'gephi'              # Graph visualization
-cask 'mactex'             # LaTex in your mac
+#cask 'mactex'             # LaTex in your mac
 cask 'notion'             # Daily planner | Data collection | Notebook
 cask 'obsidian'           # Second brain
 cask 'rectangle'          # Window manager
