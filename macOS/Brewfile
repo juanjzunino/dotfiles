@@ -1,4 +1,4 @@
-# Taps
+#Taps
 tap 'homebrew/cask'
 tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
@@ -16,6 +16,7 @@ brew 'zsh-syntax-highlighting'
 
 # Development
 brew 'python'
+brew 'r'
 brew 'node'
 
 # Editor
