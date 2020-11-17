@@ -16,7 +16,6 @@ if [ $? -eq 0 ]; then
     echo "Found XCode Tools"
 else
     echo "Installing XCode Tools"
-
     xcode-select --install
 fi
 
