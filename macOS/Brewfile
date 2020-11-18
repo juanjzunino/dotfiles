@@ -44,12 +44,12 @@ brew 'pandoc'   # Swiss-army knife
 brew 'ranger'   # Console file manager
 brew 'stow'     # Symlinks manager
 brew 'tldr'     # Command's examples
+brew 'tmux'     # Terminal multiplexer
 brew 'tree'     # Display folder structure
 brew 'wget'     # Download files
 
 # Apps
 cask '1password'          # Password manager
-cask 'cleanmymac'         # MacBook malware and trash removal
 cask 'dozer'              # Menu bar customization
 cask 'evernote'           # Note-taking app
 cask 'flux'               # Adjust screen brightness
