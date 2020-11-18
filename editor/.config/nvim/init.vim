@@ -17,14 +17,15 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Writing
-Plug 'junegunn/goyo.vim'  
-Plug 'junegunn/limelight.vim'  
-
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+
+" Writing
+Plug 'junegunn/goyo.vim'  
+Plug 'junegunn/limelight.vim'  
+Plug 'godlygeek/tabular'
 
 " Text manipulation
 Plug 'tpope/vim-commentary'
@@ -34,10 +35,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntactic language support
 Plug 'stephpy/vim-yaml'
+Plug 'cespare/vim-toml'
 Plug 'elzr/vim-json'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 Plug 'vim-python/python-syntax'
+Plug 'rust-lang/rust.vim'
+Plug 'plasticboy/vim-markdown'
 Plug 'dag/vim-fish'
 
 " Color schemes
