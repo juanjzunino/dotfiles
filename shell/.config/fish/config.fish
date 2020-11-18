@@ -1,3 +1,5 @@
+abbr -a vim nvim
+
 function fish_prompt
 	set_color cyan
     echo -n '['
