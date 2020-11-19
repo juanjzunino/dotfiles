@@ -29,7 +29,6 @@ opencv-python
 pandas
 parse
 pep8
-pyarrow
 pycrypto
 pyflakes
 pylint
