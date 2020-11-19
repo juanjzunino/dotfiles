@@ -1,57 +1,15 @@
-" Neovim config file
-set nocompatible
-
-"============================ Plugins ============================
-
-call plug#begin('~/.config/nvim/plugged')
-
-" VIM enhacements
-Plug 'ciaranm/securemodelines'
-Plug 'editorconfig/editorconfig-vim'
-
-" GUI enhacements
-Plug 'vim-airline/vim-airline'
-Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdtree'
-
-" Git
-Plug 'tpope/vim-fugitive'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" Writing
-Plug 'junegunn/goyo.vim'  
-
-" Search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'romainl/vim-cool'
-
-" Text manipulation
-Plug 'tpope/vim-commentary'
-
-" Semantic language support
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Syntatic language support
-Plug 'stephpy/vim-yaml'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'vim-python/python-syntax'
-Plug 'dag/vim-fish'
-
-" Color schemes
-Plug 'morhetz/gruvbox'
-
-call plug#end()
-
-
-"======================= Editor Settings =========================
-
 " Syntax highlighting
 syntax on
 
 " Leader key
 let mapleader = " "
+
+" Set encoding
+set encoding=utf-8
+
+" Set spelling
+set nospell
+set spelllang=en,es
 
 " Lines (relative) numbers
 set number
@@ -60,12 +18,12 @@ set relativenumber
 " Tabs settings
 set tabstop=4 softtabstop=4
 set shiftwidth=4 
-set expandtab "Convert tabs into spaces
+set expandtab
 set smartindent
 
 " Soft wrapping text
 set linebreak
-set wrap
+set nowrap
 
 " Search settings
 set ignorecase
@@ -73,19 +31,21 @@ set smartcase
 set incsearch
 set hlsearch
 
-" Keys bindings
-nmap Q <Nop> "Disable Ex Mode
+" Backspace works now
 set backspace=indent,eol,start
-set mouse+=a
 
 " GUI
 set laststatus=2
-set showmode
+set noshowmode
 set scrolloff=8
 set nofoldenable
 set ttyfast
 set wildmenu
 set shortmess+=c
+set cursorline
+set mouse+=a
+set signcolumn=yes
+set colorcolumn=79
 
 " Splits
 set splitbelow splitright
@@ -109,77 +69,107 @@ set hidden
 set updatetime=300
 
 " Undo
+set undodir=~/.config/nvim/undodir
 set undofile
-set undodir=~/.vim/undodir
 
 " Colorscheme
 set termguicolors
 set background=dark
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
+
+" hi! Normal ctermbg=NONE guibg=NONE 
+" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 " Autocompletions
 source ~/.config/nvim/coc.vim
 
-"===================== Keyboard Shortcuts ========================
+" -------------------------------- Mappings ----------------------------------
+" Open config file
+nnoremap <leader>cf :e $MYVIMRC<cr>
 
-"Avoid bad habits
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
+" Disable Ex Mode
+nmap Q <Nop>
+
+" Quit w/ q:
+map q: :q
+
+" Set spell check
+nnoremap <Leader>sc :set spell!<CR>
+
+" Yank to clipboard
+vnoremap y "*y
+
+" Jump to start and end of line using the home row keys
+map H ^
+map L $
 
 " Move by line
 nnoremap j gj
 nnoremap k gk
 
+" Move block up or down
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
+
 " Toggles between buffers
 nnoremap <leader><leader> <c-^>
 
-"Tab key indentation
+" Close buffer
+nnoremap <leader>cb :bd<cr>
+
+" Tab key indentation
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 
-"Split panes tmux style
+" Unbind for tmux
+map <C-a> <Nop>
+map <C-x> <Nop>
+
+" Split panes tmux style
 nnoremap <Leader>- :sp<CR>
 nnoremap <Leader>\| :vsp<CR>
 
-"========================= Autocommands ==========================
+" Ctrl+h to stop searching
+vnoremap <C-h> :nohlsearch<cr>
+nnoremap <C-h> :nohlsearch<cr>
 
-"======================== Plugin Settings ========================
+" Very magic by default
+nnoremap ? ?\v
+nnoremap / /\v
 
-"NerdTREE
-noremap <Leader>n :NERDTreeToggle<CR>
+" Search results centered
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
 
-" Secure modeline
-let g:secure_modelines_allowed_items = [
-                \ "textwidth",   "tw",
-                \ "softtabstop", "sts",
-                \ "tabstop",     "ts",
-                \ "shiftwidth",  "sw",
-                \ "expandtab",   "et",   "noexpandtab", "noet",
-                \ "filetype",    "ft",
-                \ "foldmethod",  "fdm",
-                \ "readonly",    "ro",   "noreadonly", "noro",
-                \ "rightleft",   "rl",   "norightleft", "norl",
-                \ "colorcolumn"
-                \ ]
+" Avoid bad habits
+nnoremap <Left>  <nop>
+nnoremap <Right> <nop>
+nnoremap <Up>    <nop>
+nnoremap <Down>  <nop>
+inoremap <Left>  <nop>
+inoremap <Right> <nop>
+inoremap <Up>    <nop>
+inoremap <Down>  <nop>
 
-" FZF
-map <C-p> :Files<CR>
-nmap <leader>; :Buffers<CR>
-let g:fzf_layout = { 'down': '~20%' }
+" ------------------------------ Autocommands --------------------------------
+" Prevent accidental writes to buffers that shouldn't be edited
+autocmd BufRead *.orig set readonly
+autocmd BufRead *.pacnew set readonly
 
-" Markdown
-let g:vim_markdown_frontmatter = 1
+" Help filetype detection
+autocmd BufRead *.md set filetype=markdown
+autocmd BufRead *.tex set filetype=tex
 
-"Python highlighting
-let g:python_highlight_all = 1
-let g:python_highlight_indent_errors = 0
-let g:python_highlight_space_errors = 0
+" Default for writing files
+augroup writing
+    autocmd!
+    autocmd Filetype markdown,tex set colorcolumn=
+    autocmd Filetype markdown,tex set spell
+    autocmd Filetype markdown,tex set wrap
+augroup END
 
-"Goyo
-nnoremap <C-g> :Goyo<CR>
+
