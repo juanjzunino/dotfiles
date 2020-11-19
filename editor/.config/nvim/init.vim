@@ -73,7 +73,7 @@ set smartindent
 
 " Soft wrapping text
 set linebreak
-set wrap
+set nowrap
 
 " Search settings
 set ignorecase
@@ -219,6 +219,7 @@ augroup writing
     autocmd!
     autocmd Filetype markdown,tex set colorcolumn=
     autocmd Filetype markdown,tex set spell
+    autocmd Filetype markdown,tex set wrap
 augroup END
 
 " ----------------------------- Plugin Settings ------------------------------
