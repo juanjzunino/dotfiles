@@ -219,9 +219,9 @@ autocmd BufRead *.tex set filetype=tex
 " Default for writing files
 augroup writing
     autocmd!
-    autocmd Filetype markdown,tex set colorcolumn=
-    autocmd Filetype markdown,tex set spell
-    autocmd Filetype markdown,tex set wrap
+    autocmd Filetype markdown,tex,txt set colorcolumn=
+    autocmd Filetype markdown,tex,txt set spell
+    autocmd Filetype markdown,tex,txt set wrap
 augroup END
 
 " ----------------------------- Plugin Settings ------------------------------
