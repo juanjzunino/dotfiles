@@ -54,6 +54,7 @@ brew 'wget'     # Download files
 
 # Apps
 cask '1password'          # Password manager
+cask 'alfred'             # Main spotlight
 cask 'dozer'              # Menu bar customization
 cask 'evernote'           # Note-taking app
 cask 'flux'               # Adjust screen brightness
