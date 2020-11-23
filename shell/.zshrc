@@ -4,7 +4,7 @@ autoload -U colors && colors
 # Prompt
 autoload -Uz promptinit
 promptinit
-PS1="%{$fg[cyan]%}[%{$fg[blue]%}%n@%m %{$fg[green]%}%1~%{$fg[cyan]%}] %B%{$fg[yellow]%}>%b "
+PS1="%{$fg[cyan]%}[%{$fg[blue]%}%n@%m %{$fg[green]%}%1~%{$fg[cyan]%}] %B%{$fg[yellow]%}|%b "
 
 # Aliases
 if [ -f ~/.aliases ]; then
@@ -23,7 +23,6 @@ if type brew &>/dev/null; then
  FPATH=/usr/local/share/zsh-completions:$FPATH
  autoload -Uz compinit && compinit
 fi
-
 
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -49,5 +48,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Activate conda when starting a new tmux session
+[[ -z $TMUX ]] || conda deactivate; conda activate base
+
 # Syntax highlighting (must be at the end of the file)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

@@ -1,8 +1,0 @@
-# ~/.config/starship.toml
-[prompt]
-format = "$all"
-add_newline = false
-
-[python]
-format = 'via [${symbol}${pyenv_prefix}( \($virtualenv\))]($style) '
-symbol = ' '

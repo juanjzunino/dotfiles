@@ -20,7 +20,7 @@ function fish_prompt
     echo -n ']'
     echo -n " "
 	set_color --bold bryellow
-	echo -n '> '
+	echo -n '| '
     echo -n " "
 	set_color normal
 end
