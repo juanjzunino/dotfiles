@@ -75,14 +75,14 @@ set undofile
 " Colorscheme
 set termguicolors
 set background=dark
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+" colorscheme gruvbox
 
 " hi! Normal ctermbg=NONE guibg=NONE 
 " hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 " Autocompletions
-source ~/.config/nvim/coc.vim
+" source ~/.config/nvim/coc.vim
 
 " -------------------------------- Mappings ----------------------------------
 " Open config file
