@@ -85,6 +85,7 @@ set hlsearch
 set backspace=indent,eol,start
 
 " GUI
+set cmdheight=2
 set laststatus=2
 set noshowmode
 set scrolloff=8
@@ -239,6 +240,7 @@ let g:secure_modelines_allowed_items = [
                 \ "rightleft",   "rl",   "norightleft", "norl",
                 \ "colorcolumn"
                 \ ]
+
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 
