@@ -42,10 +42,8 @@ set nofoldenable
 set ttyfast
 set wildmenu
 set shortmess+=c
-set cursorline
 set mouse+=a
 set signcolumn=yes
-set colorcolumn=79
 
 " Splits
 set splitbelow splitright
@@ -73,7 +71,7 @@ set undodir=~/.config/nvim/undodir
 set undofile
 
 " Colorscheme
-set termguicolors
+" set termguicolors
 set background=dark
 " let g:gruvbox_contrast_dark = 'hard'
 " colorscheme gruvbox
