@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 # Tracks IDs
-book_id = {'Python for Data Analysis': 'RU835292822NL'}
+book_id = {}
 
 # Activate web driver
 driver = webdriver.Chrome('/Users/juanjozunino/Documents/chromedriver')
