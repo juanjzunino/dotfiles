@@ -44,7 +44,6 @@ Plug 'dag/vim-fish'
 
 " Color schemes
 Plug 'morhetz/gruvbox'
-Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
