@@ -11,6 +11,7 @@ flake8
 graphviz
 h5py
 ipdb
+ipython
 isort
 jedi
 jupyter
