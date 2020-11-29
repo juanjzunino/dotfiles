@@ -3,8 +3,9 @@ autoload -U colors && colors
 
 # Prompt
 autoload -Uz promptinit
+autoload -Uz vcs_info
 promptinit
-PS1="%{$fg[cyan]%}[%{$fg[blue]%}%n@%m %{$fg[green]%}%1~%{$fg[cyan]%}] %B%{$fg[yellow]%}|%b "
+PS1="%{$fg[cyan]%}%m %{$fg[magenta]%}:: %{$fg[blue]%}%1~ %B%{$fg[red]%}|%b "
 
 # Aliases
 if [ -f ~/.aliases ]; then
