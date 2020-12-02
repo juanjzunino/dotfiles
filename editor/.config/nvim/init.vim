@@ -11,6 +11,7 @@ Plug 'justinmk/vim-sneak'
 
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'machakann/vim-highlightedyank'
 Plug 'preservim/nerdtree'
 
@@ -45,6 +46,7 @@ Plug 'dag/vim-fish'
 
 " Color schemes
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -127,11 +129,8 @@ set undofile
 " Colorscheme
 set termguicolors
 set background=dark
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
-
-" hi! Normal ctermbg=NONE guibg=NONE 
-" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+" let g:gruvbox_contrast_dark = 'hard'
+colorscheme base16-gruvbox-dark-hard
 
 " Autocompletions
 source ~/.config/nvim/coc.vim
@@ -267,4 +266,3 @@ nnoremap <C-g> :Goyo<CR>
 " Limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
