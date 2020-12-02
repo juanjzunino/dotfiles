@@ -7,6 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'justinmk/vim-sneak'
 
 " GUI enhancements
 Plug 'vim-airline/vim-airline'
@@ -221,6 +222,8 @@ augroup writing
     autocmd Filetype markdown,tex,txt set colorcolumn=
     autocmd Filetype markdown,tex,txt set spell
     autocmd Filetype markdown,tex,txt set wrap
+    autocmd Filetype markdown,tex,txt set encoding=utf-8
+    autocmd Filetype markdown,tex,txt set fileencoding=utf-8
 augroup END
 
 " ----------------------------- Plugin Settings ------------------------------
@@ -252,8 +255,11 @@ let g:fzf_layout = { 'down': '~20%' }
 " Markdown
 let g:vim_markdown_frontmatter = 1
 
-"Python highlighting
+" Python highlighting
 let g:python_highlight_all = 1
+
+" Vim Sneak
+let g:sneak#s_next = 1
 
 " Goyo
 nnoremap <C-g> :Goyo<CR>
