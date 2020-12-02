@@ -47,3 +47,4 @@ torch
 torchvision
 torchviz
 tqdm
+xlrd
