@@ -20,9 +20,10 @@ brew 'r'
 brew 'node'
 
 # Editor
-brew 'vim'              # Update vim version
-brew 'neovim'           # Main text editor
-cask 'sublime-text'     # Alternative text editor
+brew 'neovim'       # Main text editor
+brew 'vim'          # Update pre-installed version
+cask 'emacs'        # Alternative text editor
+cask 'sublime-text' # Alternative text editor
 
 # IDE
 cask 'pycharm'          # Python
