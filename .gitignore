@@ -7,6 +7,7 @@ shell/.config/fish/functions/
 # Nvim
 editor/.config/nvim/plugged/
 editor/.config/nvim/undodir/
+editor/.config/nvim/spell/
 
 # Homebrew
 macOS/Brewfile.lock.json

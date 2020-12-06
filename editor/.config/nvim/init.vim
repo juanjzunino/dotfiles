@@ -35,17 +35,17 @@ Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntactic language support
+Plug 'elzr/vim-json'
 Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
-Plug 'elzr/vim-json'
+Plug 'plasticboy/vim-markdown'
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
-Plug 'plasticboy/vim-markdown'
 Plug 'dag/vim-fish'
 
 " Color schemes
-Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
