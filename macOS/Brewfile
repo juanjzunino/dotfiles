@@ -17,6 +17,8 @@ brew 'zsh-syntax-highlighting'
 # Development
 brew 'python'
 brew 'r'
+brew 'go'
+brew 'rustup'
 brew 'node'
 
 # Editor
