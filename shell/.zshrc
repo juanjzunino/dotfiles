@@ -32,7 +32,8 @@ fi
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Rust
-# export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+source ~/.cargo/env
 
 # Local scripts
 export PATH="$PATH:$HOME/bin"
