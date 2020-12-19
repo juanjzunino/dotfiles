@@ -28,8 +28,8 @@ cask 'emacs'        # Alternative text editor
 cask 'sublime-text' # Alternative text editor
 
 # IDE
-cask 'pycharm'          # Python
-cask 'datagrip'         # SQL
+cask 'pycharm'  # Python
+cask 'datagrip' # SQL
 
 # Version control
 brew 'git'
@@ -50,27 +50,29 @@ brew 'neofetch' # Notebook specs
 brew 'pandoc'   # Swiss-army knife
 brew 'ranger'   # Console file manager
 brew 'stow'     # Symlinks manager
-brew 'tldr'     # Command's examples
+brew 'tealdeer' # Command's examples
 brew 'tmux'     # Terminal multiplexer
 brew 'tree'     # Display folder structure
 brew 'wget'     # Download files
 
 # Apps
-cask '1password'          # Password manager
-cask 'alfred'             # Main spotlight
-cask 'dozer'              # Menu bar customization
-cask 'evernote'           # Note-taking app
-cask 'flux'               # Adjust screen brightness
-cask 'gephi'              # Graph visualization
-cask 'notion'             # Daily planner | Data collection | Notebook
-cask 'obsidian'           # Second brain
-cask 'rectangle'          # Window manager
-cask 'rstudio'            # IDE for R
-cask 'slack'              # Corporate messaging app
-cask 'spotify'            # Music app
-cask 'vagrant'            # Set up remote machines
-cask 'virtualbox'         # Set up remote machines
-cask 'whatsapp'           # Personal messaging app
+cask '1password'  # Password manager
+cask 'alfred'     # Main spotlight
+cask 'dozer'      # Menu bar customization
+cask 'evernote'   # Note-taking app
+cask 'flux'       # Adjust screen brightness
+cask 'gephi'      # Graph visualization
+cask 'notion'     # Daily planner | Data collection | Notebook
+cask 'obsidian'   # Second brain
+cask 'rectangle'  # Window manager
+cask 'rstudio'    # IDE for R
+cask 'slack'      # Corporate messaging app
+cask 'spotify'    # Music app
+cask 'vagrant'    # Set up remote machines
+cask 'virtualbox' # Set up remote machines
+cask 'whatsapp'   # Personal messaging app
+cask 'discord'    # Chat app
+cask 'keybase'    # Chat app
 
 # Fonts
 cask 'font-sauce-code-pro-nerd-font'
