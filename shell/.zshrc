@@ -15,6 +15,7 @@ fi
 # Settings
 export EDITOR="nvim"
 export TERMINAL="alacritty"
+export TERM=xterm-256color
 
 # Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
