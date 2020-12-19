@@ -39,6 +39,9 @@ source ~/.cargo/env
 # Local scripts
 export PATH="$PATH:$HOME/bin"
 
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
