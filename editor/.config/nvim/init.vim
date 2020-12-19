@@ -30,7 +30,7 @@ Plug 'godlygeek/tabular'
 
 " Text manipulation
 Plug 'tpope/vim-commentary'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 " Semantic language support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -127,9 +127,12 @@ set undodir=~/.config/nvim/undodir
 set undofile
 
 " Colorscheme
+if !has('gui_running')
+  set t_Co=256
+endif
 set termguicolors
 set background=dark
-" let g:gruvbox_contrast_dark = 'hard'
+" let base16colorspace=256
 colorscheme base16-gruvbox-dark-hard
 
 " Autocompletions
