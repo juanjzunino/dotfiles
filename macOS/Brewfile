@@ -50,7 +50,7 @@ brew 'neofetch' # Notebook specs
 brew 'pandoc'   # Swiss-army knife
 brew 'ranger'   # Console file manager
 brew 'stow'     # Symlinks manager
-brew 'tealdeer' # Command's examples
+brew 'tldr' # Command's examples
 brew 'tmux'     # Terminal multiplexer
 brew 'tree'     # Display folder structure
 brew 'wget'     # Download files
