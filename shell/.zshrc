@@ -29,6 +29,9 @@ fi
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 # Python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
