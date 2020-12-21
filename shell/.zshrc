@@ -66,3 +66,4 @@ unset __conda_setup
 # Syntax highlighting (must be at the end of the file)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# eval "$(starship init zsh)"
