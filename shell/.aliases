@@ -1,9 +1,11 @@
 # Editor
 alias vim='nvim'
 
+# Open files
+alias finder="open -R"
+
 # Listing options
-alias ls="exa"
-alias ll="exa -a"
+alias ls="exa -a"
 alias l="exa -la"
 
 # Tree options
