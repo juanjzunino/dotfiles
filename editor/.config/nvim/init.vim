@@ -30,7 +30,6 @@ Plug 'godlygeek/tabular'
 
 " Text manipulation
 Plug 'tpope/vim-commentary'
-" Plug 'jiangmiao/auto-pairs'
 
 " Semantic language support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
