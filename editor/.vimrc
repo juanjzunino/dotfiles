@@ -9,7 +9,6 @@ set encoding=utf-8
 
 " Set spelling
 set nospell
-set spelllang=en,es
 
 " Lines (relative) numbers
 set number
@@ -43,7 +42,7 @@ set ttyfast
 set wildmenu
 set shortmess+=c
 set mouse+=a
-set signcolumn=yes
+" set signcolumn=yes
 
 " Splits
 set splitbelow splitright
@@ -71,16 +70,8 @@ set undodir=~/.config/nvim/undodir
 set undofile
 
 " Colorscheme
-" set termguicolors
 set background=dark
-" let g:gruvbox_contrast_dark = 'hard'
-" colorscheme gruvbox
-
-" hi! Normal ctermbg=NONE guibg=NONE 
-" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
-
-" Autocompletions
-" source ~/.config/nvim/coc.vim
+colorscheme peachpuff
 
 " -------------------------------- Mappings ----------------------------------
 " Open config file
@@ -160,14 +151,3 @@ autocmd BufRead *.pacnew set readonly
 
 " Help filetype detection
 autocmd BufRead *.md set filetype=markdown
-autocmd BufRead *.tex set filetype=tex
-
-" Default for writing files
-augroup writing
-    autocmd!
-    autocmd Filetype markdown,tex set colorcolumn=
-    autocmd Filetype markdown,tex set spell
-    autocmd Filetype markdown,tex set wrap
-augroup END
-
-
