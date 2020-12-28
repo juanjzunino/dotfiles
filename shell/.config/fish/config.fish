@@ -1,25 +1,21 @@
 abbr -a vim nvim
 
 function fish_prompt
-	set_color cyan
-    echo -n '['
 	set_color blue
-	echo -n (whoami)
-    echo -n '@'
     echo -n (hostname | cut -d . -f 1)
     echo -n " "
+    set_color magenta
+    echo -n "::"
+    echo -n " "
     if [ $PWD = $HOME ]
-		set_color green
+		set_color yellow
 		echo -n "~"
-
     else
-        set_color green
+        set_color yellow
         echo -n (basename $PWD)
 	end
-	set_color cyan
-    echo -n ']'
     echo -n " "
-	set_color --bold bryellow
+	set_color --bold brgreen
 	echo -n '| '
     echo -n " "
 	set_color normal
