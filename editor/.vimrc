@@ -72,6 +72,7 @@ set undofile
 " Colorscheme
 set background=dark
 colorscheme peachpuff
+highlight Comment ctermfg=green
 
 " -------------------------------- Mappings ----------------------------------
 " Open config file
