@@ -5,7 +5,7 @@ autoload -U colors && colors
 autoload -Uz promptinit
 autoload -Uz vcs_info
 promptinit
-PS1="%{$fg[cyan]%}%m %{$fg[yellow]%}:: %{$fg[blue]%}%1~ %B%{$fg[red]%}|%b "
+PS1="%{$fg[white]%}%m %{$fg[yellow]%}:: %{$fg[blue]%}%1~ %B%{$fg[green]%}|%b "
 
 # Aliases
 if [ -f ~/.aliases ]; then
@@ -66,4 +66,3 @@ unset __conda_setup
 # Syntax highlighting (must be at the end of the file)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# eval "$(starship init zsh)"
