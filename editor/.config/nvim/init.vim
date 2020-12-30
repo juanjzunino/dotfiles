@@ -87,18 +87,20 @@ set hlsearch
 set backspace=indent,eol,start
 
 " GUI
+set showcmd
 set cmdheight=2
 set laststatus=2
 set noshowmode
 set scrolloff=8
 set nofoldenable
 set ttyfast
+set synmaxcol=500
 set wildmenu
 set shortmess+=c
 set cursorline
 set mouse+=a
 set signcolumn=yes
-set colorcolumn=79
+set colorcolumn=80
 
 " Splits
 set splitbelow splitright
