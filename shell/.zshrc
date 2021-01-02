@@ -14,6 +14,7 @@ fi
 
 # Settings
 export EDITOR="nvim"
+export VISUAL="nvim"
 export TERMINAL="alacritty"
 export TERM=xterm-256color
 
