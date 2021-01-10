@@ -2,7 +2,7 @@
 set nocompatible
 
 " -------------------------------- Plugins -----------------------------------
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin()
 
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
@@ -42,6 +42,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
 Plug 'dag/vim-fish'
+Plug 'tmux-plugins/vim-tmux'
 
 " Color schemes
 Plug 'chriskempson/base16-vim'
@@ -127,7 +128,7 @@ set updatetime=300
 set undodir=~/.config/nvim/undodir
 set undofile
 
-" Colorscheme
+" Color Scheme
 if !has('gui_running')
   set t_Co=256
 endif
@@ -135,6 +136,8 @@ set termguicolors
 set background=dark
 let base16colorspace=256
 colorscheme base16-gruvbox-dark-hard
+
+" :hi Comment guifg=#fabd2f
 
 " Autocompletions
 source ~/.config/nvim/coc.vim
@@ -287,4 +290,7 @@ let g:lightline = {
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
+
+" Use auocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
