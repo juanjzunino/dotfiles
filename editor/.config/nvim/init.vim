@@ -250,9 +250,6 @@ let g:secure_modelines_allowed_items = [
                 \ "colorcolumn"
                 \ ]
 
-" Use auocmd to force lightline update.
-autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
-
 " FZF
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
@@ -286,7 +283,7 @@ let g:lightline = {
       \ }
       \ }
 
-
+" Retrieve filename
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
