@@ -1,55 +1,6 @@
-" Neovim config file
+" vim config file
 set nocompatible
 
-" -------------------------------- Plugins -----------------------------------
-call plug#begin('~/.vim/plugged')
-
-" VIM enhancements
-Plug 'ciaranm/securemodelines'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'justinmk/vim-sneak'
-
-" GUI enhancements
-Plug 'itchyny/lightline.vim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdtree'
-
-" Git
-Plug 'tpope/vim-fugitive'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" Search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-rooter'
-
-" Writing
-Plug 'junegunn/goyo.vim'  
-Plug 'junegunn/limelight.vim'  
-Plug 'godlygeek/tabular'
-
-" Text manipulation
-Plug 'tpope/vim-commentary'
-
-" Semantic language support
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Syntactic language support
-Plug 'elzr/vim-json'
-Plug 'stephpy/vim-yaml'
-Plug 'cespare/vim-toml'
-Plug 'plasticboy/vim-markdown'
-Plug 'vim-python/python-syntax'
-Plug 'rust-lang/rust.vim'
-Plug 'dag/vim-fish'
-
-" Color schemes
-Plug 'chriskempson/base16-vim'
-Plug 'morhetz/gruvbox'
-
-call plug#end()
-
-" ---------------------------- Editor Settings -------------------------------
 " Syntax highlighting
 syntax on
 
@@ -94,7 +45,6 @@ set ttyfast
 set wildmenu
 set shortmess+=c
 set mouse+=a
-" set signcolumn=yes
 
 " Splits
 set splitbelow splitright
@@ -204,63 +154,4 @@ autocmd BufRead *.pacnew set readonly
 
 " Help filetype detection
 autocmd BufRead *.md set filetype=markdown
-
-" ----------------------------- Plugin Settings ------------------------------
-" NerdTREE
-noremap <Leader>n :NERDTreeToggle<CR>
-
-" Secure modeline
-let g:secure_modelines_allowed_items = [
-                \ "textwidth",   "tw",
-                \ "softtabstop", "sts",
-                \ "tabstop",     "ts",
-                \ "shiftwidth",  "sw",
-                \ "expandtab",   "et",   "noexpandtab", "noet",
-                \ "filetype",    "ft",
-                \ "foldmethod",  "fdm",
-                \ "readonly",    "ro",   "noreadonly", "noro",
-                \ "rightleft",   "rl",   "norightleft", "norl",
-                \ "colorcolumn"
-                \ ]
-
-" Use auocmd to force lightline update.
-autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
-
-" FZF
-map <C-p> :Files<CR>
-nmap <leader>; :Buffers<CR>
-let g:fzf_layout = { 'down': '~20%' }
-
-" Markdown
-let g:vim_markdown_frontmatter = 1
-
-" Python highlighting
-let g:python_highlight_all = 1
-
-" Vim Sneak
-let g:sneak#s_next = 1
-
-" Goyo
-nnoremap <C-g> :Goyo<CR>
-
-" Limelight
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
-" Lightline
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'filename': 'LightlineFilename',
-      \   'cocstatus': 'coc#status'
-      \ }
-      \ }
-
-
-function! LightlineFilename()
-  return expand('%:t') !=# '' ? @% : '[No Name]'
-endfunction
 
