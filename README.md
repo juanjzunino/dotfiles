@@ -18,7 +18,7 @@ Requirements:
 
 Don't forget to check the ![references](https://github.com/juanjzunino/dotfiles/blob/master/references.md) section.
 
-#### TODO
+## TODO
 __Shell__
 - Git info
 - .env
@@ -32,3 +32,5 @@ __Python__
 __Nvim__
 - Research about RTP
 - Color folder (i.e., base16 template)
+- CoC:
+    - CoC-Python json
