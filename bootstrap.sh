@@ -63,7 +63,6 @@ done
 # Add shells
 sudo sh -c 'echo /usr/local/bin/bash >> /etc/shells'
 sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
-sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
 
 ##############################################################################
 # macOS Settings                                                             #
