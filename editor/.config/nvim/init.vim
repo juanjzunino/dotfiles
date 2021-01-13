@@ -105,10 +105,6 @@ set colorcolumn=80
 
 " Splits
 set splitbelow splitright
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
 
 " File type detection
 filetype plugin indent on
@@ -187,6 +183,12 @@ map <C-x> <Nop>
 " Split panes tmux style
 nnoremap <Leader>- :sp<CR>
 nnoremap <Leader>\| :vsp<CR>
+
+" Move easily between panes
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " Ctrl+h to stop searching
 vnoremap <C-h> :nohlsearch<cr>
