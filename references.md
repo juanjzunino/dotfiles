@@ -3,11 +3,11 @@
 
 You'll find that most of my configurations are inspired by [Jon Gjengset](https://github.com/jonhoo), [Anish Athalye](https://github.com/anishathalye/) and [Jose Javier Gonzalez Ortiz](https://github.com/jjgo). I strongly recommend to take a look into theirs configurations.
 
-### Motivation
+__Motivation__
 - [Missing semester](https://missing.csail.mit.edu/)
 
-### Bootstraping methods
+__Bootstraping methods__
 - [Unofficial guide to dotfiles](https://dotfiles.github.io/)
 
-### Stow
+__Stow__
 - [Stow tutorial by DevInsideYou](https://www.youtube.com/watch?v=CFzEuBGPPPg)
