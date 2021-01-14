@@ -1,10 +1,6 @@
 # Mac Files
 .DS_Store
 
-# Fish
-shell/.config/fish/fish_variables
-shell/.config/fish/functions/
-
 # Nvim
 editor/.config/nvim/plugged/
 editor/.config/nvim/undodir/
