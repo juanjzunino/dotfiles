@@ -1,4 +1,4 @@
-" -------------------------------- Plugins -----------------------------------
+" ---------------------------------- Plugins ----------------------------------
 call plug#begin()
 
 " VIM enhancements
@@ -46,7 +46,7 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-" ---------------------------- Editor Settings -------------------------------
+" ------------------------------ Editor Settings ------------------------------
 set nocompatible
 
 " Syntax highlighting
@@ -136,7 +136,7 @@ colorscheme base16-gruvbox-dark-hard
 " Autocompletions
 source ~/.config/nvim/coc.vim
 
-" -------------------------------- Mappings ----------------------------------
+" --------------------------------- Mappings ----------------------------------
 " Open config file
 nnoremap <leader>cf :e $MYVIMRC<cr>
 
@@ -213,7 +213,7 @@ inoremap <Right> <nop>
 inoremap <Up>    <nop>
 inoremap <Down>  <nop>
 
-" ------------------------------ Autocommands --------------------------------
+" ------------------------------- Autocommands --------------------------------
 " Prevent accidental writes to buffers that shouldn't be edited
 autocmd BufRead *.orig set readonly
 autocmd BufRead *.pacnew set readonly
@@ -232,7 +232,7 @@ augroup writing
     autocmd Filetype markdown,tex,txt set fileencoding=utf-8
 augroup END
 
-" ----------------------------- Plugin Settings ------------------------------
+" ------------------------------ Plugin Settings ------------------------------
 " NerdTREE
 noremap <Leader>n :NERDTreeToggle<CR>
 
