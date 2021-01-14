@@ -17,9 +17,6 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 
-# Send files to trash
-alias ts="trash"
-
 # Git
 alias gs="git status"
 alias gg="git graph"
@@ -32,11 +29,8 @@ alias jn="jupyter notebook"
 alias docs="cd ~/Documents"
 alias desk="cd ~/Desktop"
 alias loads="cd ~/Downloads"
-alias book="cd ~/Documents/Books"
 alias books="cd ~/Documents/Books"
-alias paper="cd ~/Documents/Papers"
 alias papers="cd ~/Documents/Papers"
-alias mooc="cd ~/Documents/MOOC"
 alias basb="cd ~/Documents/Obsidian"
 alias mim="cd ~/Documents/business-analytics"
 alias thesis="cd ~/Documents/business-analytics/Thesis"
