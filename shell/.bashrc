@@ -5,16 +5,14 @@ if [ -f ~/.aliases ]; then
 fi
 
 # Settings
-export EDITOR="nvim"
-export VISUAL="nvim"
-export TERMINAL="alacritty"
-# export TERM=xterm-256color
+export EDITOR="vim"
+export VISUAL="vim"
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
 # ---------------------------------- Prompt -----------------------------------
 # # Prompt
-PS1="\[\033[37m\]\h \[\033[31m\]:: \[\033[32m\]\W\[\033[m\] \e[1m\e[34m| \e[0m"
+PS1="\[\033[32m\]\h \[\033[31m\]:: \[\033[37m\]\W\[\033[m\] \[\033[33m\]$ \e[0m"
 
 # ---------------------------------- Plugins ----------------------------------
 # Fuzzy finder
