@@ -1,4 +1,4 @@
-" vim config file
+" ---------------------------- Editor Settings -------------------------------
 set nocompatible
 
 " Syntax highlighting
