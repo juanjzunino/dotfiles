@@ -5,7 +5,6 @@ tap 'homebrew/cask-fonts'
 
 # Shells
 brew 'bash'
-brew 'fish'
 brew 'zsh'
 
 # Shell enhancements
@@ -24,7 +23,6 @@ brew 'node'
 # Editor
 brew 'neovim'       # Main text editor
 brew 'vim'          # Update pre-installed version
-cask 'emacs'        # Alternative text editor
 cask 'sublime-text' # Alternative text editor
 
 # IDE
@@ -44,7 +42,6 @@ cask 'google-chrome'      # Alternative browser
 
 # Binaries
 brew 'autojump'  # Frequent directories
-brew 'bat'       # Cat clone with syntax highlighting
 brew 'exa'       # A modern replacement for ls
 brew 'htop'      # Monitor system processes
 brew 'neofetch'  # Notebook specs
