@@ -1,12 +1,4 @@
-# Enable colors
-autoload -U colors && colors
-
-# Prompt
-autoload -Uz promptinit
-autoload -Uz vcs_info
-promptinit
-PS1="%{$fg[white]%}%m %{$fg[yellow]%}:: %{$fg[blue]%}%1~ %B%{$fg[green]%}|%b "
-
+# --------------------------------- Settings ----------------------------------
 # Aliases
 if [ -f ~/.aliases ]; then
     source ~/.aliases
@@ -17,15 +9,32 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="alacritty"
 export TERM=xterm-256color
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+disable r
 
+# History
+HISTSIZE=10000
+SAVEHIST=$HISTSIZE
+setopt appendhistory
+setopt incappendhistory
+setopt extendedhistory
+
+# ---------------------------------- Prompt -----------------------------------
+# Prompt
+autoload -U colors && colors
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '*'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:git:*' formats "%F{242} (%b%f%{$fg[red]%}%u%{$fg[cyan]%}%c%F{242})%f"
+setopt PROMPT_SUBST
+PS1='%{$fg[red]%}[$fg[yellow]%}jjz%F{172}::%f%{$fg[blue]%}%m %{$fg[green]%}%1~$f%{$fg[red]%}]${vcs_info_msg_0_}%{$reset_color%} '
+
+# ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Completions
-if type brew &>/dev/null; then
- FPATH=/usr/local/share/zsh-completions:$FPATH
- autoload -Uz compinit && compinit
-fi
 
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -33,9 +42,14 @@ fi
 # Autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-# Python
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# Completions
+autoload -Uz compinit && compinit -i
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+_comp_options_+=(globdots)
+FPATH=/usr/local/share/zsh-completions:$FPATH
 
+# ----------------------------------- Path ------------------------------------
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 source ~/.cargo/env
@@ -43,11 +57,11 @@ source ~/.cargo/env
 # Local scripts
 export PATH="$PATH:$HOME/bin"
 
-export LC_ALL=en_US.UTF-8  
-export LANG=en_US.UTF-8
+# Python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -61,11 +75,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# ----------------------------------- Tmux ------------------------------------
 # Activate conda when starting a new tmux session
 [[ -z $TMUX ]] || conda deactivate; conda activate base
 
+# ------------------------------- Highlighting --------------------------------
 # Syntax highlighting (must be at the end of the file)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-export PATH="$HOME/.poetry/bin:$PATH"
