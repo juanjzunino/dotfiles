@@ -1,6 +1,3 @@
-" Neovim config file
-set nocompatible
-
 " -------------------------------- Plugins -----------------------------------
 call plug#begin()
 
@@ -41,7 +38,6 @@ Plug 'cespare/vim-toml'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
-Plug 'dag/vim-fish'
 Plug 'tmux-plugins/vim-tmux'
 
 " Color schemes
@@ -51,6 +47,8 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 " ---------------------------- Editor Settings -------------------------------
+set nocompatible
+
 " Syntax highlighting
 syntax on
 
