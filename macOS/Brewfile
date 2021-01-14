@@ -1,24 +1,24 @@
 # Taps
-tap 'homebrew/cask'
 tap 'homebrew/bundle'
+tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 
 # Shells
 brew 'bash'
 brew 'zsh'
 
-# Shell enhancements
+# Shell plugins
 brew 'bash-completion'
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
 # Development
+brew 'go'
+brew 'node'
 brew 'python'
 brew 'r'
-brew 'go'
 brew 'rustup'
-brew 'node'
 
 # Editor
 brew 'neovim'       # Main text editor
@@ -26,8 +26,8 @@ brew 'vim'          # Update pre-installed version
 cask 'sublime-text' # Alternative text editor
 
 # IDE
-cask 'pycharm'  # Python
 cask 'datagrip' # SQL
+cask 'pycharm'  # Python
 
 # Version control
 brew 'git'
@@ -37,30 +37,33 @@ cask 'alacritty'  # Main terminal emulator
 cask 'iterm2'     # Alternative terminal emulator
 
 # Browser
-cask 'firefox'            # Main browser
-cask 'google-chrome'      # Alternative browser
+cask 'firefox'        # Main browser
+cask 'google-chrome'  # Alternative browser
 
 # Binaries
-brew 'autojump'  # Frequent directories
-brew 'exa'       # A modern replacement for ls
-brew 'htop'      # Monitor system processes
-brew 'neofetch'  # Notebook specs
-brew 'pandoc'    # Swiss-army knife
-brew 'ranger'    # Console file manager
-brew 'stow'      # Symlinks manager
-brew 'tldr'      # Command's examples
-brew 'tmux'      # Terminal multiplexer
-brew 'tree'      # Display folder structure
-brew 'wget'      # Download files
+brew 'autojump'   # Frequent directories
+brew 'exa'        # A modern replacement for ls
+brew 'htop'       # Monitor system processes
+brew 'neofetch'   # Notebook specs
+brew 'pandoc'     # Swiss-army knife
+brew 'ranger'     # Console file manager
+brew 'ripgrep'    # Search tool like grep and The Silver Searcher
+brew 'stow'       # Symlinks manager
+brew 'tldr'       # Command's examples
+brew 'tmux'       # Terminal multiplexer
+brew 'tree'       # Display folder structure
+brew 'wget'       # Download files
 brew 'youtube-dl' # Youtube downloader
 
 # Apps
 cask '1password'  # Password manager
 cask 'alfred'     # Main spotlight
+cask 'discord'    # Chat app
 cask 'dozer'      # Menu bar customization
 cask 'evernote'   # Note-taking app
 cask 'flux'       # Adjust screen brightness
 cask 'gephi'      # Graph visualization
+cask 'keybase'    # Chat app
 cask 'notion'     # Daily planner | Data collection | Notebook
 cask 'obsidian'   # Second brain
 cask 'rectangle'  # Window manager
@@ -70,9 +73,7 @@ cask 'spotify'    # Music app
 cask 'vagrant'    # Set up remote machines
 cask 'virtualbox' # Set up remote machines
 cask 'whatsapp'   # Personal messaging app
-cask 'discord'    # Chat app
-cask 'keybase'    # Chat app
-
+#
 # Fonts
 cask 'font-sauce-code-pro-nerd-font'
 
