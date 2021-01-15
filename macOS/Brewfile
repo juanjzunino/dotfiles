@@ -42,6 +42,7 @@ cask 'google-chrome'  # Alternative browser
 # Binaries
 brew 'autojump'   # Frequent directories
 brew 'exa'        # A modern replacement for ls
+brew 'fzf'        # Command-line fuzzy finder
 brew 'htop'       # Monitor system processes
 brew 'neofetch'   # Notebook specs
 brew 'pandoc'     # Swiss-army knife
