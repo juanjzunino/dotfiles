@@ -7,8 +7,7 @@ tap 'homebrew/cask-fonts'
 brew 'bash'
 brew 'zsh'
 
-# Shell plugins
-brew 'bash-completion'
+# Zsh plugins
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
@@ -70,6 +69,7 @@ cask 'rectangle'  # Window manager
 cask 'rstudio'    # IDE for R
 cask 'slack'      # Corporate messaging app
 cask 'spotify'    # Music app
+cask 'telegram'   # Messaging app with a focus on speed and security
 cask 'vagrant'    # Set up remote machines
 cask 'virtualbox' # Set up remote machines
 cask 'whatsapp'   # Personal messaging app
