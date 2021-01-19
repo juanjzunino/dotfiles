@@ -30,7 +30,7 @@ zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git:*' formats "%F{242} (%b%f%{$fg[red]%}%u%{$fg[cyan]%}%c%F{242})%f"
 setopt PROMPT_SUBST
-PS1='%{$fg[red]%}[$fg[yellow]%}jjz%F{172}::%f%{$fg[blue]%}%m %{$fg[green]%}%1~$f%{$fg[red]%}]${vcs_info_msg_0_}%{$reset_color%} '
+PS1='$fg[yellow]%}jjz %F{172}::%f %{$fg[blue]%}%1~${vcs_info_msg_0_}%{$reset_color%} $f%{$fg[red]%}| '
 
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
