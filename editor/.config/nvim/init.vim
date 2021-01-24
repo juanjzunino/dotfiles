@@ -9,7 +9,6 @@ Plug 'justinmk/vim-sneak'
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdtree'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -45,6 +44,19 @@ Plug 'chriskempson/base16-vim'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+if isdirectory($HOME . "/.config/nvim/plugged/coc.nvim")
+    call coc#add_extension(
+       \'coc-explorer',
+       \'coc-git',
+       \'coc-json',
+       \'coc-yaml',
+       \'coc-highlight',
+       \'coc-jedi',
+       \'coc-rls',
+       \'coc-sh',
+     \)
+endif
 
 " ------------------------------ Editor Settings ------------------------------
 set nocompatible
@@ -309,13 +321,13 @@ nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Show actions available at this location
 nnoremap <silent> <space>a  :CocAction<cr>
 
+" File explorer
+nmap <Leader>n :CocCommand explorer<CR>
+
 " FZF
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
 let g:fzf_layout = { 'down': '~20%' }
-
-" NerdTREE
-noremap <Leader>n :NERDTreeToggle<CR>
 
 " Markdown
 let g:vim_markdown_frontmatter = 1
