@@ -17,7 +17,6 @@ window:
 
 window.dynamic_title: true
 
-
 # Font configuration 
 font:
   normal:
@@ -41,10 +40,6 @@ font:
   glyph_offset:
     x: 0
     y: 0
-
-  scale_with_dpi: true
-  use_thin_strokes: true # [macOS only]
-
 
 # Colors (Base16 Gruvbox Dark Hard)
 colors:
@@ -84,30 +79,20 @@ colors:
     - { index: 20, color: '#bdae93' }
     - { index: 21, color: '#ebdbb2' }
 
-# draw_bold_text_with_bright_colors: true
- 
- 
 # Cursor configuration
 cursor_style: Block
 unfocused_hollow_cursor: true
 custom_cursor_colors: false
 
-
 # Mouse configuration
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
-  
 
-# Scrolling coniguration
+# Scrolling configuration
 scrolling:
   history: 10000
   multiplier: 3
-
- 
-# Mouse bindings
-# mouse_bindings:
-#   - { mouse: Middle, action: PasteSelection }
 
 # Key bindings
 key_bindings:
