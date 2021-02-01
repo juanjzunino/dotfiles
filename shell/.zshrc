@@ -30,7 +30,7 @@ zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git:*' formats "%F{242} (%b%f%{$fg[red]%}%u%{$fg[cyan]%}%c%F{242})%f"
 setopt PROMPT_SUBST
-PS1='$fg[yellow]%}jjz %F{172}::%f %{$fg[blue]%}%1~${vcs_info_msg_0_}%{$reset_color%} $f%{$fg[red]%}| '
+PS1='%{$fg[yellow]%}jjz %F{172}::%f %{$fg[blue]%}%1~${vcs_info_msg_0_}%{$reset_color%} $f%{$fg[red]%}| '
 
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
@@ -43,11 +43,11 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Completions
-autoload -Uz compinit && compinit -i
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-_comp_options_+=(globdots)
-FPATH=/usr/local/share/zsh-completions:$FPATH
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    autoload -Uz compinit
+    compinit
+fi
 
 # ----------------------------------- Path ------------------------------------
 # Rust
