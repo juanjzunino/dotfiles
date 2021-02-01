@@ -51,7 +51,6 @@ if isdirectory($HOME . "/.config/nvim/plugged/coc.nvim")
        \'coc-git',
        \'coc-json',
        \'coc-yaml',
-       \'coc-highlight',
        \'coc-jedi',
        \'coc-rls',
        \'coc-sh',
