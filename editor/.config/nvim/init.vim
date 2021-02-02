@@ -39,9 +39,8 @@ Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
 Plug 'tmux-plugins/vim-tmux'
 
-" Colorschemes
+" Colorscheme
 Plug 'chriskempson/base16-vim'
-Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -133,7 +132,7 @@ set updatetime=300
 set undodir=~/.config/nvim/undodir
 set undofile
 
-" Colorscheme
+" Colorscheme (Base16 - Gruvbox Dark Hard)
 if !has('gui_running')
   set t_Co=256
 endif
