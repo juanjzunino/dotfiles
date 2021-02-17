@@ -3,78 +3,70 @@ tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 
-# Shells
+# Browser
+cask 'firefox'
+cask 'google-chrome'
+
+# Terminal, shells and plugins
+cask 'alacritty'
+cask 'iterm2'
 brew 'bash'
 brew 'zsh'
-
-# Zsh plugins
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
 # Development
+brew 'git'
+brew 'python'
+brew 'rustup'
 brew 'go'
 brew 'node'
-brew 'python'
 brew 'r'
-brew 'rustup'
+cask 'rstudio'
+cask 'virtualbox'
+cask 'vagrant'
 
-# Editor
-brew 'neovim'       # Main text editor
-brew 'vim'          # Update pre-installed version
-cask 'sublime-text' # Alternative text editor
+# Editors and IDEs
+brew 'neovim'
+brew 'vim'
+cask 'sublime-text'
+cask 'pycharm'
+cask 'datagrip'
+cask 'gephi'
 
-# IDE
-cask 'datagrip' # SQL
-cask 'pycharm'  # Python
-
-# Version control
-brew 'git'
-
-# Terminal
-cask 'alacritty'  # Main terminal emulator
-cask 'iterm2'     # Alternative terminal emulator
-
-# Browser
-cask 'firefox'        # Main browser
-cask 'google-chrome'  # Alternative browser
+# Productivity tools
+cask 'notion'
+cask 'typora'
+cask 'slack'
 
 # Binaries
-brew 'autojump'   # Frequent directories
-brew 'exa'        # A modern replacement for ls
-brew 'fzf'        # Command-line fuzzy finder
-brew 'htop'       # Monitor system processes
-brew 'neofetch'   # Notebook specs
-brew 'pandoc'     # Swiss-army knife
-brew 'ranger'     # Console file manager
-brew 'ripgrep'    # Search tool like grep and The Silver Searcher
-brew 'stow'       # Symlinks manager
-brew 'tldr'       # Command's examples
-brew 'tmux'       # Terminal multiplexer
-brew 'tree'       # Display folder structure
-brew 'wget'       # Download files
-brew 'youtube-dl' # Youtube downloader
+brew 'autojump'
+brew 'exa'
+brew 'fzf'
+brew 'htop'
+brew 'neofetch'
+brew 'pandoc'
+brew 'ranger'
+brew 'ripgrep'
+brew 'stow'
+brew 'tldr'
+brew 'tmux'
+brew 'tree'
+brew 'wget'
+brew 'youtube-dl'
 
 # Apps
-cask '1password'  # Password manager
-cask 'alfred'     # Main spotlight
-cask 'discord'    # Chat app
-cask 'dozer'      # Menu bar customization
-cask 'evernote'   # Note-taking app
-cask 'flux'       # Adjust screen brightness
-cask 'gephi'      # Graph visualization
-cask 'keybase'    # Chat app
-cask 'notion'     # Daily planner | Data collection | Notebook
-cask 'typora'     # Markdown previewer
-cask 'rectangle'  # Window manager
-cask 'rstudio'    # IDE for R
-cask 'slack'      # Corporate messaging app
-cask 'spotify'    # Music app
-cask 'telegram'   # Messaging app with a focus on speed and security
-cask 'vagrant'    # Set up remote machines
-cask 'virtualbox' # Set up remote machines
-cask 'whatsapp'   # Personal messaging app
-#
+cask '1password'
+cask 'alfred'
+cask 'dozer'
+cask 'flux'
+cask 'keybase'
+cask 'rectangle'
+cask 'spotify'
+cask 'telegram'
+cask 'whatsapp'
+
 # Fonts
 cask 'font-sauce-code-pro-nerd-font'
 
