@@ -65,7 +65,7 @@ cask 'flux'       # Adjust screen brightness
 cask 'gephi'      # Graph visualization
 cask 'keybase'    # Chat app
 cask 'notion'     # Daily planner | Data collection | Notebook
-cask 'obsidian'   # Second brain
+cask 'typora'     # Markdown previewer
 cask 'rectangle'  # Window manager
 cask 'rstudio'    # IDE for R
 cask 'slack'      # Corporate messaging app
