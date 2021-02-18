@@ -3,6 +3,7 @@ alias vim='nvim'
 
 # Open files
 alias finder="open -R"
+alias typora="open -a typora"
 
 # Listing options
 alias ls="exa -a"
