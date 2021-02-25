@@ -58,7 +58,6 @@ brew 'youtube-dl'
 
 # Apps
 cask '1password'
-cask 'alfred'
 cask 'dozer'
 cask 'flux'
 cask 'keybase'
