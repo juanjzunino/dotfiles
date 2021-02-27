@@ -79,7 +79,3 @@ unset __conda_setup
 # Activate conda when starting a new tmux session
 [[ -z $TMUX ]] || conda deactivate; conda activate base
 
-# ------------------------------- Highlighting --------------------------------
-# Syntax highlighting (must be at the end of the file)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
