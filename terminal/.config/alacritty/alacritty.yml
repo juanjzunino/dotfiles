@@ -11,7 +11,7 @@ window:
 
   padding:
     x: 5
-    y: 5
+    y: 3
 
   decorations: buttonless
 
@@ -41,43 +41,35 @@ font:
     x: 0
     y: 0
 
-# Colors (Base16 Gruvbox Dark Hard)
+# Colors (Solarized)
 colors:
   primary:
-    background: '#1d2021'
-    foreground: '#d5c4a1'
+    background: '#002b36' # base03
+    foreground: '#839496' # base0
 
   cursor:
-    text: '#1d2021'
-    cursor: '#d5c4a1'
+    text:   '#002b36' # base03
+    cursor: '#839496' # base0
 
   normal:
-    black:   '#1d2021'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#d5c4a1'
+    black:   '#073642' # base02
+    red:     '#dc322f' # red
+    green:   '#859900' # green
+    yellow:  '#b58900' # yellow
+    blue:    '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan:    '#2aa198' # cyan
+    white:   '#eee8d5' # base2
 
   bright:
-    black:   '#665c54'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#fbf1c7'
-
-  indexed_colors:
-    - { index: 16, color: '#fe8019' }
-    - { index: 17, color: '#d65d0e' }
-    - { index: 18, color: '#3c3836' }
-    - { index: 19, color: '#504945' }
-    - { index: 20, color: '#bdae93' }
-    - { index: 21, color: '#ebdbb2' }
+    black:   '#002b36' # base03
+    red:     '#cb4b16' # orange
+    green:   '#586e75' # base01
+    yellow:  '#657b83' # base00
+    blue:    '#839496' # base0
+    magenta: '#6c71c4' # violet
+    cyan:    '#93a1a1' # base1
+    white:   '#fdf6e3' # base3
 
 # Cursor configuration
 cursor_style: Block

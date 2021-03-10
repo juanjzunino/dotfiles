@@ -40,7 +40,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'tmux-plugins/vim-tmux'
 
 " Colorscheme
-Plug 'chriskempson/base16-vim'
+Plug 'overcache/NeoSolarized'
 
 call plug#end()
 
@@ -132,15 +132,13 @@ set updatetime=300
 set undodir=~/.config/nvim/undodir
 set undofile
 
-" Colorscheme (Base16 - Gruvbox Dark Hard)
+" Colorscheme (Solarized)
 if !has('gui_running')
   set t_Co=256
 endif
 set termguicolors
 set background=dark
-let base16colorspace=256
-colorscheme base16-gruvbox-dark-hard
-" :hi Comment guifg=#fabd2f
+colorscheme NeoSolarized
 
 " --------------------------------- Mappings ----------------------------------
 " Open config file
@@ -345,6 +343,7 @@ autocmd! User GoyoLeave Limelight!
 
 " Lightline
 let g:lightline = {
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
