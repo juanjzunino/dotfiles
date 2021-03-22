@@ -1,6 +1,8 @@
 " ---------------------------------- Plugins ----------------------------------
 call plug#begin()
 
+" Chequeo
+
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
