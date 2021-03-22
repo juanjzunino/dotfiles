@@ -37,18 +37,6 @@ Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
-if isdirectory($HOME . "/.config/nvim/plugged/coc.nvim")
-    call coc#add_extension(
-       \'coc-explorer',
-       \'coc-git',
-       \'coc-json',
-       \'coc-yaml',
-       \'coc-jedi',
-       \'coc-rls',
-       \'coc-sh',
-     \)
-endif
-
 " ------------------------------ Editor Settings ------------------------------
 set nocompatible
 
