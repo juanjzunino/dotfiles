@@ -13,5 +13,3 @@ Requirements:
 - Stow
 - Homebrew
 - macOS
-
-Don't forget to check the ![references](https://github.com/juanjzunino/dotfiles/blob/master/references.md) section.

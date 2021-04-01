@@ -1,12 +1,9 @@
 " ---------------------------------- Plugins ----------------------------------
 call plug#begin()
 
-" Chequeo
-
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'justinmk/vim-sneak'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -21,15 +18,27 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 
+" Startify
+Plug 'mhinz/vim-startify'
+
 " Writing
 Plug 'junegunn/goyo.vim'  
 Plug 'junegunn/limelight.vim'  
-Plug 'godlygeek/tabular'
 
 " Text manipulation
 Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
 
-" Tree-Sitter
+" Lsp
+Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'kabouzeid/nvim-lspinstall'
+" Plug 'onsails/lspkind-nvim'  # Nice symbols
+
+" Autocomplete
+Plug 'hrsh7th/nvim-compe'
+
+" Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Colorscheme
@@ -37,37 +46,49 @@ Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
+" ------------------------------ LSP Settings ---------------------------------
+" Tree-Sitter
+luafile ~/.config/nvim/treesitter.lua
+
+" LSP
+" npm i -g pyright
+lua require'lspconfig'.pyright.setup{}
+
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+
+" Compe
+luafile ~/.config/nvim/compe.lua
+" luafile ~/.config/nvim/lua/compe.lua
+
 " ------------------------------ Editor Settings ------------------------------
+" General
 set nocompatible
-
-" Syntax highlighting
 syntax on
-
-" Leader key
 let mapleader = " "
-
-" Set encoding
+filetype plugin indent on
 set encoding=utf-8
-
-" Set spelling
 set nospell
 set spelllang=en,es
+set completeopt=menuone,noselect
 
-" Lines (relative) numbers
-set number
-set relativenumber
-
-" Tabs settings
+" Writing
 set tabstop=4 softtabstop=4
 set shiftwidth=4 
 set expandtab
 set smartindent
-
-" Soft wrapping text
 set linebreak
 set nowrap
+set nofoldenable
 
-" Search settings
+" Search
 set ignorecase
 set smartcase
 set incsearch
@@ -77,12 +98,13 @@ set hlsearch
 set backspace=indent,eol,start
 
 " GUI
+set number
+set relativenumber
 set showcmd
 set cmdheight=2
 set laststatus=2
 set noshowmode
 set scrolloff=8
-set nofoldenable
 set ttyfast
 set synmaxcol=500
 set wildmenu
@@ -91,29 +113,20 @@ set cursorline
 set mouse+=a
 set signcolumn=yes
 set colorcolumn=80
-
-" Splits
 set splitbelow splitright
-
-" File type detection
-filetype plugin indent on
 
 " No swap files
 set noswapfile
 set nobackup
 set nowritebackup
-
-" Buffers
 set hidden
+set undodir=~/.config/nvim/undodir
+set undofile
 
 " Completions
 set updatetime=300
 
-" Undo
-set undodir=~/.config/nvim/undodir
-set undofile
-
-" Colorscheme (Solarized)
+" Colorscheme (Gruvbox Base16)
 if !has('gui_running')
   set t_Co=256
 endif
@@ -136,6 +149,7 @@ nnoremap <Leader>sc :set spell!<CR>
 
 " Yank to clipboard
 vnoremap y "*y
+nnoremap y "*y
 
 " Jump to start and end of line using the home row keys
 map H ^
@@ -156,8 +170,10 @@ nnoremap <leader><leader> <c-^>
 nnoremap <leader>cb :bd<cr>
 
 " Tab key indentation
-vnoremap <Tab> >
-vnoremap <S-Tab> <
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+vnoremap > >gv
+vnoremap < <gv
 
 " Unbind for tmux
 map <C-a> <Nop>
@@ -218,7 +234,7 @@ augroup writing
 augroup END
 
 " ------------------------------ Plugin Settings ------------------------------
-"""" Secure modeline
+" Secure modeline
 let g:secure_modelines_allowed_items = [
                 \ "textwidth",   "tw",
                 \ "softtabstop", "sts",
@@ -236,12 +252,6 @@ let g:secure_modelines_allowed_items = [
 map <C-p> :Files<CR>
 nmap <leader>; :Buffers<CR>
 let g:fzf_layout = { 'down': '~20%' }
-
-" Markdown
-let g:vim_markdown_frontmatter = 1
-
-" Python highlighting
-let g:python_highlight_all = 1
 
 " Vim Sneak
 let g:sneak#s_next = 1
@@ -268,5 +278,4 @@ let g:lightline = {
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
-
 
