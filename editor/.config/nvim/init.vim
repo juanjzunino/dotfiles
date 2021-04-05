@@ -11,14 +11,7 @@ Plug 'machakann/vim-highlightedyank'
 
 " Git
 Plug 'tpope/vim-fugitive'
-
-" Search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
-
-" Startify
-Plug 'mhinz/vim-startify'
 
 " Writing
 Plug 'junegunn/goyo.vim'  
@@ -57,41 +50,14 @@ Plug 'nvim-telescope/telescope.nvim'
 " Colorscheme
 Plug 'chriskempson/base16-vim'
 
-
 call plug#end()
 
 " ------------------------------ LSP Settings ---------------------------------
 " Tree-Sitter
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {'python',
-                      'rust',
-                      'go',
-                      'lua',
-                      'typescript',
-                      'javascript',
-                      'latex',
-                      'bash',
-                      'comment',
-                      'json',
-                      'yaml',
-                      'toml'},
-  highlight = { enable = true }
-}
-EOF
-
+lua require('nv-treesitter')
 
 " LSP
-" npm i -g pyright
-" lua require'lspconfig'.pyright.setup{}
-lua <<EOF
-require'lspinstall'.setup() -- important
-
-local servers = require'lspinstall'.installed_servers()
-for _, server in pairs(servers) do
-  require'lspconfig'[server].setup{}
-end
-EOF
+lua require('nv-lsp')
 
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -103,73 +69,7 @@ nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 " Compe
-lua <<EOF
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  documentation = true;
-
-  source = {
-    path = true;
-    buffer = true;
-    calc = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
-  };
-}
-
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
-local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        return true
-    else
-        return false
-    end
-end
-
--- Use (s-)tab to:
---- move to prev/next item in completion menuone
---- jump to prev/next snippet's placeholder
-_G.tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
-  elseif vim.fn.call("vsnip#available", {1}) == 1 then
-    return t "<Plug>(vsnip-expand-or-jump)"
-  elseif check_back_space() then
-    return t "<Tab>"
-  else
-    return vim.fn['compe#complete']()
-  end
-end
-_G.s_tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
-  elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
-    return t "<Plug>(vsnip-jump-prev)"
-  else
-    return t "<S-Tab>"
-  end
-end
-
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-EOF
+lua require('nv-compe')
 
 " File Explorer
 nnoremap <C-n> :NvimTreeToggle<CR>
@@ -177,9 +77,9 @@ nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
 " Bar
-nnoremap <silent> <A-,> :BufferPrevious<CR>
-nnoremap <silent> <A-.> :BufferNext<CR>
-nnoremap <silent> <A-c> :BufferClose<CR>
+" nnoremap <silent> <A-,> :BufferPrevious<CR>
+" nnoremap <silent> <A-.> :BufferNext<CR>
+" nnoremap <silent> <A-c> :BufferClose<CR>
 
 " ------------------------------ Editor Settings ------------------------------
 " General
@@ -361,34 +261,9 @@ let g:secure_modelines_allowed_items = [
                 \ "colorcolumn"
                 \ ]
 
-" FZF
-map <C-p> :Files<CR>
-nmap <leader>; :Buffers<CR>
-let g:fzf_layout = { 'down': '~20%' }
-
-" Vim Sneak
-let g:sneak#s_next = 1
-
 " Goyo
 nnoremap <C-g> :Goyo<CR>
 
 " Limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
-" Lightline
-" let g:lightline = {
-"       \ 'active': {
-"       \   'left': [ [ 'mode', 'paste' ],
-"       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-"       \ },
-"       \ 'component_function': {
-"       \   'filename': 'LightlineFilename',
-"       \ }
-"       \ }
-
-" " Retrieve filename
-" function! LightlineFilename()
-"   return expand('%:t') !=# '' ? @% : '[No Name]'
-" endfunction
-
