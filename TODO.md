@@ -16,7 +16,6 @@
     - [ ] Finish configuration in lua folder
 
 - [X] Install telescope
-    - [ ] Configure telescope settings in init.vim
     - [ ] Finish configuration in lua folder
 
 - [ ] Statusline and tab bar
@@ -41,6 +40,6 @@
         - [ ] Goyo and limelight
 
 - [ ] Lua
-    - [ ] Source all lua files from init.vim
+    - [X] Source all lua files from init.vim
     - [ ] Move from init.vim to init.lua
     - [ ] Modularize lua files

@@ -40,7 +40,7 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true})
 
 -- Ctrl+h to stop searching
-vim.api.nvim_set_keymap('n', '<C-h>', ':nohlsearch<Cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-h>', ':nohlsearch<CR>', {noremap = true})
 
 -- Search functionality
 vim.api.nvim_set_keymap('n', '?', '?\\v', {noremap = true})
@@ -52,5 +52,24 @@ vim.api.nvim_set_keymap('n', '#', '#zz', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'g*', 'g*zz', {noremap = true, silent = true})
 
 -- TEMPORARY
-vim.api.nvim_set_keymap('n', '<leader>cf', ':e $MYVIMRC<Cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>sc', ':set spell!<Cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>cf', ':e $MYVIMRC<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>sc', ':set spell!<CR>', {noremap = true})
+
+-- compe
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-n>', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true})
+
+-- nvim-tree
+vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>n', ':NvimTreeFindFile<CR>', {noremap = true})
+
+-- goyo
+vim.api.nvim_set_keymap('n', '<C-g>', ':Goyo<CR>', {noremap = true})
+
