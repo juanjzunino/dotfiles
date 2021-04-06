@@ -83,69 +83,9 @@ nnoremap <leader>n :NvimTreeFindFile<CR>
 
 " ------------------------------ Editor Settings ------------------------------
 " General
-set nocompatible
-syntax on
-let mapleader = " "
-filetype plugin indent on
-set encoding=utf-8
-set nospell
-set spelllang=en,es
-set completeopt=menuone,noselect
-
-" Writing
-set tabstop=4 softtabstop=4
-set shiftwidth=4 
-set expandtab
-set smartindent
-set linebreak
-set nowrap
-set nofoldenable
-
-" Search
-set ignorecase
-set smartcase
-set incsearch
-set hlsearch
-
-" Backspace works now
-set backspace=indent,eol,start
-
-" GUI
-set number
-set relativenumber
-set showcmd
-set cmdheight=2
-set laststatus=2
-set noshowmode
-set scrolloff=8
-set ttyfast
-set synmaxcol=500
-set wildmenu
-set shortmess+=c
-set cursorline
-set mouse+=a
-set signcolumn=yes
-set colorcolumn=80
-set splitbelow splitright
-
-" No swap files
-set noswapfile
-set nobackup
-set nowritebackup
-set hidden
-set undodir=~/.config/nvim/undodir
-set undofile
-
-" Completions
-set updatetime=300
-
-" Colorscheme (Gruvbox Base16)
-if !has('gui_running')
-  set t_Co=256
-endif
-set termguicolors
-let base16colorspace=256
-colorscheme base16-gruvbox-dark-hard
+lua require('settings')
+lua require('keymappings')
+lua require('Colorscheme')
 
 " --------------------------------- Mappings ----------------------------------
 " Open config file
@@ -159,10 +99,6 @@ map q: :q
 
 " Set spell check
 nnoremap <Leader>sc :set spell!<CR>
-
-" Yank to clipboard
-vnoremap y "*y
-nnoremap y "*y
 
 " Jump to start and end of line using the home row keys
 map H ^

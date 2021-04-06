@@ -26,9 +26,11 @@
     - [ ] FInish configuration in lua folder
 
 - [ ] General settings
-    - [ ] Vim settings in individual lua file
+    - [X] Vim settings in individual lua file
+    - [ ] Research about folding in nvim
     - [ ] Key-mappings in individual lua file
     - [ ] Auto-commands in individual lua file
+    - [X] Colorscheme
 
 - [ ] Plugins
     - [X] Install packer
