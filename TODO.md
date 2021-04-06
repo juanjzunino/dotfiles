@@ -22,7 +22,7 @@
     - [X] Install barbar
     - [ ] Finish configuration in lua folder
     - [ ] Install new statusline written in lua
-    - [ ] FInish configuration in lua folder
+    - [ ] Finish configuration in lua folder
 
 - [ ] General settings
     - [X] Vim settings in individual lua file
@@ -35,11 +35,9 @@
     - [X] Install packer
     - [ ] Check how to automatically install packer in new machines
     - [ ] Research about neutron
-    - [ ] Get rid of unused plugins
-        - [ ] highlighted yank
-        - [ ] Goyo and limelight
+    - [X] Get rid of unused plugins
 
-- [ ] Lua
+- [X] Lua
     - [X] Source all lua files from init.vim
-    - [ ] Move from init.vim to init.lua
-    - [ ] Modularize lua files
+    - [X] Move from init.vim to init.lua
+    - [X] Modularize lua files

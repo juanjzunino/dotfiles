@@ -1,4 +1,3 @@
--- vim.cmd [[packadd packer.nvim]]
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -9,9 +8,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
     execute 'packadd packer.nvim'
 end
 
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
+vim.cmd('autocmd BufWritePost plugins.lua PackerCompile') -- Auto compile when there are changes in plugins.lua
 
--- require('packer').init({display = {non_interactive = true}})
+require('packer').init({display = {non_interactive = true}})
 require('packer').init({display = {auto_clean = false}})
 
 return require('packer').startup(function(use)
@@ -60,35 +59,12 @@ return require('packer').startup(function(use)
     -- Color
     use 'chriskempson/base16-vim'
 
-    -- Git
-    -- use 'TimUntersberger/neogit'
-    -- use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
-    -- use 'f-person/git-blame.nvim'
-    -- use 'tpope/vim-fugitive'
-    -- use 'tpope/vim-rhubarb'
-
-    -- Navigation
-    -- use 'unblevable/quick-scope' -- hop may replace you
-    -- use 'phaazon/hop.nvim'
-    -- use 'kevinhwang91/rnvimr' -- telescope may fully replace you
-
     -- General Plugins
-    -- use 'liuchengxu/vim-which-key'
-    -- use 'kevinhwang91/nvim-bqf'
-    -- use 'airblade/vim-rooter'
-    -- use 'ChristianChiarulli/dashboard-nvim'
-    -- use 'metakirby5/codi.vim'
-    -- use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
-    -- use 'voldikss/vim-floaterm'
-    -- use 'terrortylor/nvim-comment'
-    -- use 'monaqa/dial.nvim'
-    -- use 'junegunn/goyo.vim'
-    -- use 'andymass/vim-matchup'
-    -- use 'MattesGroeger/vim-bookmarks'
-    -- use 'windwp/nvim-autopairs'
-    -- use 'mbbill/undotree'
-
-    -- Documentation Generator
-    -- use {'kkoomen/vim-doge', run = ':call doge#install()'}
+    use 'itchyny/lightline.vim'
+    use 'machakann/vim-highlightedyank'
+    use 'tpope/vim-fugitive'
+    use 'airblade/vim-rooter'
+    use 'tpope/vim-commentary'
+    use 'godlygeek/tabular'
 
 end)
