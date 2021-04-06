@@ -2,8 +2,6 @@
 .DS_Store
 
 # Nvim
-editor/.config/nvim/plugged/
-editor/.config/nvim/undodir/
 editor/.config/nvim/spell/
 
 # Homebrew
