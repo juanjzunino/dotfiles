@@ -1,10 +1,6 @@
 " ---------------------------------- Plugins ----------------------------------
 call plug#begin()
 
-" VIM enhancements
-Plug 'ciaranm/securemodelines'
-Plug 'editorconfig/editorconfig-vim'
-
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
@@ -88,80 +84,6 @@ lua require('keymappings')
 lua require('Colorscheme')
 
 " --------------------------------- Mappings ----------------------------------
-" Open config file
-nnoremap <leader>cf :e $MYVIMRC<cr>
-
-" Disable Ex Mode
-nmap Q <Nop>
-
-" Quit w/ q:
-map q: :q
-
-" Set spell check
-nnoremap <Leader>sc :set spell!<CR>
-
-" Jump to start and end of line using the home row keys
-map H ^
-map L $
-
-" Move by line
-nnoremap j gj
-nnoremap k gk
-
-" Move block up or down
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '>+1<CR>gv-gv
-
-" Toggles between buffers
-nnoremap <leader><leader> <c-^>
-
-" Close buffer
-nnoremap <leader>cb :bd<cr>
-
-" Tab key indentation
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
-vnoremap > >gv
-vnoremap < <gv
-
-" Unbind for tmux
-map <C-a> <Nop>
-map <C-x> <Nop>
-
-" Split panes tmux style
-nnoremap <Leader>- :sp<CR>
-nnoremap <Leader>\| :vsp<CR>
-
-" Move easily between panes
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-
-" Ctrl+h to stop searching
-vnoremap <C-h> :nohlsearch<cr>
-nnoremap <C-h> :nohlsearch<cr>
-
-" Very magic by default
-nnoremap ? ?\v
-nnoremap / /\v
-
-" Search results centered
-nnoremap <silent> n nzz
-nnoremap <silent> N Nzz
-nnoremap <silent> * *zz
-nnoremap <silent> # #zz
-nnoremap <silent> g* g*zz
-
-" Avoid bad habits
-nnoremap <Left>  <nop>
-nnoremap <Right> <nop>
-nnoremap <Up>    <nop>
-nnoremap <Down>  <nop>
-inoremap <Left>  <nop>
-inoremap <Right> <nop>
-inoremap <Up>    <nop>
-inoremap <Down>  <nop>
 
 " ------------------------------- Autocommands --------------------------------
 " Prevent accidental writes to buffers that shouldn't be edited
@@ -183,20 +105,6 @@ augroup writing
 augroup END
 
 " ------------------------------ Plugin Settings ------------------------------
-" Secure modeline
-let g:secure_modelines_allowed_items = [
-                \ "textwidth",   "tw",
-                \ "softtabstop", "sts",
-                \ "tabstop",     "ts",
-                \ "shiftwidth",  "sw",
-                \ "expandtab",   "et",   "noexpandtab", "noet",
-                \ "filetype",    "ft",
-                \ "foldmethod",  "fdm",
-                \ "readonly",    "ro",   "noreadonly", "noro",
-                \ "rightleft",   "rl",   "norightleft", "norl",
-                \ "colorcolumn"
-                \ ]
-
 " Goyo
 nnoremap <C-g> :Goyo<CR>
 

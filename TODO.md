@@ -37,8 +37,6 @@
     - [ ] Check how to automatically install packer in new machines
     - [ ] Research about neutron
     - [ ] Get rid of unused plugins
-        - [ ] Secure modelines
-        - [ ] editor config
         - [ ] highlighted yank
         - [ ] Goyo and limelight
 
