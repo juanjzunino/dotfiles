@@ -3,8 +3,7 @@
 Configurations files:
 - Bash
 - Zsh
-- Vim
-- Nvim (main editor)
+- Nvim
 - Alacritty
 - Tmux
 
