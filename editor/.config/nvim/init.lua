@@ -8,6 +8,7 @@ require('plugins')
 -- Plugins
 require('nv-treesitter')
 require('nv-compe')
+require('nv-telescope')
 require('nv-nvimtree')
 
 -- LSP
