@@ -1,3 +1,7 @@
+-- Globals
+DATA_PATH = vim.fn.stdpath('data')
+CACHE_PATH = vim.fn.stdpath('cache')
+
 -- General
 vim.cmd("syntax on") -- Chequear si no viene ya dado
 vim.o.fileencoding = "utf-8"

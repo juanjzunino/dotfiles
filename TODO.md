@@ -8,7 +8,7 @@
 
 - [X] Install lsp-config, lsp-saga, lsp-install, lsp-kind
     - [X] Configure lsp settings in init.vim
-    - [ ] Install language servers for python, zsh, rust, etc..
+    - [X] Install language servers for python, zsh, rust, etc..
     - [ ] Finish configuration in lua folder
 
 - [X] Install nvim-compe
@@ -28,7 +28,7 @@
     - [X] Vim settings in individual lua file
     - [ ] Research about folding in nvim
     - [X] Key-mappings in individual lua file
-    - [ ] Auto-commands in individual lua file
+    - [X] Auto-commands in individual lua file
     - [X] Colorscheme
 
 - [ ] Plugins
