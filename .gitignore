@@ -3,7 +3,7 @@
 
 # Nvim
 editor/.config/nvim/spell/
-editir/.config/nvim/plugin/
+editor/.config/nvim/plugin/
 
 # Homebrew
 macOS/Brewfile.lock.json
