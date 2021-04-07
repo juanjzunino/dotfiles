@@ -1,4 +1,3 @@
--- vim.cmd [[packadd packer.nvim]]
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -55,6 +54,10 @@ return require('packer').startup(function(use)
     }
     use 'nvim-telescope/telescope-media-files.nvim'
 
+    -- Icons
+    use 'kyazdani42/nvim-web-devicons'
+    use 'ryanoasis/vim-devicons'
+
     -- Color
     use 'chriskempson/base16-vim'
 
@@ -65,9 +68,5 @@ return require('packer').startup(function(use)
     use 'airblade/vim-rooter'
     use 'tpope/vim-commentary'
     use 'godlygeek/tabular'
-
-    -- Icons
-    use 'kyazdani42/nvim-web-devicons'
-    use 'ryanoasis/vim-devicons'
 
 end)
