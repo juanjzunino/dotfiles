@@ -15,6 +15,7 @@ require('lsp')
 require('lsp.python-ls')
 require('lsp.lua-ls')
 require('lsp.rust-ls')
+require('lsp.r-ls')
 require('lsp.bash-ls')
 require('lsp.latex-ls')
 
