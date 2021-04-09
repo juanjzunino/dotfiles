@@ -10,9 +10,7 @@ end
 
 local my = function(file) require(file) end
 
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
-
--- require('packer').init({display = {non_interactive = true}})
+vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 require('packer').init({display = {auto_clean = false}})
 
 return require('packer').startup(function(use)
@@ -34,11 +32,8 @@ return require('packer').startup(function(use)
 
     -- Treesitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    -- use 'p00f/nvim-ts-rainbow'
-    -- use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
-    -- use 'nvim-treesitter/playground'
-    -- use 'JoosepAlviste/nvim-ts-context-commentstring'
-    -- use 'windwp/nvim-ts-autotag'
+    use 'p00f/nvim-ts-rainbow'
+    use 'nvim-treesitter/playground'
 
     -- Explorer
     use 'kyazdani42/nvim-tree.lua'

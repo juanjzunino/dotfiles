@@ -1,22 +1,34 @@
 # TODO
 
 ### NVIM
-- [X] Install Tresitter
+- [ ] Treesitter
+    - [X] Install Tresitter
     - [X] Configure Treesitter in init.vim
     - [ ] Finish conguration in lua folder
     - [ ] Research about extensions of Tresitter
 
-- [X] Install lsp-config, lsp-saga, lsp-install, lsp-kind
+- [ ] LSP
+    - [X] Install lsp-config, lsp-saga, lsp-install, lsp-kind
     - [X] Configure lsp settings in init.vim
     - [X] Install language servers for python, zsh, rust, etc..
     - [ ] Finish configuration in lua folder
+	- [ ] lsp-config
+	- [ ] lsp-saga
+	- [ ] lsp-kind
+	- [ ] lspiinstall
 
-- [X] Install nvim-compe
+- [ ] Compe
+    - [X] Install nvim-compe
     - [X] Configure compe settings in init.vim
     - [ ] Finish configuration in lua folder
 
-- [X] Install telescope
-    - [ ] Finish configuration in lua folder
+- [X] Telescope
+    - [X] Install telescope
+    - [X] Finish configuration in lua folder
+
+- [X] Nvim-Tree
+    - [X] Install nvim-tree
+    - [X] Finish configuration in lua folder
 
 - [ ] Statusline and tab bar
     - [X] Install barbar
@@ -33,7 +45,7 @@
 
 - [ ] Plugins
     - [X] Install packer
-    - [ ] Check how to automatically install packer in new machines
+    - [X] Check how to automatically install packer in new machines
     - [ ] Research about neutron
     - [X] Get rid of unused plugins
 

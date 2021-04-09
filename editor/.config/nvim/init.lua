@@ -10,6 +10,7 @@ require('nv-treesitter')
 require('nv-compe')
 require('nv-telescope')
 require('nv-nvimtree')
+require('nv-lspkind')
 
 -- LSP
 require('lsp')
@@ -19,4 +20,3 @@ require('lsp.rust-ls')
 require('lsp.r-ls')
 require('lsp.bash-ls')
 require('lsp.latex-ls')
-
