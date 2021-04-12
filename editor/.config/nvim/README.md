@@ -6,6 +6,7 @@
     - [X] Configure Treesitter in init.vim
     - [X] Finish conguration in lua folder
     - [X] Research about extensions of Tresitter
+    - [ ] Integrate plugins with Treesitter
 
 - [ ] LSP
     - [X] Install lsp-config, lsp-saga, lsp-install, lsp-kind
