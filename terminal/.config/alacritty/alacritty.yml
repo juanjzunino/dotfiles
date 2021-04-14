@@ -109,6 +109,8 @@ key_bindings:
   - { key: K,        mods: Command, action: ClearHistory                 }
   - { key: K,        mods: Command, chars: "\x0c"                        }
   - { key: N,        mods: Command, action: "SpawnNewInstance"           }
+  - { key: Left,     mods: Alt,     chars: "\x1bb"                       }
+  - { key: Right,    mods: Alt,     chars: "\x1bf"                       }
 
 # Live config reload
 live_config_reload: true
