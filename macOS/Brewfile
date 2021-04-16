@@ -27,6 +27,7 @@ brew 'lua'
 cask 'rstudio'
 cask 'virtualbox'
 cask 'vagrant'
+brew 'efm-langserver'
 
 # Editors and IDEs
 brew 'neovim'
