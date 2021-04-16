@@ -14,7 +14,6 @@ brew 'zsh'
 brew 'fish'
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
-brew 'zsh-syntax-highlighting'
 
 # Development
 brew 'git'
@@ -41,7 +40,6 @@ cask 'gephi'
 cask 'notion'
 cask 'obsidian'
 cask 'slack'
-cask 'trello'
 
 # Binaries
 brew 'autojump'
