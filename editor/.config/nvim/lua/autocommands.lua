@@ -1,3 +1,5 @@
+local utils = require('nv-utils')
+
 -- Prevent accidental writes to buffers that shouldn't be edited
 vim.cmd('autocmd BufRead *.orig set readonly')
 vim.cmd('autocmd BufRead *.pacnew set readonly')
@@ -15,6 +17,15 @@ augroup writing
     autocmd Filetype markdown,tex,txt set wrap
 augroup END]], false)
 
--- " Limelight
--- autocmd! User GoyoEnter Limelight
--- autocmd! User GoyoLeave Limelight!
+local auto_formatters = {
+  -- python_autoformat =
+	{'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
+}
+
+utils.define_augroups({
+    _general_settings = {
+        {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'}
+    },
+    _auto_formatters = auto_formatters
+})
+

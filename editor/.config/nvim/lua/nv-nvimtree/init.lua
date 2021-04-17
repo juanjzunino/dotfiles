@@ -1,3 +1,8 @@
+vim.g.nvim_tree_hide_dotfiles = 0 -- Change to 1 when fully migrated to dotbot
+vim.g.nvim_tree_indent_markers = 1
+vim.g.nvim_tree_follow = 1
+vim.g.nvim_tree_auto_close = 1
+
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 vim.g.nvim_tree_bindings = {
     ["<CR>"] = tree_cb("edit"),

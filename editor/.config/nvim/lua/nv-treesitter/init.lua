@@ -1,15 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {'python',
-                      'rust',
-                      'go',
-                      'lua',
-                      'typescript',
-                      'javascript',
-                      'latex',
-                      'bash',
-                      'comment',
-                      'json',
-                      'yaml',
-                      'toml'},
-  highlight = { enable = true }
+  ensure_installed = 'all',
+  ignore_install = {'haskell'},
+  highlight = { enable = true },
 }

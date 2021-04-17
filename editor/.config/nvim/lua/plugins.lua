@@ -8,8 +8,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
     execute 'packadd packer.nvim'
 end
 
-local my = function(file) require(file) end
-
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 require('packer').init({display = {auto_clean = false}})
 
@@ -32,20 +30,18 @@ return require('packer').startup(function(use)
 
     -- Treesitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use 'p00f/nvim-ts-rainbow'
-    use 'nvim-treesitter/playground'
 
     -- Explorer
     use 'kyazdani42/nvim-tree.lua'
 
     -- Status Line and Bufferline
-    -- use 'glepnir/galaxyline.nvim'
-    -- use 'romgrk/barbar.nvim'
+    use 'romgrk/barbar.nvim'
+    use 'hoob3rt/lualine.nvim'
 
     -- Telescope
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    use { 'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/popup.nvim'},
+		    {'nvim-lua/plenary.nvim'}}
     }
     use 'nvim-telescope/telescope-media-files.nvim'
 
@@ -55,10 +51,12 @@ return require('packer').startup(function(use)
 
     -- Color
     use 'chriskempson/base16-vim'
+    use 'tjdevries/colorbuddy.vim'
+    use 'tjdevries/gruvbuddy.nvim'
+    use 'norcalli/nvim-colorizer.lua'
+
 
     -- General Plugins
-    use 'itchyny/lightline.vim'
-    use 'machakann/vim-highlightedyank'
     use 'tpope/vim-fugitive'
     use 'airblade/vim-rooter'
     use 'tpope/vim-commentary'
