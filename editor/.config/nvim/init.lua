@@ -16,7 +16,6 @@ require('nv-telescope')
 require('nv-nvimtree')
 require('nv-lspkind')
 require('nv-lualine')
-require('nv-utils')
 
 -- LSP
 require('lsp')

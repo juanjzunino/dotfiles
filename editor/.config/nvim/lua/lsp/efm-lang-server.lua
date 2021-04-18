@@ -6,8 +6,8 @@ local python_arguments = {
     lintFormats = {"%f:%l:%c: %m"}
   },
   isort = {formatCommand = "isort --quiet -", formatStdin = true},
-  yapf = {formatCommand = "yapf --quiet", formatStdin = true},
-  -- black = {formatCommand = "black --quiet --stdin-filename ", formatStdin = true},
+  -- yapf = {formatCommand = "yapf --quiet", formatStdin = true},
+  black = {formatCommand = "black --quiet --stdin-filename ", formatStdin = true},
 }
 
 -- Lua
@@ -23,18 +23,22 @@ local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatSt
 
 -- Formatters
 require"lspconfig".efm.setup {
-    cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
-    init_options = {documentFormatting = true, codeAction = false},
-    filetypes = {"lua", "python", "javascriptreact", "javascript", "sh", "html", "css", "json", "yaml", "markdown"},
-    settings = {
-        rootMarkers = {".git/"},
-        languages = {
-            python = python_arguments,
-            lua = lua_arguments,
-            json = {prettier},
-            yaml = {prettier},
-        }
-    }
+	cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
+	init_options = {documentFormatting = true, codeAction = true},
+	filetypes = {"lua", "python", "javascriptreact", "javascript", "sh", "html", "css", "json", "yaml", "markdown"},
+	settings = {
+		rootMarkers = {".git/"},
+		languages = {
+			-- python = python_arguments,
+			python = {
+				{formatCommand = "yapf --quiet", formatStdin = true},
+				{formatCommand = "isort --quiet -", formatStdin = true},
+			},
+			-- lua = lua_arguments,
+			-- json = {prettier},
+			-- yaml = {prettier},
+		}
+	}
 }
 
 

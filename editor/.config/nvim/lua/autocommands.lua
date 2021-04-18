@@ -1,31 +1,43 @@
-local utils = require('nv-utils')
-
--- Prevent accidental writes to buffers that shouldn't be edited
-vim.cmd('autocmd BufRead *.orig set readonly')
-vim.cmd('autocmd BufRead *.pacnew set readonly')
-
 -- Help filetype detection
 vim.cmd('autocmd BufRead *.md set filetype=markdown')
 vim.cmd('autocmd BufRead *.tex set filetype=tex')
 
--- Default for writing files
-vim.api.nvim_exec([[
-augroup writing
-    autocmd!
-    autocmd Filetype markdown,tex,txt set colorcolumn=
-    autocmd Filetype markdown,tex,txt set spell
-    autocmd Filetype markdown,tex,txt set wrap
-augroup END]], false)
+local nv_utils = {}
 
-local auto_formatters = {
-  -- python_autoformat =
-	{'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
-}
+function nv_utils.define_augroups(definitions)
+    -- Create autocommand groups based on the passed definitions
+    -- The key will be the name of the group, and each definition
+    -- within the group should have:
+    --    1. Trigger
+    --    2. Pattern
+    --    3. Text
+    -- just like how they would normally be defined from Vim itself
+    for group_name, definition in pairs(definitions) do
+        vim.cmd('augroup ' .. group_name)
+        vim.cmd('autocmd!')
 
-utils.define_augroups({
+        for _, def in pairs(definition) do
+            local command = table.concat(vim.tbl_flatten {'autocmd', def}, ' ')
+            vim.cmd(command)
+        end
+
+        vim.cmd('augroup END')
+    end
+end
+
+-- local auto_formatters = {
+--   {'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting(nil, 1000)'},
+-- }
+
+nv_utils.define_augroups({
     _general_settings = {
         {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'}
     },
-    _auto_formatters = auto_formatters
+
+    _auto_formatters = {
+		  {'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting(nil, 1000)'},
+		  -- {'BufWritePre', '*.lua', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
+		}
+
 })
 
