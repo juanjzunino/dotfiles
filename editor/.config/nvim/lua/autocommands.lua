@@ -31,11 +31,15 @@ end
 
 nv_utils.define_augroups({
     _general_settings = {
-        {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'}
+        {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'},
+				{'BufWinEnter', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'BufRead', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'BufNewFile', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+
     },
 
     _auto_formatters = {
-		  {'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting(nil, 1000)'},
+		  {'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting_sync(nil, 100)'},
 		  -- {'BufWritePre', '*.lua', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
 		}
 

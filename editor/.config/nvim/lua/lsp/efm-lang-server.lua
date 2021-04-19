@@ -31,7 +31,7 @@ require"lspconfig".efm.setup {
 		languages = {
 			-- python = python_arguments,
 			python = {
-				{formatCommand = "yapf --quiet", formatStdin = true},
+			-- 	{formatCommand = "yapf --quiet", formatStdin = true},
 				{formatCommand = "isort --quiet -", formatStdin = true},
 			},
 			-- lua = lua_arguments,
