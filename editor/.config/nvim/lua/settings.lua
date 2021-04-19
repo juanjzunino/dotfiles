@@ -1,5 +1,5 @@
 -- General
-vim.cmd("syntax on")
+-- vim.cmd("syntax on")
 vim.o.fileencoding    = "utf-8"
 vim.o.completeopt     = "menuone,noselect"
 vim.wo.number         = true
@@ -42,11 +42,8 @@ vim.bo.softtabstop    = 4
 vim.bo.expandtab      = true
 
 -- Swap files
-vim.bo.swapfile       = false
+vim.o.swapfile        = false
 
 -- Clipboard
 vim.o.clipboard       = 'unnamedplus'
-
--- TODO
 -- vim.wo.spelllang = "es,en"
--- set backspace=indent,eol,start if necessary...
