@@ -59,7 +59,6 @@ brew 'youtube-dl'
 
 # Others
 cask '1password'
-cask 'dozer'
 cask 'flux'
 cask 'keybase'
 cask 'rectangle'

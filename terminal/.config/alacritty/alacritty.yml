@@ -20,15 +20,18 @@ window.dynamic_title: true
 # Font configuration 
 font:
   normal:
-    family: SauceCodePro Nerd Font
+    # family: SauceCodePro Nerd Font
+    family: JetBrainsMono Nerd Font Mono
     style: Regular
 
   bold:
-    family: SauceCodePro Nerd Font
+    # family: SauceCodePro Nerd Font
+    family: JetBrainsMono Nerd Font Mono
     style: Bold
 
   italic:
-    family: SauceCodePro Nerd Font
+    # family: SauceCodePro Nerd Font
+    family: JetBrainsMono Nerd Font Mono
     style: Italic
 
   size: 12.5
