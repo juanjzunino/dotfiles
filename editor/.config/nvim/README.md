@@ -31,7 +31,7 @@
     - [X] Install nvim-tree
     - [X] Finish configuration in lua folder
 
-- [ ] Statusline and tab bar
+- [X] Statusline and tab bar
     - [X] Install barbar
     - [X] Finish configuration in lua folder
     - [X] Install new statusline written in lua -- lualine

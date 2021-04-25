@@ -17,6 +17,7 @@ require('nv-compe')
 require('nv-lspkind')
 require('nv-lualine')
 require('nv-dashboard')
+require('nv-autopairs')
 
 -- LSP
 require('lsp')

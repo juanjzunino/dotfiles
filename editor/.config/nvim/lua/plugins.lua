@@ -56,6 +56,7 @@ return require('packer').startup(function(use)
 		-- Writing
     use 'tpope/vim-commentary'
     use 'godlygeek/tabular'
+		use 'windwp/nvim-autopairs'
 
     -- General Plugins
     -- use 'airblade/vim-rooter'
