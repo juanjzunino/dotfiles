@@ -29,7 +29,7 @@ vim.api.nvim_set_keymap('n', '<leader><leader>', '<c-^>', {noremap = true})
 vim.api.nvim_set_keymap('', '<C-a>', '<Nop>', {})
 vim.api.nvim_set_keymap('', '<C-x>', '<Nop>', {})
 
--- Split panes tmux stles
+-- Split panes tmux styles
 vim.api.nvim_set_keymap('n', '<Leader>-', ':sp<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>|', ':vsp<CR>', {noremap = true})
 
@@ -51,7 +51,6 @@ vim.api.nvim_set_keymap('n', '*', '*zz', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '#', '#zz', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'g*', 'g*zz', {noremap = true, silent = true})
 
--- TEMPORARY
-vim.api.nvim_set_keymap('n', '<leader>cf', ':e $MYVIMRC<CR>', {noremap = true})
+-- Enable spell check
 vim.api.nvim_set_keymap('n', '<leader>sc', ':set spell!<CR>', {noremap = true})
 

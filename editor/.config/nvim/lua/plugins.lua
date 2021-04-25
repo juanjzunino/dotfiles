@@ -50,16 +50,15 @@ return require('packer').startup(function(use)
     use 'ryanoasis/vim-devicons'
 
     -- Color
-    use 'chriskempson/base16-vim'
-    use 'tjdevries/colorbuddy.vim'
-    use 'tjdevries/gruvbuddy.nvim'
+		use 'chriskempson/base16-vim'
     use 'norcalli/nvim-colorizer.lua'
 
-
-    -- General Plugins
-    use 'tpope/vim-fugitive'
-    use 'airblade/vim-rooter'
+		-- Writing
     use 'tpope/vim-commentary'
     use 'godlygeek/tabular'
+
+    -- General Plugins
+    -- use 'airblade/vim-rooter'
+		use 'glepnir/dashboard-nvim'
 
 end)

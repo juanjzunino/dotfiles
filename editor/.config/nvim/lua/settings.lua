@@ -1,5 +1,4 @@
 -- General
--- vim.cmd("syntax on")
 vim.o.fileencoding    = "utf-8"
 vim.o.completeopt     = "menuone,noselect"
 vim.wo.number         = true
@@ -46,4 +45,3 @@ vim.o.swapfile        = false
 
 -- Clipboard
 vim.o.clipboard       = 'unnamedplus'
--- vim.wo.spelllang = "es,en"

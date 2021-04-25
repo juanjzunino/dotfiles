@@ -11,11 +11,12 @@ require('plugins')
 
 -- Plugins
 require('nv-treesitter')
-require('nv-compe')
 require('nv-telescope')
 require('nv-nvimtree')
+require('nv-compe')
 require('nv-lspkind')
 require('nv-lualine')
+require('nv-dashboard')
 
 -- LSP
 require('lsp')

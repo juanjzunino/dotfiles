@@ -8,13 +8,13 @@
     - [X] Research about extensions of Tresitter
     - [X] Integrate plugins with Treesitter
 
-- [ ] LSP
+- [X] LSP
     - [X] Install lsp-config, lsp-saga, lsp-install, lsp-kind
     - [X] Configure lsp settings in init.vim
     - [X] Install language servers for python, zsh, rust, etc..
     - [X] Finish configuration in lua folder
 	- [ ] lsp-config -- Formatters
-	- [ ] lsp-saga
+	- [X] lsp-saga
 	- [X] lsp-kind
 	- [X] lspinstall
 
@@ -50,8 +50,8 @@
     - [ ] Research about neutron
     - [X] Get rid of unused plugins
 
-- [ ] Colorscheme
-    - [ ] Setup gruvbuddy -- TjDeVries
+- [x] Colorscheme
+    - [X] Base16 Gruvbox Dark Hard
 
 - [X] Lua
     - [X] Source all lua files from init.vim
