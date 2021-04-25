@@ -47,4 +47,3 @@ unset __conda_setup
 # ----------------------------------- Tmux ------------------------------------
 # Activate conda when starting a new tmux session
 [[ -z $TMUX ]] || conda deactivate; conda activate base
-
