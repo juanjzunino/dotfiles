@@ -1,7 +1,3 @@
--- Help filetype detection
-vim.cmd('autocmd BufRead *.md set filetype=markdown')
-vim.cmd('autocmd BufRead *.tex set filetype=tex')
-
 local nv_utils = {}
 
 function nv_utils.define_augroups(definitions)
@@ -25,23 +21,18 @@ function nv_utils.define_augroups(definitions)
     end
 end
 
--- local auto_formatters = {
---   {'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting(nil, 1000)'},
--- }
-
 nv_utils.define_augroups({
     _general_settings = {
         {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'},
-				-- {'BufWinEnter', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
-        -- {'BufRead', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
-        -- {'BufNewFile', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
-
+				{'BufWinEnter', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'BufRead', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'BufNewFile', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'BufRead', '*.md', 'set filetype=markdown'},
+        {'BufRead', '*.tex', 'set filetype=tex'},
     },
-
     _auto_formatters = {
-		  {'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
+		  -- {'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
 		  -- {'BufWritePre', '*.lua', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
 		}
-
 })
 

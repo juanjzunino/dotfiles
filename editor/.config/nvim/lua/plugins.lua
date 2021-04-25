@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
 
     -- Color
 		use 'chriskempson/base16-vim'
+		use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
     use 'norcalli/nvim-colorizer.lua'
 
 		-- Writing

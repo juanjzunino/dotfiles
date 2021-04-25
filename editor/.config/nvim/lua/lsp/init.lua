@@ -5,6 +5,7 @@ vim.api.nvim_set_keymap('n', '<space>rn', '<cmd>:Lspsaga rename<CR>', {noremap =
 vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', 'ca', '<cmd>:Lspsaga code_action<CR>', {noremap = true, silent=true})
 vim.api.nvim_set_keymap('n', 'K', '<cmd>:Lspsaga hover_doc<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<space>w', '<cmd>:lua vim.lsp.buf.formatting()<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-e>', '<cmd>:Lspsaga diagnostic_jump_prev<CR>', {noremap = true, silent=true})
 vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>:Lspsaga diagnostic_jump_next<CR>', {noremap = true, silent=true})

@@ -13,7 +13,7 @@
     - [X] Configure lsp settings in init.vim
     - [X] Install language servers for python, zsh, rust, etc..
     - [X] Finish configuration in lua folder
-	- [ ] lsp-config -- Formatters
+	- [X] lsp-config
 	- [X] lsp-saga
 	- [X] lsp-kind
 	- [X] lspinstall
