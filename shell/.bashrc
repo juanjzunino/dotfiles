@@ -10,10 +10,6 @@ export VISUAL="vim"
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
-# ---------------------------------- Prompt -----------------------------------
-# Prompt
-PS1="\[\033[37m\]jjz \[\033[37m\]:: \[\033[34m\]\W \[\033[31m\]|\e[0m "
-
 # ---------------------------------- Plugins ----------------------------------
 # Fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -47,3 +43,6 @@ unset __conda_setup
 # ----------------------------------- Tmux ------------------------------------
 # Activate conda when starting a new tmux session
 [[ -z $TMUX ]] || conda deactivate; conda activate base
+
+# ---------------------------------- Prompt -----------------------------------
+eval "$(starship init bash)"

@@ -20,18 +20,6 @@ setopt appendhistory
 setopt incappendhistory
 setopt extendedhistory
 
-# ---------------------------------- Prompt -----------------------------------
-# Prompt
-autoload -U colors && colors
-autoload -Uz vcs_info
-precmd() { vcs_info }
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '*'
-zstyle ':vcs_info:*' stagedstr '+'
-zstyle ':vcs_info:git:*' formats "%F{242} (%b%f%{$fg[red]%}%u%{$fg[cyan]%}%c%F{242})%f"
-setopt PROMPT_SUBST
-PS1='jjz %F{242}::%f %{$fg[blue]%}%1~${vcs_info_msg_0_} %{$fg[red]%}|%{$reset_color%} '
-
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -78,3 +66,6 @@ unset __conda_setup
 # ----------------------------------- Tmux ------------------------------------
 # Activate conda when starting a new tmux session
 [[ -z $TMUX ]] || conda deactivate; conda activate base
+
+# ---------------------------------- Prompt -----------------------------------
+eval "$(starship init zsh)"
