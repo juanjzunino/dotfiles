@@ -3,3 +3,19 @@ add_newline = false
 
 [line_break]
 disabled = true
+
+[golang]
+symbol = " "
+style = "blue"
+
+[rust]
+symbol = " "
+style = "blue"
+
+[python]
+symbol = " "
+style = "blue"
+
+[lua]
+symbol = " "
+style = "blue"
