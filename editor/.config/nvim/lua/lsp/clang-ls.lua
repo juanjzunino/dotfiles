@@ -1,3 +1,3 @@
 require'lspconfig'.clangd.setup {
-    cmd = {DATA_PATH .. "/lspinstall/cpp/clangd/bin/clangd"},
+  cmd = {DATA_PATH .. "/lspinstall/cpp/clangd/bin/clangd"},
 }

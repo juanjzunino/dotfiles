@@ -9,8 +9,8 @@ vim.api.nvim_set_keymap('', 'H', '^', {})
 vim.api.nvim_set_keymap('', 'L', '$', {})
 
 -- Move by line
-vim.api.nvim_set_keymap('n', 'j', 'gj', {noremap=true})
-vim.api.nvim_set_keymap('n', 'k', 'gk', {noremap=true})
+vim.api.nvim_set_keymap('n', 'j', 'gj', {noremap = true})
+vim.api.nvim_set_keymap('n', 'k', 'gk', {noremap = true})
 
 -- Move block up or down
 vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv', {noremap = true})
