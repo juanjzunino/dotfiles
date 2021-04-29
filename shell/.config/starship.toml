@@ -9,7 +9,7 @@ read_only_style = "white"
 
 [git_branch]
 symbol = " "
-style = "bold #d78700"
+style = "bold 202"
 
 [docker_context]
 symbol = " "
