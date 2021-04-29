@@ -1,25 +1,48 @@
-# Disable the blank line at the start of the prompt
 add_newline = false
 
 [line_break]
 disabled = true
 
+[directory]
+read_only = "  "
+read_only_style = "white"
+
 [git_branch]
 symbol = " "
 style = "bold #d78700"
 
+[docker_context]
+symbol = " "
+
+[gcloud]
+symbol = " "
+
 [golang]
 symbol = " "
-style = "blue"
 
-[rust]
-symbol = " "
-style = "blue"
+[java]
+symbol = " "
 
-[python]
-symbol = " "
-style = "blue"
+[julia]
+symbol = " "
 
 [lua]
 symbol = " "
-style = "blue"
+
+[nodejs]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
