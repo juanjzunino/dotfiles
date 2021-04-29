@@ -42,6 +42,9 @@ return require('packer').startup(function(use)
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
   use 'nvim-telescope/telescope-media-files.nvim'
 
+	-- Git
+	use {'lewis6991/gitsigns.nvim'}
+
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
