@@ -3,7 +3,6 @@ alias vim='nvim'
 
 # Open files
 alias finder="open -R"
-alias typora="open -a typora"
 
 # Listing options
 alias ls="exa -a"
@@ -30,9 +29,9 @@ alias jn="jupyter notebook"
 alias docs="cd ~/Documents"
 alias desk="cd ~/Desktop"
 alias loads="cd ~/Downloads"
-alias books="cd ~/Documents/Books"
-alias papers="cd ~/Documents/Papers"
+alias books="cd ~/Documents/Resources/Books"
+alias papers="cd ~/Documents/Resources/Papers"
 alias mim="cd ~/Documents/MiM+Analytics"
-alias lectures="cd ~/Documents/Lectures"
+alias lectures="cd ~/Documents/Knowledge/Lectures"
 alias thesis="cd ~/Documents/MiM+Analytics/Thesis"
-alias knw="cd ~/Documents/Knowledge\ Architecture"
+alias knw="cd ~/Documents/Knowledge"
