@@ -33,12 +33,16 @@ vim.o.hlsearch        = true
 -- Tabs
 vim.wo.linebreak      = true
 vim.wo.wrap           = false
-vim.wo.foldenable     = false
 vim.bo.smartindent    = true
 vim.bo.tabstop        = 4
 vim.bo.shiftwidth     = 4
 vim.bo.softtabstop    = 4
 vim.bo.expandtab      = true
+
+-- Fold
+vim.wo.foldenable     = true
+vim.wo.foldmethod     = 'marker'
+vim.wo.foldlevel      = 3
 
 -- Clipboard
 vim.o.clipboard       = 'unnamedplus'
