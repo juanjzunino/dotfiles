@@ -1,4 +1,4 @@
--- Python
+-- {{{ Python
 local python_arguments = {}
 
 -- TODO: Make it work
@@ -16,8 +16,9 @@ local black = {formatCommand = "black --quiet -", formatStdin = true}
 
 table.insert(python_arguments, black)
 table.insert(python_arguments, isort)
+-- }}}
 
--- Lua
+-- {{{ Lua
 local lua_arguments = {}
 
 local luaFormat = {
@@ -26,9 +27,11 @@ local luaFormat = {
 }
 
 table.insert(lua_arguments, luaFormat)
+-- }}}
 
--- Json, Yaml
+-- {{{ Json, Yaml
 local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}
+-- }}}
 
 -- Formatters
 require"lspconfig".efm.setup {
