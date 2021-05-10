@@ -11,6 +11,9 @@ read_only_style = "white"
 symbol = " "
 style = "bold 202"
 
+[git_status]
+style = "bold yellow"
+
 [docker_context]
 symbol = " "
 
