@@ -1,7 +1,6 @@
-## TODO: Nvim
----
+# TODO
 
 - [ ] Change from lualine to galaxyline
-- [ ] Enable folding (marker option)
+- [X] Enable folding (marker option)
 - [ ] Change mappings
 - [ ] Fix gitsigns
