@@ -7,6 +7,9 @@ disabled = true
 read_only = "  "
 read_only_style = "white"
 
+[jobs]
+symbol = " "
+
 [git_branch]
 symbol = " "
 style = "bold 202"
