@@ -14,6 +14,7 @@ local yapf = {formatCommand = "yapf --quiet", formatStdin = true}
 
 local black = {formatCommand = "black --quiet -", formatStdin = true}
 
+-- table.insert(python_arguments, yapf)
 table.insert(python_arguments, black)
 table.insert(python_arguments, isort)
 -- }}}
