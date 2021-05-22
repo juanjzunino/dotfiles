@@ -58,8 +58,7 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'godlygeek/tabular'
 
-  -- General Plugins
-  -- use 'airblade/vim-rooter'
+  -- Dashboard
   use 'glepnir/dashboard-nvim'
 
 end)
