@@ -27,6 +27,7 @@ cask 'rstudio'
 cask 'virtualbox'
 cask 'vagrant'
 brew 'efm-langserver'
+cask 'karabiner-elements'
 
 # Editors and IDEs
 brew 'neovim'
