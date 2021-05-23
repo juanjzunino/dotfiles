@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
 
   -- Git
   use {'lewis6991/gitsigns.nvim'}
+	use {"ahmedkhalf/lsp-rooter.nvim"}
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
