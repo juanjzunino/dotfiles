@@ -21,9 +21,6 @@ vim.o.inccommand      = "split"
 vim.o.mouse           = vim.o.mouse .. "a"
 vim.o.shortmess       = vim.o.shortmess .. "c"
 
--- Spell
-vim.o.spell           = false
-
 -- Search
 vim.o.ignorecase      = true
 vim.o.smartcase       = true
@@ -49,3 +46,6 @@ vim.o.clipboard       = 'unnamedplus'
 
 -- Swap files
 vim.o.swapfile        = false
+
+-- Spell
+vim.o.spell           = false
