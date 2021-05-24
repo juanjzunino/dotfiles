@@ -10,8 +10,8 @@ window:
     lines: 0
 
   padding:
-    x: 5
-    y: 3
+    x: 2
+    y: 2
 
   decorations: buttonless
 
