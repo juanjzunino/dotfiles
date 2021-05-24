@@ -4,6 +4,7 @@ add_newline = false
 disabled = true
 
 [directory]
+style = "bold white"
 read_only = "  "
 read_only_style = "white"
 
