@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
   -- Color
+	use 'morhetz/gruvbox'
   use 'norcalli/nvim-colorizer.lua'
 
   -- Writing
