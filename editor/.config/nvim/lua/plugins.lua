@@ -9,7 +9,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
-require('packer').init({display = {auto_clean = false}})
 
 return require('packer').startup(function(use)
   -- Packer can manage itself as an optional plugin
@@ -35,8 +34,8 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
 
   -- Status Line and Bufferline
+	use 'glepnir/galaxyline.nvim'
   use 'romgrk/barbar.nvim'
-  use 'hoob3rt/lualine.nvim'
 
   -- Telescope
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
@@ -52,6 +51,9 @@ return require('packer').startup(function(use)
 
   -- Color
 	use 'morhetz/gruvbox'
+	use 'christianchiarulli/nvcode-color-schemes.vim'
+	use 'tjdevries/colorbuddy.vim'
+	use 'tjdevries/gruvbuddy.nvim'
   use 'norcalli/nvim-colorizer.lua'
 
   -- Writing

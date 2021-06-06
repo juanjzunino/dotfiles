@@ -1,13 +1,13 @@
--- Runtime path
-vim.cmd("set rtp+=~/Documents/dev/others/base16-vim")
-
 -- General colors settings
 vim.o.termguicolors = true
 vim.o.background = 'dark'
-vim.o.t_Co = '256'
+-- vim.o.t_Co = '256'
 
 -- Colorscheme
-vim.cmd("colorscheme base16-gruvbox-dark-hard")
+vim.cmd 'colorscheme gruvbox'
+-- vim.cmd 'colorscheme lunar'
+-- require('colorbuddy').colorscheme('gruvbuddy')
+
 
 -- Colorizer
 require('colorizer').setup()
