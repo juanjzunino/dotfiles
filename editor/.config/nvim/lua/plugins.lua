@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Git
-  -- use {'lewis6991/gitsigns.nvim'}
+  use {'lewis6991/gitsigns.nvim'}
 	-- use {"ahmedkhalf/lsp-rooter.nvim"}
 
   -- Icons
@@ -50,10 +50,7 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
   -- Color
-	use 'morhetz/gruvbox'
-	use 'christianchiarulli/nvcode-color-schemes.vim'
-	use 'tjdevries/colorbuddy.vim'
-	use 'tjdevries/gruvbuddy.nvim'
+	use 'norcalli/nvim-base16.lua'
   use 'norcalli/nvim-colorizer.lua'
 
   -- Writing

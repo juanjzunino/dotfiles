@@ -1,13 +1,10 @@
 -- General colors settings
 vim.o.termguicolors = true
 vim.o.background = 'dark'
--- vim.o.t_Co = '256'
 
 -- Colorscheme
-vim.cmd 'colorscheme gruvbox'
--- vim.cmd 'colorscheme lunar'
--- require('colorbuddy').colorscheme('gruvbuddy')
-
+local base16 = require 'base16'
+base16(base16.themes["gruvbox-dark-hard"], true)
 
 -- Colorizer
 require('colorizer').setup()
