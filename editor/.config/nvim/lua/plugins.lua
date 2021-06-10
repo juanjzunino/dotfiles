@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
+	use 'nvim-lua/lsp-status.nvim'
   use 'kabouzeid/nvim-lspinstall'
 
   -- Debugging
@@ -34,8 +35,8 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
 
   -- Status Line and Bufferline
-	use 'glepnir/galaxyline.nvim'
   use 'romgrk/barbar.nvim'
+	use 'hoob3rt/lualine.nvim'
 
   -- Telescope
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
