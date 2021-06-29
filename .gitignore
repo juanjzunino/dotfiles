@@ -1,9 +1,5 @@
-# Mac Files
+# macOS Files
 .DS_Store
 
 # Nvim
-editor/.config/nvim/spell/
 editor/.config/nvim/plugin/
-
-# Homebrew
-macOS/Brewfile.lock.json
