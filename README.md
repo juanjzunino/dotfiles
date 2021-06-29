@@ -6,9 +6,10 @@ Configurations files:
 - Nvim
 - Alacritty
 - Tmux
+- Starship
 
 Requirements:
 - Git
-- Stow
 - Homebrew
 - macOS
+- dotbot
