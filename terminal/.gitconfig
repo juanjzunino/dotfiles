@@ -8,8 +8,5 @@
 	name = Juanjo Zunino
 	email = juanj.zunino@gmail.com
 
-[alias]
-    graph = log --all --graph --decorate
-
 [init]
 	defaultBranch = main

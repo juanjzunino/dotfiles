@@ -3,18 +3,35 @@
       create: true
       relink: true
 
+- shell:
+    - command: which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+      description: Installing homebrew
+    - command: brew bundle --file=$HOME/dotfiles/macOS/Brewfile
+      description: Installing brew packages
+      stdout: true
+    # - command: sudo sh -c 'echo /usr/local/bin/bash >> /etc/shells'
+    #   description: Enabling zsh
+    # - command: sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
+    #   description: Enabling bash
+    # - command: source $HOME/dotfiles/.macos
+    #   description: Sourcing macOS settings
+
 - clean: ["~", "~/.config"]
 
 - link:
-    ~/.bash_profile: bash/bash_profile
-    ~/.bashrc: bash/bashrc
-    ~/.dotfiles: ""
+    ~/bin: bin/
+    ~/.aliases: aliases
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.zprofile: zprofile
+    ~/.zshrc: zshrc
+    ~/.vimrc: vimrc
+    ~/.tmux.conf: tmux.conf
     ~/.gitconfig: gitconfig
     ~/.gitignore_global:
-    ~/.tmux.conf: tmux.conf
     ~/.config/nvim: nvim/
-    ~/.zshrc: zsh/zshrc
-    ~/.aliases: zsh/aliases
+    ~/.config/alacritty: alacritty/
+    ~/.config/starship.toml: starship.toml
 
 - shell:
     - git submodule sync --recursive

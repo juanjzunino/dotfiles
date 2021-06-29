@@ -19,7 +19,7 @@ alias rm="rm -i"
 
 # Git
 alias gs="git status"
-alias gg="git graph"
+alias gg="git log --graph --pretty=oneline"
 alias gu="git pull"
 
 # Jupyter Notebooks
