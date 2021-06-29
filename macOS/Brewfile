@@ -1,49 +1,24 @@
-# Taps
+# ----------------------------------- Taps ------------------------------------
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 
-# Browsers
-cask 'firefox'
-cask 'google-chrome'
-
-# Terminal, shells and plugins
+# ----------------------------------- Shell -----------------------------------
+# Terminal emulator
 cask 'alacritty'
+
+# Shell
 brew 'bash'
+brew 'bash-completion'
 brew 'zsh'
-brew 'fish'
 brew 'zsh-autosuggestions'
-brew 'zsh-completions'
 
-# Development
+# Version Control System
 brew 'git'
-brew 'python'
-brew 'rustup'
-brew 'go'
-brew 'node'
-cask 'r'
-brew 'lua'
-cask 'rstudio'
-cask 'virtualbox'
-cask 'vagrant'
-brew 'efm-langserver'
-cask 'karabiner-elements'
-
-# Editors and IDEs
-brew 'neovim'
-brew 'vim'
-cask 'sublime-text'
-cask 'pycharm'
-cask 'datagrip'
-cask 'gephi'
-
-# Productivity tools
-cask 'notion'
-cask 'obsidian'
-cask 'slack'
 
 # Binaries
 brew 'autojump'
+brew 'bat'
 brew 'exa'
 brew 'fzf'
 brew 'htop'
@@ -51,6 +26,7 @@ brew 'neofetch'
 brew 'pandoc'
 brew 'ranger'
 brew 'ripgrep'
+brew 'starship'
 brew 'stow'
 brew 'tldr'
 brew 'tmux'
@@ -58,11 +34,60 @@ brew 'tree'
 brew 'wget'
 brew 'youtube-dl'
 
-# Others
+# ----------------------------------- Dev -------------------------------------
+# Python
+brew 'openssl'
+brew 'readline'
+brew 'sqlite3'
+brew 'xz'
+brew 'zlib'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+
+# Rust
+brew 'rustup'
+
+# Go
+brew 'go'
+
+# Node.js
+brew 'node'
+
+# Lua
+brew 'lua'
+
+# R
+cask 'r'
+cask 'rstudio'
+
+# Language Server Protocols
+brew 'efm-langserver'
+
+# Development Environments
+cask 'virtualbox'
+cask 'vagrant'
+
+# ------------------------------ Editors & IDEs -------------------------------
+brew 'vim'
+brew 'neovim'
+cask 'sublime-text'
+cask 'pycharm'
+cask 'datagrip'
+cask 'gephi'
+
+# --------------------------------- Others ------------------------------------
+# Browsers
+cask 'firefox'
+cask 'google-chrome'
+
+# Apps
 cask '1password'
 cask 'flux'
+cask 'karabiner-elements'
 cask 'keybase'
+cask 'obsidian'
 cask 'rectangle'
+cask 'slack'
 cask 'spotify'
 cask 'telegram'
 cask 'whatsapp'
