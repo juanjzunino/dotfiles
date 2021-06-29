@@ -4,31 +4,27 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
-# Settings
-export EDITOR="nvim"
-export VISUAL="nvim"
-export TERMINAL="alacritty"
-export TERM=xterm-256color
-export LC_ALL=en_US.UTF-8  
-export LANG=en_US.UTF-8
-disable r
+# Colors
+autoload -Uz colors && colors
 
-# History
-HISTSIZE=10000
-SAVEHIST=$HISTSIZE
-setopt appendhistory
-setopt incappendhistory
-setopt extendedhistory
+# Options
+disable r
 
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 # Fuzzy Finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
+fi
 
 # Autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+if [ -f /usr/local/etc/profile.d/autojump.sh ]; then
+    source /usr/local/etc/profile.d/autojump.sh
+fi
 
 # Completions
 if type brew &>/dev/null; then
@@ -37,35 +33,10 @@ if type brew &>/dev/null; then
     compinit
 fi
 
-# ----------------------------------- Path ------------------------------------
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-source ~/.cargo/env
-
-# Local scripts
-export PATH="$PATH:$HOME/bin"
-
+# --------------------------------- Exports -----------------------------------
 # Python
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="$HOME/.poetry/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
-# >>> conda initialize >>>
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# ----------------------------------- Tmux ------------------------------------
-# Activate conda when starting a new tmux session
-[[ -z $TMUX ]] || conda deactivate; conda activate base
-
-# ---------------------------------- Prompt -----------------------------------
+# Prompt
 eval "$(starship init zsh)"
