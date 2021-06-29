@@ -1,5 +1,10 @@
 # macOS Files
 .DS_Store
+.DS_Store?
+Brewfile.lock.json
 
-# Nvim
-editor/.config/nvim/plugin/
+# nvim
+nvim/plugin/
+nvim/node_modules
+nvim/package-lock.json
+nvim/package.json
