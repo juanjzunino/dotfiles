@@ -6,7 +6,7 @@
 - shell:
     - command: which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
       description: Installing homebrew
-    - command: brew bundle --file=$HOME/dotfiles/macOS/Brewfile
+    - command: brew bundle --file=$HOME/dotfiles/Brewfile
       description: Installing brew packages
       stdout: true
     # - command: sudo sh -c 'echo /usr/local/bin/bash >> /etc/shells'
@@ -28,11 +28,10 @@
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: gitconfig
-    ~/.gitignore_global:
     ~/.config/nvim: nvim/
     ~/.config/alacritty: alacritty/
     ~/.config/starship.toml: starship.toml
 
 - shell:
     - git submodule sync --recursive
-    - git update-submodules
+    - git submodule update --init --recursive
