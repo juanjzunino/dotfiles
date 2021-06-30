@@ -11,6 +11,7 @@ cask 'alacritty'
 brew 'bash'
 brew 'bash-completion'
 brew 'zsh'
+brew 'zsh-completions'
 brew 'zsh-autosuggestions'
 
 # Version Control System
