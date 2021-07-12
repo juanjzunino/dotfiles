@@ -1,69 +1,38 @@
-add_newline = false
-
-[line_break]
-disabled = true
-
 [package]
 disabled = true
 
-[directory]
-style = "bold white"
-read_only = "  "
-read_only_style = "white"
+#[docker_context]
+#symbol = " "
 
-[jobs]
-symbol = " "
+#[gcloud]
+#symbol = " "
 
-[git_branch]
-symbol = " "
+#[golang]
+#symbol = " "
 
-[git_status]
-style = "bold yellow"
+#[java]
+#symbol = " "
 
-[docker_context]
-symbol = " "
-style = "blue"
+#[julia]
+#symbol = " "
 
-[gcloud]
-symbol = " "
-style = "blue"
+#[lua]
+#symbol = " "
 
-[golang]
-symbol = " "
-style = "blue"
+#[nodejs]
+#symbol = " "
 
-[java]
-symbol = " "
-style = "blue"
+#[python]
+#symbol = " "
 
-[julia]
-symbol = " "
-style = "blue"
+#[ruby]
+#symbol = " "
 
-[lua]
-symbol = " "
-style = "blue"
+#[rust]
+#symbol = " "
 
-[nodejs]
-symbol = " "
-style = "blue"
+#[scala]
+#symbol = " "
 
-[python]
-symbol = " "
-style = "blue"
-
-[ruby]
-symbol = " "
-style = "blue"
-
-[rust]
-symbol = " "
-style = "blue"
-
-[scala]
-symbol = " "
-style = "blue"
-
-[swift]
-symbol = "ﯣ "
-style = "blue"
+#[swift]
+#symbol = "ﯣ "
