@@ -5,7 +5,7 @@ alias vim='nvim'
 alias finder="open -R"
 
 # Listing options
-alias ls="exa -a"
+alias ls="exa -a --icons"
 alias l="exa -la"
 
 # Tree options
