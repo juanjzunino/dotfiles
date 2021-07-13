@@ -1,37 +1,17 @@
+--[[ Notes:
+./after/plugin/*.lua
+  This is where configuration for plugins live.
+  They get auto sourced on startup. In general, the name of the file configures
+  the plugin with the corresponding name.
+./lua/jj/*.lua
+  This is where configuration/extensions for new style plugins live.
+  They don't get sourced automatically, but do get sourced by doing something like:
+    require('jj.dap')
+  or similar. I generally recommend that people do this so that you don't accidentally
+  override any of the plugin requires with namespace clashes. So don't just put your configuration
+  in "./lua/dap.lua" because then it will override the plugin version of "dap.lua"
+--]]
+
 -- Globals
 DATA_PATH = vim.fn.stdpath('data')
 CACHE_PATH = vim.fn.stdpath('cache')
-
--- General
-require('settings')
-require('keymappings')
-require('autocommands')
-require('colorscheme')
-require('plugins')
-
--- Plugins
-require('nv-autopairs')
-require('nv-compe')
-require('nv-dashboard')
-require('nv-gitsigns')
-require('nv-lspkind')
-require('nv-lualine')
-require('nv-nvimtree')
-require('nv-telescope')
-require('nv-treesitter')
-
--- LSP
-require('lsp')
-require('lsp.bash-ls')
-require('lsp.clang-ls')
-require('lsp.efm-lang-server')
-require('lsp.go-ls')
-require('lsp.javascript-ls')
-require('lsp.json-ls')
-require('lsp.latex-ls')
-require('lsp.lua-ls')
-require('lsp.python-ls')
-require('lsp.r-ls')
-require('lsp.rust-ls')
-require('lsp.yaml-ls')
-require('lsp.vim-ls')
