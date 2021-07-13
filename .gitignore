@@ -2,9 +2,3 @@
 .DS_Store
 .DS_Store?
 Brewfile.lock.json
-
-# nvim
-nvim/plugin/
-nvim/node_modules
-nvim/package-lock.json
-nvim/package.json
