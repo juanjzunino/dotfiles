@@ -46,6 +46,7 @@ brew 'pyenv-virtualenv'
 
 # Rust
 brew 'rustup'
+brew 'rust-analyzer'
 
 # Go
 brew 'go'
@@ -73,7 +74,6 @@ brew 'neovim'
 cask 'sublime-text'
 cask 'pycharm'
 cask 'datagrip'
-cask 'gephi'
 
 # --------------------------------- Others ------------------------------------
 # Browsers
