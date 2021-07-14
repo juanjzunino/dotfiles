@@ -112,11 +112,11 @@ require"lspconfig".efm.setup {
     rootMarkers = {".git/"},
     languages = {
       python = {
-				{
-					LintCommand = "flake8 --ignore=E501 --stdin-display-name ${INPUT} -",
-					lintStdin = true,
-					lintFormats = { "%f:%l:%c: %m" },
-				},
+				-- {
+				-- 	LintCommand = "flake8 --ignore=E501 --stdin-display-name ${INPUT} -",
+				-- 	lintStdin = true,
+				-- 	lintFormats = { "%f:%l:%c: %m" },
+				-- },
         {formatCommand = "isort --quiet -", formatStdin = true}
         -- {formatCommand = "yapf --quiet", formatStdin = true},
         -- {formatCommand = "black --quiet -", formatStdin = true},
