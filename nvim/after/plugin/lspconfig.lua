@@ -15,12 +15,8 @@ end
 
 -- On attach
 local custom_attach = function(client, bufnr)
-  local function buf_set_keymap(...)
-    vim.api.nvim_buf_set_keymap(bufnr, ...)
-  end
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
   nvim_status.on_attach(client)
 
@@ -70,7 +66,33 @@ custom_capabilities.textDocument.completion.completionItem.resolveSupport =
     {properties = {"documentation", "detail", "additionalTextEdits"}}
 
 -- Language Server Protocol
-require'lspconfig'.pyright.setup {on_init = custom_init, on_attach = custom_attach, capabilities = custom_capabilities}
+require'lspconfig'.pyright.setup {
+	on_init = custom_init,
+	on_attach = custom_attach,
+	capabilities = custom_capabilities
+}
+
+lspconfig.rust_analyzer.setup {
+  cmd = {"rust-analyzer"},
+  filetypes = {"rust"},
+  on_init = custom_init,
+  on_attach = custom_attach,
+  capabilities = custom_capabilities
+}
+
+lspconfig.gopls.setup {
+  on_init = custom_init,
+  on_attach = custom_attach,
+  capabilities = custom_capabilities,
+  settings = {gopls = {codelenses = {test = true}}},
+  flags = {debounce_text_changes = 200}
+}
+
+lspconfig.yamlls.setup {
+	on_init = custom_init,
+	on_attach = custom_attach,
+	capabilities = custom_capabilities
+}
 
 local sumneko_root_path = DATA_PATH .. "/lspinstall/lua"
 local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
@@ -101,10 +123,7 @@ require'lspconfig'.sumneko_lua.setup {
   }
 }
 
-lspconfig.yamlls.setup {on_init = custom_init, on_attach = custom_attach, capabilities = custom_capabilities}
-
 require"lspconfig".efm.setup {
-  cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
   on_attach = custom_attach,
   init_options = {documentFormatting = true, codeAction = true},
   filetypes = {"lua", "python", "json", "yaml"},
@@ -112,21 +131,16 @@ require"lspconfig".efm.setup {
     rootMarkers = {".git/"},
     languages = {
       python = {
-				-- {
-				-- 	LintCommand = "flake8 --ignore=E501 --stdin-display-name ${INPUT} -",
-				-- 	lintStdin = true,
-				-- 	lintFormats = { "%f:%l:%c: %m" },
-				-- },
+        -- {
+        -- 	LintCommand = "flake8 --ignore=E501 --stdin-display-name ${INPUT} -",
+        -- 	lintStdin = true,
+        -- 	lintFormats = { "%f:%l:%c: %m" },
+        -- },
         {formatCommand = "isort --quiet -", formatStdin = true}
         -- {formatCommand = "yapf --quiet", formatStdin = true},
         -- {formatCommand = "black --quiet -", formatStdin = true},
       },
-      -- lua = {
-      --   {
-      --     formatCommand = "lua-format -i --no-keep-simple-function-one-line --column-limit=120 --indent-width=2 --tab-width=2",
-      --     formatStdin = true
-      --   }
-      -- },
+      lua = {{formatCommand = "lua-format -i --column-limit=120 --indent-width=2 --tab-width=2", formatStdin = true}},
       json = {{formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}},
       yaml = {{formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}}
     }
