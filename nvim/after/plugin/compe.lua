@@ -1,3 +1,7 @@
+if not pcall(require, 'compe') then
+	return
+end
+
 require'compe'.setup {
   enabled = true;
   autocomplete = true;

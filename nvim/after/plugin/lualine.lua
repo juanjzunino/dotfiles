@@ -1,3 +1,7 @@
+if not pcall(require, 'lualine') then
+	return
+end
+
 local lualine = require('lualine')
 
 local gruvbox = require'lualine.themes.gruvbox'

@@ -14,7 +14,6 @@ vim.o.cursorline = true
 vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.scrolloff = 10
-vim.wo.colorcolumn = "80"
 vim.wo.signcolumn = "yes"
 vim.o.belloff = "all"
 vim.o.inccommand = "split"
@@ -46,6 +45,8 @@ vim.o.clipboard = 'unnamedplus'
 
 -- Swap files
 vim.o.swapfile = false
+vim.o.undofile = true
+vim.o.undodir = '/Users/juanjozunino/.cache'
 
 -- Spell
 vim.o.spell = false

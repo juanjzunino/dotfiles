@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/lsp-status.nvim'
   use 'glepnir/lspsaga.nvim'
-	use 'onsails/lspkind-nvim'
+  use 'onsails/lspkind-nvim'
   use 'kabouzeid/nvim-lspinstall'
 
   -- Debugging
@@ -39,8 +39,8 @@ return require('packer').startup(function(use)
   use 'hoob3rt/lualine.nvim'
 
   -- Telescope
-	use 'nvim-lua/popup.nvim'
-	use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
 
@@ -53,7 +53,8 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
   -- Color
-  use 'norcalli/nvim-base16.lua'
+  use 'tjdevries/colorbuddy.vim'
+  use 'tjdevries/gruvbuddy.nvim'
   use 'norcalli/nvim-colorizer.lua'
 
   -- Writing

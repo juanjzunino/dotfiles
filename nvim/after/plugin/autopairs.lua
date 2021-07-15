@@ -1,3 +1,7 @@
+if not pcall(require, 'nvim-autopairs') then
+	return
+end
+
 require('nvim-autopairs').setup()
 
 local remap = vim.api.nvim_set_keymap
