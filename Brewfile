@@ -13,6 +13,7 @@ brew 'bash-completion'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
 
 # Version Control System
 brew 'git'

@@ -26,6 +26,11 @@ if [ -f /usr/local/etc/profile.d/autojump.sh ]; then
     source /usr/local/etc/profile.d/autojump.sh
 fi
 
+# Syntax highlighting
+if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 # Completions
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
