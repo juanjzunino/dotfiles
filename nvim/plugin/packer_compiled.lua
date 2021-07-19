@@ -73,17 +73,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
-  ["colorbuddy.vim"] = {
-    loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
-  ["gruvbuddy.nvim"] = {
+  gruvbox = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
   ["lsp-status.nvim"] = {
     loaded = true,
@@ -104,6 +100,10 @@ _G.packer_plugins = {
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
+  ["nvim-base16.lua"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-base16.lua"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,

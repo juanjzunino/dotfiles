@@ -53,9 +53,9 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
   -- Color
-  use 'tjdevries/colorbuddy.vim'
-  use 'tjdevries/gruvbuddy.nvim'
   use 'norcalli/nvim-colorizer.lua'
+  use 'norcalli/nvim-base16.lua'
+  use 'morhetz/gruvbox'
 
   -- Writing
   use 'tpope/vim-commentary'
