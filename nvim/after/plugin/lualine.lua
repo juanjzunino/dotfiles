@@ -4,12 +4,6 @@ end
 
 local lualine = require('lualine')
 
-local gruvbox = require'lualine.themes.gruvbox'
-gruvbox.command.a.fg = '#282828'
-gruvbox.command.a.bg = '#a89984'
-gruvbox.command.c.fg = '#a89984'
-gruvbox.command.c.bg = '#3c3836'
-
 local get_lsp_client = function(msg)
   msg = msg or 'No Active Lsp'
   local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
@@ -30,7 +24,7 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = gruvbox,
+    theme = 'powerline',
     component_separators = {'|', '|'},
     section_separators = '',
     disabled_filetypes = {}

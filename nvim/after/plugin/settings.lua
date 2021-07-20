@@ -50,3 +50,4 @@ vim.o.undodir = '/Users/juanjozunino/.cache'
 
 -- Spell
 vim.o.spell = false
+vim.o.spelllang = 'en,es'
