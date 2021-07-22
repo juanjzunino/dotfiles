@@ -51,6 +51,7 @@ brew 'rust-analyzer'
 
 # Go
 brew 'go'
+brew 'gopls'
 
 # Node.js
 brew 'node'
