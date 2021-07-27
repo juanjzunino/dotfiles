@@ -27,7 +27,7 @@ local get_lsp_client = function(msg)
   if lsps == "" then
     return msg
   else
-    return lsps .. ' '
+    return 'LSP  : ' .. lsps
   end
 end
 
