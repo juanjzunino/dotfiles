@@ -2,6 +2,7 @@
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
+tap 'ethereum/ethereum'
 
 # ----------------------------------- Shell -----------------------------------
 # Terminal emulator
@@ -62,6 +63,9 @@ brew 'lua'
 # R
 cask 'r'
 cask 'rstudio'
+
+# Solidity
+brew 'Solidity'
 
 # Language Server Protocols
 brew 'efm-langserver'
