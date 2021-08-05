@@ -78,6 +78,7 @@ cask 'vagrant'
 brew 'vim'
 brew 'neovim'
 cask 'sublime-text'
+cask 'sublime-merge'
 cask 'pycharm'
 cask 'datagrip'
 
