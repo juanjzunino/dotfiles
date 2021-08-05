@@ -45,40 +45,26 @@ font:
 
 colors:
   primary:
-    background: "#1d2021"
-    foreground: "#d5c4a1"
+    background: "#282c34"
+    foreground: "#abb2bf"
 
   cursor:
-    text: "#1d2021"
-    cursor: "#d5c4a1"
+    text: CellBackground
+    cursor: "#ECEFF4"
+
+  selection:
+    text: CellForeground
+    background: "#3e4451"
 
   normal:
-    black: "#1d2021"
-    red: "#fb4934"
-    green: "#b8bb26"
-    yellow: "#fabd2f"
-    blue: "#83a598"
-    magenta: "#d3869b"
-    cyan: "#8ec07c"
-    white: "#d5c4a1"
-
-  bright:
-    black: "#665c54"
-    red: "#fb4934"
-    green: "#b8bb26"
-    yellow: "#fabd2f"
-    blue: "#83a598"
-    magenta: "#d3869b"
-    cyan: "#8ec07c"
-    white: "#fbf1c7"
-
-  indexed_colors:
-    - { index: 16, color: "#fe8019" }
-    - { index: 17, color: "#d65d0e" }
-    - { index: 18, color: "#3c3836" }
-    - { index: 19, color: "#504945" }
-    - { index: 20, color: "#bdae93" }
-    - { index: 21, color: "#ebdbb2" }
+    black: "#4C566A"
+    red: "#bf616a"
+    green: "#A3BE8C"
+    yellow: "#D7BA7D"
+    blue: "#5e81ac"
+    magenta: "#B48EAD"
+    cyan: "#88c0d0"
+    white: "#abb2bf"
 
 # Cursor configuration
 cursor_style: Block
