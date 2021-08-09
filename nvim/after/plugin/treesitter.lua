@@ -3,7 +3,7 @@ if not pcall(require, "nvim-treesitter") then
 end
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = 'all',
+  ensure_installed = {'python', 'lua'},
   ignore_install = {'haskell'},
   highlight = {enable = true}
 }

@@ -20,6 +20,8 @@ local custom_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
+	buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
   nvim_status.on_attach(client)
 
   -- Mappings
@@ -149,7 +151,7 @@ lspconfig.efm.setup {
         -- {formatCommand = "yapf --quiet", formatStdin = true},
         -- {formatCommand = "black --quiet -", formatStdin = true},
       },
-      lua = {{formatCommand = "lua-format -i --column-limit=120 --indent-width=2 --tab-width=2", formatStdin = true}},
+      -- lua = {{formatCommand = "lua-format -i --indent-width=2 --tab-width=2", formatStdin = true}},
       json = {{formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}},
       yaml = {{formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}}
     }

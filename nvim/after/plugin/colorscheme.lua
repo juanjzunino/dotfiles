@@ -6,4 +6,5 @@ vim.o.background = 'dark'
 require'colorizer'.setup()
 
 -- Colorscheme
-require('onedark').setup()
+local base16 = require 'base16'
+base16(base16.themes["gruvbox-dark-hard"], true)

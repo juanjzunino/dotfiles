@@ -2,7 +2,7 @@ if not pcall(require, "nvim-tree.config") then
 	return
 end
 
-vim.g.nvim_tree_hide_dotfiles = 0 -- Change to 1 when fully migrated to dotbot
+vim.g.nvim_tree_hide_dotfiles = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_follow = 1
 vim.g.nvim_tree_auto_close = 1
