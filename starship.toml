@@ -1,38 +1,19 @@
+[character]
+success_symbol = "[❯](red)"
+
+[directory]
+style = "yellow"
+
+[hostname]
+ssh_only = false
+style = 'blue'
+format = "[$hostname]($style) "
+
 [package]
 disabled = true
 
-#[docker_context]
-#symbol = " "
+[git_branch]
+style = "green"
 
-#[gcloud]
-#symbol = " "
-
-#[golang]
-#symbol = " "
-
-#[java]
-#symbol = " "
-
-#[julia]
-#symbol = " "
-
-#[lua]
-#symbol = " "
-
-#[nodejs]
-#symbol = " "
-
-#[python]
-#symbol = " "
-
-#[ruby]
-#symbol = " "
-
-#[rust]
-#symbol = " "
-
-#[scala]
-#symbol = " "
-
-#[swift]
-#symbol = "ﯣ "
+[git_status]
+style = "red"
