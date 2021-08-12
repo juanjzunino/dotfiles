@@ -1,13 +1,17 @@
+[line_break]
+disabled = true
+
 [character]
-success_symbol = "[❯](red)"
+success_symbol = "[|](red)"
+error_symbol = "[|](red)"
 
 [directory]
-style = "yellow"
+style = "blue"
 
 [hostname]
 ssh_only = false
-style = 'blue'
-format = "[$hostname]($style) "
+style = 'white'
+format = "jjz($style) "
 
 [package]
 disabled = true
