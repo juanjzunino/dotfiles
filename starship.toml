@@ -20,4 +20,4 @@ disabled = true
 style = "green"
 
 [git_status]
-style = "red"
+style = "yellow"
