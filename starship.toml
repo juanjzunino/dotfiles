@@ -11,7 +11,7 @@ style = "blue"
 [hostname]
 ssh_only = false
 style = 'white'
-format = "jjz($style) "
+format = "($hostname)($style) "
 
 [package]
 disabled = true
