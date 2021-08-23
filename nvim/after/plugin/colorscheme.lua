@@ -6,5 +6,4 @@ vim.o.background = 'dark'
 require'colorizer'.setup()
 
 -- Colorscheme
-local base16 = require 'base16'
-base16(base16.themes["gruvbox-dark-medium"], true)
+vim.cmd 'colorscheme nord'

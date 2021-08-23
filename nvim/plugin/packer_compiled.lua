@@ -93,13 +93,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nord-vim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
-  },
-  ["nvim-base16.lua"] = {
-    loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-base16.lua"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
@@ -132,6 +132,10 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

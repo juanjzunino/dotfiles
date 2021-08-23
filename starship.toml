@@ -1,23 +1,2 @@
-[line_break]
-disabled = true
-
-[character]
-success_symbol = "[|](red)"
-error_symbol = "[|](red)"
-
-[directory]
-style = "blue"
-
-[hostname]
-ssh_only = false
-style = 'white'
-format = "($hostname)($style) "
-
 [package]
 disabled = true
-
-[git_branch]
-style = "green"
-
-[git_status]
-style = "yellow"
