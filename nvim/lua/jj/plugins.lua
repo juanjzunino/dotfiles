@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+	use 'nvim-treesitter/playground'
 
   -- Explorer
   use 'kyazdani42/nvim-tree.lua'
@@ -54,8 +55,7 @@ return require('packer').startup(function(use)
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
-	use 'navarasu/onedark.nvim'
-	use 'arcticicestudio/nord-vim'
+	use 'EdenEast/nightfox.nvim'
 
   -- Writing
   use 'tpope/vim-commentary'
