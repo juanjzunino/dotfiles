@@ -6,5 +6,4 @@ vim.o.background = 'dark'
 require'colorizer'.setup()
 
 -- Colorscheme
-vim.g.nightfox_style = "nordfox"
-require('nightfox').set()
+require('onedark').setup()

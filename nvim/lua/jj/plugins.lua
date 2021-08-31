@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
-	use 'EdenEast/nightfox.nvim'
+	use 'navarasu/onedark.nvim'
 
   -- Writing
   use 'tpope/vim-commentary'
