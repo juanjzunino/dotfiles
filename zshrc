@@ -6,7 +6,6 @@ fi
 
 # Colors
 autoload -Uz colors && colors
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#757b83'
 
 # Options
 disable r
