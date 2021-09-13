@@ -20,8 +20,10 @@ local custom_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-	buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+	-- Enable completion triggered by <c-x><c-o>
+  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+	-- LSP Status
   nvim_status.on_attach(client)
 
   -- Mappings
@@ -60,7 +62,6 @@ local custom_attach = function(client, bufnr)
       augroup END
     ]], false)
   end
-
 end
 
 -- Capabilities

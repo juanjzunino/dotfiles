@@ -1,2 +1,32 @@
+[directory]
+style = "purple"
+read_only = "  "
+read_only_style = "white"
+
+[character]
+success_symbol = "[❯](bold yellow)"
+
+[git_branch]
+style = "yellow"
+
+[git_status]
+style = "green"
+
 [package]
 disabled = true
+
+[docker_context]
+symbol = " "
+style = "blue"
+
+[golang]
+symbol = " "
+style = "blue"
+
+[lua]
+symbol = " "
+style = "blue"
+
+[python]
+symbol = " "
+style = "blue"

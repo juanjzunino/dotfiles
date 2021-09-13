@@ -25,8 +25,9 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
 
   -- Autocomplete
-  use 'hrsh7th/nvim-compe'
-  use 'hrsh7th/vim-vsnip'
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/vim-vsnip'
+	use 'hrsh7th/cmp-buffer'
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -55,7 +56,7 @@ return require('packer').startup(function(use)
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
-	use 'norcalli/nvim-base16.lua'
+	use 'navarasu/onedark.nvim'
 
   -- Writing
   use 'tpope/vim-commentary'
