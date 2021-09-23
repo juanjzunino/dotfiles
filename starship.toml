@@ -1,16 +1,14 @@
 [directory]
-style = "purple"
-read_only = "  "
-read_only_style = "white"
+style = "blue"
 
 [character]
-success_symbol = "[❯](bold yellow)"
+success_symbol = "[❯](bold #f8bc54)"
 
 [git_branch]
-style = "yellow"
+style = "#f8bc54"
 
 [git_status]
-style = "green"
+style = "purple"
 
 [package]
 disabled = true

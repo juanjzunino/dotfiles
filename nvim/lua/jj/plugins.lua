@@ -21,13 +21,12 @@ return require('packer').startup(function(use)
   use 'onsails/lspkind-nvim'
   use 'kabouzeid/nvim-lspinstall'
 
-  -- Debugging
-  use 'mfussenegger/nvim-dap'
-
   -- Autocomplete
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/vim-vsnip'
+	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-vsnip'
+	use 'hrsh7th/vim-vsnip'
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -55,12 +54,13 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
   -- Color
+	use 'norcalli/nvim-base16.lua'
   use 'norcalli/nvim-colorizer.lua'
-	use 'navarasu/onedark.nvim'
 
   -- Writing
   use 'tpope/vim-commentary'
   use 'windwp/nvim-autopairs'
   use 'godlygeek/tabular'
+	use 'plasticboy/vim-markdown'
 
 end)

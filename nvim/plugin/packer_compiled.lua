@@ -77,6 +77,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-buffer"
   },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-vsnip"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
@@ -101,6 +109,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
+  ["nvim-base16.lua"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-base16.lua"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-cmp"
@@ -108,10 +120,6 @@ _G.packer_plugins = {
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
-  },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -132,10 +140,6 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
-  },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -172,6 +176,10 @@ _G.packer_plugins = {
   ["vim-devicons"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-devicons"
+  },
+  ["vim-markdown"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-markdown"
   },
   ["vim-vsnip"] = {
     loaded = true,
