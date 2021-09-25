@@ -75,8 +75,8 @@ require'lspconfig'.pyright.setup {
 }
 
 lspconfig.rust_analyzer.setup {
-  cmd = {"rust-analyzer"},
-  filetypes = {"rust"},
+  -- cmd = {"rust-analyzer"},
+  -- filetypes = {"rust"},
   on_init = custom_init,
   on_attach = custom_attach,
   capabilities = custom_capabilities
