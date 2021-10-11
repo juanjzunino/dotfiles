@@ -43,6 +43,7 @@ font:
 
   use_thin_strokes: true
 
+# Colorscheme
 colors:
   primary:
     background: "#282828"
