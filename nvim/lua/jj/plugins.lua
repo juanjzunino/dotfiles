@@ -16,7 +16,6 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'nvim-lua/lsp-status.nvim'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
   use 'kabouzeid/nvim-lspinstall'
@@ -32,8 +31,8 @@ return require('packer').startup(function(use)
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use 'nvim-treesitter/playground'
 
-  -- Explorer
-  use 'kyazdani42/nvim-tree.lua'
+	-- Explore
+	use 'kyazdani42/nvim-tree.lua'
 
   -- Status Line and Bufferline
   use 'romgrk/barbar.nvim'

@@ -1,6 +1,6 @@
 -- General
 vim.o.fileencoding = "utf-8"
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = "menu,menuone,noselect"
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.hidden = true

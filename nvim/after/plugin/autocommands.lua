@@ -29,10 +29,6 @@ nv_utils.define_augroups({
     {'BufNewFile', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
     {'BufRead', '*.md', 'set filetype=markdown'},
 		{'BufRead', '*.tex', 'set filetype=tex'},
-  },
-  _auto_formatters = {
-    -- {'BufWritePre', '*.py', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
-    -- {'BufWritePre', '*.lua', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'},
   }
 })
 

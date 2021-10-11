@@ -5,16 +5,6 @@ if not has_lsp then
 	return
 end
 
-local nvim_status = require('lsp-status')
-
-_ = require("lspkind").init()
-
--- On init
-local custom_init = function(client)
-  client.config.flags = client.config.flags or {}
-  client.config.flags.allow_incremental_sync = true
-end
-
 -- On attach
 local custom_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -23,24 +13,28 @@ local custom_attach = function(client, bufnr)
 	-- Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-	-- LSP Status
-  nvim_status.on_attach(client)
-
   -- Mappings
   local opts = {noremap = true, silent = true}
 
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+	-- TODO: Use this when lspsaga is updated
+	buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<cmd>:Lspsaga hover_doc<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+	buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  -- buf_set_keymap('n', 'K', '<cmd>:Lspsaga hover_doc<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+	buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  -- buf_set_keymap('n', '<C-k>', '<cmd>:Lspsaga signature_help<CR>', opts)
+  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   buf_set_keymap('n', '<space>rn', '<cmd>:Lspsaga rename<CR>', opts)
-  buf_set_keymap('n', '<space>ca', '<cmd>:Lspsaga code_action<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+  -- buf_set_keymap('n', '<space>a', '<cmd>:Lspsaga code_action<CR>', opts)
+	buf_set_keymap('n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references()<CR>', opts)
+  buf_set_keymap('n', 'gh', '<cmd>:Lspsaga lsp_finder<CR>', opts)
+  buf_set_keymap('n', '<space>e', '<cmd>:Lspsaga show_line_diagnostics<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>:Lspsaga diagnostic_jump_prev<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>:Lspsaga diagnostic_jump_next<CR>', opts)
-  buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  buf_set_keymap('n', '<space>q', '<cmd>lua require("telescope.builtin").lsp_document_diagnostics()<CR>', opts)
+  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
   -- Autoformat
   if client.resolved_capabilities.document_formatting then
@@ -52,52 +46,34 @@ local custom_attach = function(client, bufnr)
 			]]
   end
 
-  -- Document highlighting
-  if client.resolved_capabilities.document_highlight then
-    vim.api.nvim_exec([[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]], false)
-  end
 end
 
 -- Capabilities
-local custom_capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local custom_capabilities = vim.lsp.protocol.make_client_capabilities()
+custom_capabilities = require('cmp_nvim_lsp').update_capabilities(custom_capabilities)
 
 -- Language Server Protocol
-require'lspconfig'.pyright.setup {
-	on_init = custom_init,
+lspconfig.pyright.setup {
 	on_attach = custom_attach,
 	capabilities = custom_capabilities
 }
 
 lspconfig.rust_analyzer.setup {
-  -- cmd = {"rust-analyzer"},
-  -- filetypes = {"rust"},
-  on_init = custom_init,
   on_attach = custom_attach,
   capabilities = custom_capabilities
 }
 
 lspconfig.gopls.setup {
-  on_init = custom_init,
   on_attach = custom_attach,
   capabilities = custom_capabilities,
-  settings = {gopls = {codelenses = {test = true}}},
-  flags = {debounce_text_changes = 200}
 }
 
 lspconfig.yamlls.setup {
-	on_init = custom_init,
 	on_attach = custom_attach,
 	capabilities = custom_capabilities
 }
 
 lspconfig.vimls.setup {
-	on_init = custom_init,
 	on_attach = custom_attach,
 	capabilities = custom_capabilities
 }
@@ -108,7 +84,6 @@ local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
 
 require'lspconfig'.sumneko_lua.setup {
   cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
-  on_init = custom_init,
   on_attach = custom_attach,
   capabilities = custom_capabilities,
   settings = {
