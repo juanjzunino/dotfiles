@@ -4,11 +4,9 @@ alias vim='nvim'
 # Open files
 alias finder="open -R"
 
-# Listing options
+# Exa
 alias ls="exa -a --icons"
 alias l="exa -la"
-
-# Tree options
 alias tree="exa --tree"
 alias mtree="exa --tree --long"
 
@@ -29,10 +27,6 @@ alias jn="jupyter notebook"
 alias desk="cd ~/Desktop"
 alias loads="cd ~/Downloads"
 alias docs="cd ~/Documents"
-alias dev="cd ~/Documents/dev"
-alias project="cd ~/Documents/project"
-alias lectures="cd ~/Documents/knowledge/lectures"
-alias books="cd ~/Documents/resources/books"
-alias papers="cd ~/Documents/resources/papers"
+alias project="cd ~/projects"
+alias resources="cd ~/Documents/resources"
 alias mim="cd ~/Documents/knowledge/MiM+Analytics"
-alias thesis="cd ~/Documents/knowledge/MiM+Analytics/Thesis"
