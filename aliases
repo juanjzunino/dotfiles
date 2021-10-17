@@ -1,3 +1,6 @@
+# Optimization
+alias cplex='/Applications/CPLEX_Studio129/cplex/bin/x86-64_osx/cplex'
+
 # Editor
 alias vim='nvim'
 

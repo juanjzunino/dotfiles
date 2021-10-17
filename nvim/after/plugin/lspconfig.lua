@@ -1,6 +1,8 @@
 -- Local variables
 local has_lsp, lspconfig = pcall(require, "lspconfig")
 
+local lsp_installer = require("nvim-lsp-installer")
+
 if not has_lsp then
 	return
 end
@@ -78,55 +80,54 @@ lspconfig.vimls.setup {
 	capabilities = custom_capabilities
 }
 
+-- local sumneko_root_path = DATA_PATH .. "/lspinstall/lua"
+-- local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
 
-local sumneko_root_path = DATA_PATH .. "/lspinstall/lua"
-local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
+-- require'lspconfig'.sumneko_lua.setup {
+--   cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
+--   on_attach = custom_attach,
+--   capabilities = custom_capabilities,
+--   settings = {
+--     Lua = {
+--       runtime = {
+--         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+--         version = 'LuaJIT',
+--         -- Setup your lua path
+--         path = vim.split(package.path, ';')
+--       },
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = {'vim'}
+--       },
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
+--         maxPreload = 10000
+--       }
+--     }
+--   }
+-- }
 
-require'lspconfig'.sumneko_lua.setup {
-  cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
-  on_attach = custom_attach,
-  capabilities = custom_capabilities,
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-        -- Setup your lua path
-        path = vim.split(package.path, ';')
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim'}
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
-        maxPreload = 10000
-      }
-    }
-  }
-}
-
-lspconfig.efm.setup {
-  on_attach = custom_attach,
-  init_options = {documentFormatting = true, codeAction = true},
-  filetypes = {"lua", "python", "json", "yaml"},
-  settings = {
-    rootMarkers = {".git/"},
-    languages = {
-      python = {
-        -- {
-        -- 	LintCommand = "flake8 --ignore=E501 --stdin-display-name ${INPUT} -",
-        -- 	lintStdin = true,
-        -- 	lintFormats = { "%f:%l:%c: %m" },
-        -- },
-        {formatCommand = "isort --quiet -", formatStdin = true}
-        -- {formatCommand = "yapf --quiet", formatStdin = true},
-        -- {formatCommand = "black --quiet -", formatStdin = true},
-      },
-      -- lua = {{formatCommand = "lua-format -i --indent-width=2 --tab-width=2", formatStdin = true}},
-      json = {{formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}},
-      yaml = {{formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}}
-    }
-  }
-}
+-- lspconfig.efm.setup {
+--   on_attach = custom_attach,
+--   init_options = {documentFormatting = true, codeAction = true},
+--   filetypes = {"lua", "python", "json", "yaml"},
+--   settings = {
+--     rootMarkers = {".git/"},
+--     languages = {
+--       python = {
+--         -- {
+--         -- 	LintCommand = "flake8 --ignore=E501 --stdin-display-name ${INPUT} -",
+--         -- 	lintStdin = true,
+--         -- 	lintFormats = { "%f:%l:%c: %m" },
+--         -- },
+--         {formatCommand = "isort --quiet -", formatStdin = true}
+--         -- {formatCommand = "yapf --quiet", formatStdin = true},
+--         -- {formatCommand = "black --quiet -", formatStdin = true},
+--       },
+--       -- lua = {{formatCommand = "lua-format -i --indent-width=2 --tab-width=2", formatStdin = true}},
+--       json = {{formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}},
+--       yaml = {{formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}}
+--     }
+--   }
+-- }

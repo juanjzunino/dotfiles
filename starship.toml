@@ -1,30 +1,14 @@
-[directory]
-style = "blue"
-
-[character]
-success_symbol = "[❯](bold #f8bc54)"
-
-[git_branch]
-style = "#f8bc54"
-
-[git_status]
-style = "purple"
-
 [package]
 disabled = true
 
 [docker_context]
 symbol = " "
-style = "blue"
 
 [golang]
 symbol = " "
-style = "blue"
 
 [lua]
 symbol = " "
-style = "blue"
 
 [python]
 symbol = " "
-style = "blue"

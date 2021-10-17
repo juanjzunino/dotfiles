@@ -16,9 +16,9 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+	use 'williamboman/nvim-lsp-installer'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
-  use 'kabouzeid/nvim-lspinstall'
 
   -- Autocomplete
 	use 'hrsh7th/cmp-nvim-lsp'
@@ -53,8 +53,8 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
   -- Color
-	use 'norcalli/nvim-base16.lua'
   use 'norcalli/nvim-colorizer.lua'
+	use 'folke/tokyonight.nvim'
 
   -- Writing
   use 'tpope/vim-commentary'
