@@ -1,8 +1,27 @@
+[directory]
+read_only = " "
+
+[memory_usage]
+symbol = " "
+
 [package]
-disabled = true
+# disabled = true
+symbol = " "
 
 [docker_context]
 symbol = " "
+
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = " "
 
 [golang]
 symbol = " "
@@ -10,5 +29,14 @@ symbol = " "
 [lua]
 symbol = " "
 
-[python]
-symbol = " "
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[ruby]
+symbol = " "
