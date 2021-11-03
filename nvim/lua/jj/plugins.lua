@@ -16,9 +16,11 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-	use 'williamboman/nvim-lsp-installer'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
+	use 'jose-elias-alvarez/null-ls.nvim'
+	use 'folke/trouble.nvim'
+	use 'folke/todo-comments.nvim'
 
   -- Autocomplete
 	use 'hrsh7th/cmp-nvim-lsp'

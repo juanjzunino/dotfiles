@@ -101,6 +101,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
@@ -112,10 +116,6 @@ _G.packer_plugins = {
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -161,9 +161,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,

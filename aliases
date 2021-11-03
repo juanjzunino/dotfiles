@@ -18,6 +18,9 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 
+# Lua
+alias luamake=/Users/juanjozunino/lua-language-server/3rd/luamake/luamake
+
 # Git
 alias gs="git status"
 alias gg="git log --graph --pretty=oneline"

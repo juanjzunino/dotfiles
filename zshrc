@@ -6,7 +6,6 @@ fi
 
 # Prompt
 autoload -U colors && colors
-autoload -Uz vcs_info
 
 # Options
 disable r
