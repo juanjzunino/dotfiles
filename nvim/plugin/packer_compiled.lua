@@ -71,123 +71,153 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["barbar.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/barbar.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-vsnip"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-vsnip"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/hoob3rt/lualine.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-cmp"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/playground"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   tabular = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/tabular"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/tabular",
+    url = "https://github.com/godlygeek/tabular"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["todo-comments.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-commentary"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-devicons"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-devicons"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
   },
   ["vim-markdown"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-markdown"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-markdown",
+    url = "https://github.com/plasticboy/vim-markdown"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
 
