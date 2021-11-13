@@ -6,5 +6,5 @@ vim.o.background = 'dark'
 require'colorizer'.setup()
 
 -- Colorscheme
-vim.g.tokyonight_style = "night"
-vim.cmd 'colorscheme tokyonight'
+local base16 = require 'base16'
+base16(base16.themes["gruvbox-dark-hard"], true)

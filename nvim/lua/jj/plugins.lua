@@ -56,7 +56,7 @@ return require('packer').startup(function(use)
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
-	use 'folke/tokyonight.nvim'
+	use 'norcalli/nvim-base16.lua'
 
   -- Writing
   use 'tpope/vim-commentary'
