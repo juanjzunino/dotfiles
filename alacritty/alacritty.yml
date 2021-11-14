@@ -44,17 +44,14 @@ font:
   use_thin_strokes: true
 
 colors:
-  # Default colors
   primary:
     background: '#1d2021'
     foreground: '#d5c4a1'
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '#1d2021'
     cursor: '#d5c4a1'
 
-  # Normal colors
   normal:
     black:   '#1d2021'
     red:     '#fb4934'
@@ -65,7 +62,6 @@ colors:
     cyan:    '#8ec07c'
     white:   '#d5c4a1'
 
-  # Bright colors
   bright:
     black:   '#665c54'
     red:     '#fb4934'
