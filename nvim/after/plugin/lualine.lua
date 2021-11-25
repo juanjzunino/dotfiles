@@ -2,7 +2,7 @@ if not pcall(require, 'lualine') then
 	return
 end
 
-local lualine = require('lualine')
+local lualine  = require'lualine'
 
 local get_lsp_client = function(msg)
   msg = msg or "LSP Inactive"
@@ -34,7 +34,7 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'powerline',
+    theme = 'auto',
     component_separators = {'|', '|'},
     section_separators = '',
     disabled_filetypes = {}

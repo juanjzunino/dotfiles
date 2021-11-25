@@ -24,9 +24,6 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # System Preferences > General > Sidebar icon size: Medium
 defaults write -globalDomain NSTableViewDefaultSizeMode -int 2
 
-# Set highlight color to Orange
-defaults write NSGlobalDomain AppleHighlightColor -string "1.000000 0.874510 0.701961 Orange"
-
 # Menu bar: show remaining battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
@@ -75,10 +72,10 @@ defaults write com.apple.dock mineffect -string "scale"
 defaults write com.apple.dock autohide -bool true
 
 # System Preferences > Dock > Automatically hide and show the Dock (duration)
-defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
 
 # System Preferences > Dock > Automatically hide and show the Dock (delay)
-defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-delay -float 0.5
 
 # System Preferences > Dock > Show indicators for open applications
 defaults write com.apple.dock show-process-indicators -bool true

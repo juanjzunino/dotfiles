@@ -5,8 +5,6 @@ end
 require'nvim-treesitter.configs'.setup {
   ensure_installed = 'maintained',
 	ignore_install = { 'haskell' },
-  highlight = {
-		enable = true,
-		disable = { "rust" }
-	}
+  highlight = { enable = true },
+	rainbow = { enable = false },
 }

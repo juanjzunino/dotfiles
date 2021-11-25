@@ -24,7 +24,7 @@ alias luamake=/Users/juanjozunino/lua-language-server/3rd/luamake/luamake
 # Git
 alias gs="git status"
 alias gg="git log --graph --pretty=oneline"
-alias gu="git pull"
+alias gp="git pull"
 
 # Jupyter Notebooks
 alias jn="jupyter notebook"
@@ -34,5 +34,5 @@ alias desk="cd ~/Desktop"
 alias loads="cd ~/Downloads"
 alias docs="cd ~/Documents"
 alias project="cd ~/projects"
-alias resources="cd ~/Documents/resources"
+alias resources="cd ~/Documents/Resources"
 alias mim="cd ~/Documents/knowledge/MiM+Analytics"
