@@ -57,7 +57,6 @@ return require('packer').startup(function(use)
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
-	use 'EdenEast/nightfox.nvim'
 	use 'norcalli/nvim-base16.lua'
 
   -- Writing

@@ -5,26 +5,9 @@ vim.o.background = 'dark'
 -- Colorizer
 require'colorizer'.setup()
 
--- local nightfox = require("nightfox")
-
--- nightfox.setup({
---   fox = "nordfox",
---   alt_nc = true,
---   visual = true,
---   search = true,
---   styles = {
---     comments = "italic",
---     -- keywords = "bold",
---     -- functions = "italic,bold",
---   },
--- })
-
--- nightfox.load()
-
 -- Colorscheme
 local base16 = require 'base16'
 base16(base16.themes["gruvbox-dark-hard"], true)
-
 
 -- Python tweaks
 vim.cmd 'highlight pythonTSField guifg=cleared'
