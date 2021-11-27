@@ -5,25 +5,34 @@ vim.o.background = 'dark'
 -- Colorizer
 require'colorizer'.setup()
 
+-- local nightfox = require("nightfox")
+
+-- nightfox.setup({
+--   fox = "nordfox",
+--   alt_nc = true,
+--   visual = true,
+--   search = true,
+--   styles = {
+--     comments = "italic",
+--     -- keywords = "bold",
+--     -- functions = "italic,bold",
+--   },
+-- })
+
+-- nightfox.load()
+
 -- Colorscheme
--- vim.cmd 'let g:gruvbox_contrast_dark = "hard"'
--- vim.cmd 'colorscheme gruvbox'
+local base16 = require 'base16'
+base16(base16.themes["gruvbox-dark-hard"], true)
 
-local nightfox = require("nightfox")
 
-nightfox.setup({
-  fox = "nordfox",
-  alt_nc = true,
-  visual = true,
-  search = true,
-  styles = {
-    comments = "italic",
-    -- keywords = "bold",
-    -- functions = "italic,bold",
-  },
-})
-
-nightfox.load()
-
+-- Python tweaks
 vim.cmd 'highlight pythonTSField guifg=cleared'
-vim.cmd 'highlight pythonTSParameter guifg=cleared'
+
+-- Yaml tweaks
+vim.cmd 'highlight yamlTSField guifg=#83a598'
+vim.cmd 'highlight yamlTSString guifg=cleared'
+
+-- Toml tweaks
+vim.cmd 'highlight tomlTSProperty guifg=#83a598'
+vim.cmd 'highlight tomlTSString guifg=cleared'
