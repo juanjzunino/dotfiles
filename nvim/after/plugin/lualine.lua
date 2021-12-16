@@ -48,7 +48,7 @@ lualine.setup {
 		},
     lualine_c = {
 			{'filename', file_status = true},
-			{'diagnostics',  sources = {'nvim_lsp'}}
+			{'diagnostics',  sources = {'nvim_diagnostic'}}
 		},
     lualine_x = {
 			get_lsp_client,
