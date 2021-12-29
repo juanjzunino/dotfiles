@@ -6,16 +6,13 @@ vim.o.background = 'dark'
 require'colorizer'.setup()
 
 -- Colorscheme
-local base16 = require 'base16'
-base16(base16.themes["gruvbox-dark-hard"], true)
+vim.g.tokyonight_style = "night"
+vim.cmd 'colorscheme tokyonight'
+
+-- Background
+vim.cmd 'highlight Normal guibg=none'
+vim.cmd 'highlight NonText guibg=none'
 
 -- Python tweaks
-vim.cmd 'highlight pythonTSField guifg=cleared'
-
--- Yaml tweaks
-vim.cmd 'highlight yamlTSField guifg=#83a598'
-vim.cmd 'highlight yamlTSString guifg=cleared'
-
--- Toml tweaks
-vim.cmd 'highlight tomlTSProperty guifg=#83a598'
-vim.cmd 'highlight tomlTSString guifg=cleared'
+-- vim.cmd 'highlight pythonTSField guifg=cleared'
+-- vim.cmd 'highlight TSVariable guifg=cleared'

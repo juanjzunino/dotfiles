@@ -1,12 +1,10 @@
 [directory]
 read_only = " "
-style = "blue"
 
 [memory_usage]
 symbol = " "
 
 [package]
-# disabled = true
 symbol = " "
 
 [docker_context]
@@ -20,32 +18,24 @@ symbol = " "
 
 [python]
 symbol = " "
-style = 'blue'
 
 [rust]
 symbol = " "
-style = 'blue'
 
 [golang]
 symbol = " "
-style = 'blue'
 
 [lua]
 symbol = " "
-style = 'blue'
 
 [java]
 symbol = " "
-style = 'blue'
 
 [julia]
 symbol = " "
-style = 'blue'
 
 [scala]
 symbol = " "
-style = 'blue'
 
 [ruby]
 symbol = " "
-style = 'blue'

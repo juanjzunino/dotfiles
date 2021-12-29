@@ -16,7 +16,6 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'folke/trouble.nvim'
@@ -33,6 +32,8 @@ return require('packer').startup(function(use)
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use 'nvim-treesitter/playground'
 	use 'p00f/nvim-ts-rainbow'
+
+	use 'tomlion/vim-solidity'
 
 	-- Explore
 	use 'kyazdani42/nvim-tree.lua'
@@ -57,7 +58,7 @@ return require('packer').startup(function(use)
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
-	use 'norcalli/nvim-base16.lua'
+	use 'folke/tokyonight.nvim'
 
   -- Writing
   use 'tpope/vim-commentary'

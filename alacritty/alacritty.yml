@@ -1,5 +1,5 @@
 # Background configuration
-background_opacity: 0.97
+background_opacity: 0.98
 
 # Window configuration
 window:
@@ -25,11 +25,11 @@ font:
 
   bold:
     family: SauceCodePro Nerd Font
-    style: Mono Bold
+    style: Bold
 
   italic:
     family: SauceCodePro Nerd Font
-    style: Mono Italic
+    style: Italic
 
   size: 13.5
 
@@ -45,41 +45,32 @@ font:
 
 colors:
   primary:
-    background: '#1d2021'
-    foreground: '#d5c4a1'
-
-  cursor:
-    text: '#1d2021'
-    cursor: '#d5c4a1'
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
 
   normal:
-    black:   '#1d2021'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#d5c4a1'
+    black:   '0x15161E'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xa9b1d6'
 
   bright:
-    black:   '#665c54'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#fbf1c7'
+    black:   '0x414868'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xc0caf5'
 
   indexed_colors:
-    - { index: 16, color: '#fe8019' }
-    - { index: 17, color: '#d65d0e' }
-    - { index: 18, color: '#3c3836' }
-    - { index: 19, color: '#504945' }
-    - { index: 20, color: '#bdae93' }
-    - { index: 21, color: '#ebdbb2' }
-
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
 
 # Cursor configuration
 cursor_style: Block
