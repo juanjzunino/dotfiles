@@ -1,5 +1,6 @@
 [directory]
 read_only = " "
+style = "blue"
 
 [memory_usage]
 symbol = " "
