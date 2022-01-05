@@ -4,39 +4,52 @@ style = "blue"
 
 [memory_usage]
 symbol = " "
+style = "blue"
 
 [package]
 symbol = " "
+style = "blue"
 
 [docker_context]
 symbol = " "
+style = "blue"
 
 [aws]
 symbol = "  "
+style = "blue"
 
 [conda]
 symbol = " "
+style = "blue"
 
 [python]
 symbol = " "
+style = "blue"
 
 [rust]
 symbol = " "
+style = "blue"
 
 [golang]
 symbol = " "
+style = "blue"
 
 [lua]
 symbol = " "
+style = "blue"
 
 [java]
 symbol = " "
+style = "blue"
 
 [julia]
 symbol = " "
+style = "blue"
 
 [scala]
 symbol = " "
+style = "blue"
 
 [ruby]
 symbol = " "
+style = "blue"

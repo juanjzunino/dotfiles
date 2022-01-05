@@ -10,8 +10,8 @@ local base16 = require 'base16'
 base16(base16.themes['gruvbox-dark-hard'], true)
 
 -- Background
--- vim.cmd 'highlight Normal guibg=none'
--- vim.cmd 'highlight NonText guibg=none'
+vim.cmd 'highlight Normal guibg=none'
+vim.cmd 'highlight NonText guibg=none'
 
 -- Yaml tweaks
 vim.cmd 'highlight yamlTSField guifg=#83a598'
