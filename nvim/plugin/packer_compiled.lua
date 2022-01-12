@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -218,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-markdown",
     url = "https://github.com/plasticboy/vim-markdown"
+  },
+  ["vim-solarized8"] = {
+    loaded = true,
+    path = "/Users/juanjozunino/.local/share/nvim/site/pack/packer/start/vim-solarized8",
+    url = "https://github.com/lifepillar/vim-solarized8"
   },
   ["vim-solidity"] = {
     loaded = true,
