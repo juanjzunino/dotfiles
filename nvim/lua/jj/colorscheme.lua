@@ -11,8 +11,12 @@ end
 
 colorizer.setup()
 
--- Colorscheme
-vim.cmd 'colorscheme solarized'
+-- Tokyonight
+vim.g.tokyonight_style = "night"
+vim.cmd 'colorscheme tokyonight'
+
+-- Solarized
+-- vim.cmd 'colorscheme solarized'
 
 -- Background
 -- vim.cmd 'highlight Normal guibg=none'

@@ -8,7 +8,7 @@ nvim_treesitter.setup {
   ensure_installed = 'maintained',
 	ignore_install = { 'haskell' },
   highlight = {
-		enable = false,
+		enable = true,
 		-- disable = { "yaml" },
 	},
 	rainbow = { enable = false },
