@@ -1,16 +1,34 @@
-local execute = vim.api.nvim_command
 local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-
+-- Automatically install Packer
 if fn.empty(fn.glob(install_path)) > 0 then
-  execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
-  execute 'packadd packer.nvim'
+  Packer_Bootstrap = fn.system({
+		'git',
+		'clone',
+		'--depth',
+		'1',
+		'https://github.com/wbthomason/packer.nvim',
+		install_path
+	})
 end
 
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
+-- Compile Packer after writing plugins.lua
+vim.cmd [[
+	augroup packer_user_config
+		autocmd!
+		autocmd BufWritePost plugins.lua source <afile> | PackerSync
+	augroup end
+]]
 
-return require('packer').startup(function(use)
+
+-- Install plugins
+local status_ok, packer = pcall(require, 'packer')
+if not status_ok then
+	return
+end
+
+return packer.startup(function(use)
   -- Packer can manage itself as an optional plugin
   use 'wbthomason/packer.nvim'
 
@@ -19,11 +37,12 @@ return require('packer').startup(function(use)
   use 'onsails/lspkind-nvim'
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'folke/trouble.nvim'
-	use 'folke/todo-comments.nvim'
 
-  -- Autocomplete
+  -- Autocomplete and Snippets
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
@@ -32,8 +51,6 @@ return require('packer').startup(function(use)
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use 'nvim-treesitter/playground'
 	use 'p00f/nvim-ts-rainbow'
-
-	use 'tomlion/vim-solidity'
 
 	-- Explore
 	use 'kyazdani42/nvim-tree.lua'
@@ -50,7 +67,6 @@ return require('packer').startup(function(use)
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
-  -- use {"ahmedkhalf/lsp-rooter.nvim"}
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
@@ -58,10 +74,7 @@ return require('packer').startup(function(use)
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
-	use 'norcalli/nvim-base16.lua'
-	use 'morhetz/gruvbox'
-	use 'folke/tokyonight.nvim'
-	use 'lifepillar/vim-solarized8'
+	use 'ishan9299/nvim-solarized-lua'
 
   -- Writing
   use 'tpope/vim-commentary'
@@ -69,4 +82,13 @@ return require('packer').startup(function(use)
   use 'godlygeek/tabular'
 	use 'plasticboy/vim-markdown'
 
+	-- Syntax Language Support
+	use 'tomlion/vim-solidity'
+
+	-- Automatically set up your configuration after cloning packer.nvim
+	if Packer_Bootstrap then
+    require('packer').sync()
+  end
+
 end)
+

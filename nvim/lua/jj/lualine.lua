@@ -1,8 +1,8 @@
-if not pcall(require, 'lualine') then
+local status_ok, lualine  = pcall(require, 'lualine')
+
+if not status_ok then
 	return
 end
-
-local lualine  = require'lualine'
 
 local get_lsp_client = function(msg)
   msg = msg or "LSP Inactive"

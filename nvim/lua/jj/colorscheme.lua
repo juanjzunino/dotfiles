@@ -3,13 +3,16 @@ vim.o.termguicolors = true
 vim.o.background = 'dark'
 
 -- Colorizer
-require'colorizer'.setup()
+local colorizer_status_ok, colorizer = pcall(require, 'colorizer')
+
+if not colorizer_status_ok then
+	return
+end
+
+colorizer.setup()
 
 -- Colorscheme
--- local base16 = require 'base16'
--- base16(base16.themes["ocean"], true)
-
-vim.cmd 'colorscheme solarized8'
+vim.cmd 'colorscheme solarized'
 
 -- Background
 -- vim.cmd 'highlight Normal guibg=none'

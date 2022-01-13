@@ -1,8 +1,22 @@
-if not pcall(require, "nvim-tree") then
+vim.g.nvim_tree_icons = {
+	git = {
+		unstaged = "",
+		staged = "✓",
+		unmerged = "",
+		renamed = "➜",
+		untracked = "U",
+		deleted = "",
+		ignored = "◌"
+	}
+}
+
+local status_ok, nvim_tree = pcall(require, "nvim-tree")
+
+if not status_ok then
 	return
 end
 
-require'nvim-tree'.setup {
+nvim_tree.setup {
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = false,
@@ -46,6 +60,5 @@ require'nvim-tree'.setup {
 }
 
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>n', ':NvimTreeFindFile<CR>', {noremap = true})
 

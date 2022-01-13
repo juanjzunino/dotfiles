@@ -11,7 +11,7 @@ precmd() { vcs_info }
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
-zstyle ':vcs_info:git:*' formats " %{$reset_color%}(%b%{$fg[green]%}%u%{$fg[cyan]%}%c%{$reset_color%})"
+zstyle ':vcs_info:git:*' formats " %{$reset_color%}(%b%{$fg[magenta]%}%u%{$fg[cyan]%}%c%{$reset_color%})"
 setopt PROMPT_SUBST
 PS1='jjz :: %{$fg[cyan]%}%3~${vcs_info_msg_0_} %{$fg[green]%}|%{$reset_color%} '
 
