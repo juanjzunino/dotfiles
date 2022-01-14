@@ -84,6 +84,7 @@ cask 'datagrip'
 
 # --------------------------------- Others ------------------------------------
 # Browsers
+cask 'brave-browser'
 cask 'firefox'
 cask 'google-chrome'
 
