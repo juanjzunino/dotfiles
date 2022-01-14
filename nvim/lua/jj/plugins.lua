@@ -74,7 +74,6 @@ return packer.startup(function(use)
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
-	use 'ishan9299/nvim-solarized-lua'
 	use 'folke/tokyonight.nvim'
 
   -- Writing
