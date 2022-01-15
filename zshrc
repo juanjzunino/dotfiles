@@ -7,6 +7,14 @@ fi
 # Options
 disable r
 
+# Exports
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="alacritty"
+# export TERM=xterm-256color
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
 if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -35,8 +43,30 @@ if type brew &>/dev/null; then
     compinit
 fi
 
-# --------------------------------- Exports -----------------------------------
+# ----------------------------------- Path ------------------------------------
+# Local scripts
+export PATH="$PATH:$HOME/bin"
+
+# Rust
+source "$HOME/.cargo/env"
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin 
+
 # Python
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+# Starship
 eval "$(starship init zsh)"
+
