@@ -40,13 +40,7 @@ brew 'youtube-dl'
 
 # ----------------------------------- Dev -------------------------------------
 # Python
-brew 'openssl'
-brew 'readline'
-brew 'sqlite3'
-brew 'xz'
-brew 'zlib'
-brew 'pyenv'
-brew 'pyenv-virtualenv'
+brew 'miniconda'
 
 # Rust
 brew 'rustup'
