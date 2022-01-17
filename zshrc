@@ -6,6 +6,7 @@ fi
 
 # Options
 disable r
+bindkey -v
 
 # Exports
 export EDITOR="nvim"
@@ -14,6 +15,44 @@ export TERMINAL="alacritty"
 # export TERM=xterm-256color
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+
+# ----------------------------------- Alias -----------------------------------
+# Sane defaults
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+
+# Optimization
+alias cplex='/Applications/CPLEX_Studio129/cplex/bin/x86-64_osx/cplex'
+
+# Editor
+alias vim='nvim'
+
+# Open files
+alias finder="open -R"
+
+# Exa
+alias ls="exa -a --icons"
+alias l="exa -la"
+alias tree="exa --tree"
+alias mtree="exa --tree --long"
+
+# Git
+alias g="git"
+alias gs="git status"
+alias gg="git log --graph --pretty=oneline"
+alias gp="git pull"
+
+# Jupyter Notebooks
+alias jn="jupyter notebook"
+
+# Folder's shortcuts
+alias desk="cd ~/Desktop"
+alias loads="cd ~/Downloads"
+alias docs="cd ~/Documents"
+alias projects="cd ~/projects"
+alias resources="cd ~/Documents/Resources"
+alias mim="cd ~/Documents/knowledge/MiM+Analytics"
 
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
@@ -60,9 +99,9 @@ if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
     if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+# . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"  # commented out by conda initialize
     else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+# export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"  # commented out by conda initialize
     fi
 fi
 unset __conda_setup
