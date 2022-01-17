@@ -20,14 +20,11 @@
 
 - link:
     ~/bin: bin/
-    ~/.aliases: aliases
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.zprofile: zprofile
     ~/.zshrc: zshrc
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: gitconfig
+    ~/.flake8: python/flake8
     ~/.config/nvim: nvim/
     ~/.config/alacritty: alacritty/
     ~/.config/starship.toml: starship.toml
