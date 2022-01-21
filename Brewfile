@@ -63,10 +63,6 @@ cask 'rstudio'
 # Solidity
 brew 'Solidity'
 
-# Development Environments
-cask 'virtualbox'
-cask 'vagrant'
-
 # ------------------------------ Editors & IDEs -------------------------------
 brew 'vim'
 brew 'neovim'
@@ -78,7 +74,7 @@ cask 'datagrip'
 # Browsers
 cask 'brave-browser'
 cask 'firefox'
-cask 'google-chrome'
+cask 'chromium'
 
 # Apps
 cask '1password'
