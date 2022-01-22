@@ -40,7 +40,7 @@ brew 'youtube-dl'
 
 # ----------------------------------- Dev -------------------------------------
 # Python
-brew 'miniconda'
+cask 'miniconda'
 
 # Rust
 brew 'rustup-init'
