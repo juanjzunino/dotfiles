@@ -42,10 +42,8 @@ keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-h>', '<C-w>h', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
--- Search functionality
+-- Search
 keymap('n', '<C-h>', ':nohlsearch<CR>', opts)
-keymap('n', '?', '?\\v', opts)
-keymap('n', '/', '/\\v', opts)
 keymap('n', 'n', 'nzz', opts)
 keymap('n', 'N', 'Nzz', opts)
 keymap('n', '*', '*zz', opts)
