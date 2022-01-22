@@ -1,15 +1,15 @@
 # Dotfiles
 
 Configurations files:
-- Bash
-- Zsh
-- Nvim
 - Alacritty
-- Tmux
+- Nvim
+- Python
 - Starship
+- Tmux
+- Vim
+- Zsh
 
 Requirements:
 - Git
 - Homebrew
-- macOS
-- dotbot
+- Stow
