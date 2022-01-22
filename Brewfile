@@ -43,7 +43,7 @@ brew 'youtube-dl'
 brew 'miniconda'
 
 # Rust
-brew 'rustup'
+brew 'rustup-init'
 brew 'rust-analyzer'
 
 # Go
