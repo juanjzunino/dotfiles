@@ -13,4 +13,5 @@ vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>lua require("telescope.builtin"
 Neovim LSP Pickers:
 	- lsp_references [~/.config/nvim/lua/jj/lspconfig.lua]
 	- lsp_document_diagnostic [~/.config/nvim/lua/jj/lspconfig.lua]
+	- lsp_<document,workspace>_symbols [~/.config/nvim/lua/jj/lspconfig.lua]
 --]]
