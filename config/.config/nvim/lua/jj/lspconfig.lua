@@ -75,6 +75,11 @@ lspconfig.vimls.setup {
 	capabilities = custom_capabilities
 }
 
+lspconfig.clangd.setup{
+	on_attach = custom_attach,
+	capabilities = custom_capabilities
+}
+
 local sumneko_root_path = "/Users/juanjozunino/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/macOS/lua-language-server"
 
