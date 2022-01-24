@@ -9,6 +9,7 @@ disable r
 bindkey -v
 
 # Exports
+export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="alacritty"
