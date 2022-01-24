@@ -2,6 +2,9 @@
 	name = Juanjo Zunino
 	email = juanj.zunino@gmail.com
 
+[github]
+	user = juanjzunino
+
 [init]
 	defaultBranch = main
 
