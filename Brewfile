@@ -50,6 +50,7 @@ brew 'youtube-dl'
 # ----------------------------------- Dev -------------------------------------
 # Python
 cask 'miniconda'
+brew 'pyright'
 
 # Rust
 brew 'rustup-init'
@@ -59,11 +60,16 @@ brew 'rust-analyzer'
 brew 'go'
 brew 'gopls'
 
+# C/C++
+brew 'llvm'
+
 # Node.js
 brew 'node'
+brew 'prettier'
 
 # Lua
 brew 'lua'
+brew 'lua-language-server'
 
 # R
 cask 'r'
@@ -71,6 +77,9 @@ cask 'rstudio'
 
 # Solidity
 brew 'Solidity'
+
+# Yaml
+brew 'yaml-language-server'
 
 # ------------------------------ Editors & IDEs -------------------------------
 brew 'vim'
