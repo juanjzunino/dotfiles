@@ -10,7 +10,8 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.black.with({ extra_args = { "--fast" } }),
+		-- formatting.yapf,
+		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.prettier.with({ extra_filetypes = { "toml" } }),
 		formatting.stylua,
 		diagnostics.flake8,
