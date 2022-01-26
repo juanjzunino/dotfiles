@@ -1,5 +1,5 @@
 # Background configuration
-background_opacity: 1
+window_opacity: 1
 
 # Window configuration
 window:
