@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-# Thanks to Mathias Bynens and to Jose Javier Gonzalez
-# https://mths.be/macos
-# https://github.com/JJGO/macOS-setup
-
+# Much courtesy of https://github.com/mathiasbynens/
 set -e          # Exit on error
 set -o pipefail # Exit on pipe error
 set -x          # Enable verbosity
@@ -59,6 +56,9 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Dock and hot corners                                                       #
 ##############################################################################
 
+# System Preferences > Dock > Position on screen:
+defaults write com.apple.dock orientation left
+
 # System Preferences > Dock > Size:
 defaults write com.apple.dock tilesize -int 36
 
@@ -110,7 +110,7 @@ for app in "Activity Monitor" \
 	"Finder" \
 	"SystemUIServer" \
     "Terminal"; do
-	killall "${app}" &> /dev/null
+	killall "${app}" || echo "Failed to kill $app"
 done
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
