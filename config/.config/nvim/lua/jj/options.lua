@@ -37,17 +37,17 @@ vim.bo.expandtab = true
 
 -- Fold
 vim.wo.foldenable = true
-vim.wo.foldmethod = 'marker'
+vim.wo.foldmethod = "marker"
 vim.wo.foldlevel = 3
 
 -- Clipboard
-vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = "unnamedplus"
 
 -- Swap files
 vim.o.swapfile = false
 vim.o.undofile = true
-vim.o.undodir = '/Users/juanjozunino/.cache'
+vim.o.undodir = "/Users/juanjozunino/.cache"
 
 -- Spell
 vim.o.spell = false
-vim.o.spelllang = 'en,es'
+vim.o.spelllang = "en,es"
