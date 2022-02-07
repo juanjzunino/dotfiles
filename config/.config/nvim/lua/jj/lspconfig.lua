@@ -5,6 +5,12 @@ if not status_ok then
 	return
 end
 
+local status_ok, lsp_signature = pcall(require, "lsp_signature")
+
+if not status_ok then
+	return
+end
+
 -- On attach
 local custom_attach = function(client, bufnr)
 	local function buf_set_keymap(...)
@@ -38,6 +44,15 @@ local custom_attach = function(client, bufnr)
 	buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 	buf_set_keymap("n", "<space>wd", '<cmd>lua require("telescope.builtin").lsp_document_symbols()<CR>', opts)
 	buf_set_keymap("n", "<space>ww", '<cmd>lua require("telescope.builtin").lsp_workspace_symbols()<CR>', opts)
+
+	-- Signature help
+	lsp_signature.on_attach({
+		bind = true,
+		doc_lines = 0,
+		handler_opts = {
+			border = "rounded",
+		},
+	})
 
 	-- Autoformat
 	if client.resolved_capabilities.document_formatting then

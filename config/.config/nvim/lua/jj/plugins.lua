@@ -36,6 +36,7 @@ return packer.startup(function(use)
 	use("onsails/lspkind-nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("folke/trouble.nvim")
+	use("ray-x/lsp_signature.nvim")
 
 	-- Autocomplete and Snippets
 	use("hrsh7th/cmp-nvim-lsp")
