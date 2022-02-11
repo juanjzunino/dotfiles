@@ -33,7 +33,7 @@ alias vim='nvim'
 alias finder="open -R"
 
 # Exa
-alias ls="exa -a --icons"
+alias ls="exa -a"
 alias l="exa -la"
 alias tree="exa --tree"
 alias mtree="exa --tree --long"
