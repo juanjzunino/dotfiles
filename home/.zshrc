@@ -36,13 +36,15 @@ alias finder="open -R"
 alias ls="exa -a"
 alias l="exa -la"
 alias tree="exa --tree"
-alias mtree="exa --tree --long"
 
 # Git
 alias g="git"
 alias gs="git status"
+alias ga="git add ."
+alias gc="git commit"
+alias gp="git push"
+alias gu="git pull"
 alias gg="git log --graph --pretty=oneline"
-alias gp="git pull"
 
 # Jupyter Notebooks
 alias jn="jupyter notebook"
