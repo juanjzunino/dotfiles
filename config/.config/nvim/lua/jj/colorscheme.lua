@@ -11,10 +11,6 @@ end
 
 colorizer.setup()
 
--- Tokyonight
-vim.g.tokyonight_style = "night"
-vim.cmd("colorscheme tokyonight")
-
--- Background
--- vim.cmd 'highlight Normal guibg=none'
--- vim.cmd 'highlight NonText guibg=none'
+-- Atelier Dune
+local base16 = require("base16")
+base16(base16.themes["atelier-dune"], true)

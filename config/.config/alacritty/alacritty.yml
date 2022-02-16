@@ -45,32 +45,40 @@ font:
 
 colors:
   primary:
-    background: "#1a1b26"
-    foreground: "#c0caf5"
+    background: "#20201d"
+    foreground: "#a6a28c"
+
+  cursor:
+    text: "#20201d"
+    cursor: "#a6a28c"
 
   normal:
-    black: "#15161E"
-    red: "#f7768e"
-    green: "#9ece6a"
-    yellow: "#e0af68"
-    blue: "#7aa2f7"
-    magenta: "#bb9af7"
-    cyan: "#7dcfff"
-    white: "#a9b1d6"
+    black: "#20201d"
+    red: "#d73737"
+    green: "#60ac39"
+    yellow: "#ae9513"
+    blue: "#6684e1"
+    magenta: "#b854d4"
+    cyan: "#1fad83"
+    white: "#a6a28c"
 
   bright:
-    black: "#414868"
-    red: "#f7768e"
-    green: "#9ece6a"
-    yellow: "#e0af68"
-    blue: "#7aa2f7"
-    magenta: "#bb9af7"
-    cyan: "#7dcfff"
-    white: "#c0caf5"
+    black: "#7d7a68"
+    red: "#d73737"
+    green: "#60ac39"
+    yellow: "#ae9513"
+    blue: "#6684e1"
+    magenta: "#b854d4"
+    cyan: "#1fad83"
+    white: "#fefbec"
 
   indexed_colors:
-    - { index: 16, color: "#ff9e64" }
-    - { index: 17, color: "#db4b4b" }
+    - { index: 16, color: "#b65611" }
+    - { index: 17, color: "#d43552" }
+    - { index: 18, color: "#292824" }
+    - { index: 19, color: "#6e6b5e" }
+    - { index: 20, color: "#999580" }
+    - { index: 21, color: "#e8e4cf" }
 
 # Cursor configuration
 cursor_style: Block
