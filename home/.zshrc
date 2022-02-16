@@ -1,9 +1,4 @@
 # --------------------------------- Settings ----------------------------------
-# Aliases
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi
-
 # Options
 disable r
 bindkey -v
@@ -27,15 +22,19 @@ alias rm="rm -i"
 alias cplex='/Applications/CPLEX_Studio129/cplex/bin/x86-64_osx/cplex'
 
 # Editor
-alias vim='nvim'
+if [ "$(command -v nvim)" ]; then
+    alias vim='nvim'
+fi
 
 # Open files
 alias finder="open -R"
 
 # Exa
-alias ls="exa -a"
-alias l="exa -la"
-alias tree="exa --tree"
+if [ "$(command -v exa)" ]; then
+    alias ls="exa -a"
+    alias l="exa -la"
+    alias tree="exa --tree"
+fi
 
 # Git
 alias g="git"
