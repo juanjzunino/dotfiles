@@ -30,10 +30,14 @@ fi
 alias finder="open -R"
 
 # Exa
-if [ "$(command -v exa)" ]; then
+if [ "$(command -v exa)" ];
+then
     alias ls="exa -a"
     alias l="exa -la"
     alias tree="exa --tree"
+else
+    alias ls="ls -aG"
+    alias l="ls -laG"
 fi
 
 # Git
@@ -53,7 +57,8 @@ alias desk="cd ~/Desktop"
 alias loads="cd ~/Downloads"
 alias docs="cd ~/Documents"
 alias projects="cd ~/projects"
-alias resources="cd ~/Documents/Resources"
+alias books="cd ~/Documents/Books"
+alias papers="cd ~/Documents/Papers"
 alias mim="cd ~/Documents/knowledge/MiM+Analytics"
 
 # ---------------------------------- Plugins ----------------------------------
