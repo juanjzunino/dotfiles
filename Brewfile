@@ -21,7 +21,6 @@ brew 'git'
 
 # Binaries
 brew 'autojump'
-brew 'bandwhich'
 brew 'bat'
 brew 'bottom'
 brew 'dust'
@@ -68,11 +67,12 @@ brew 'prettier'
 
 # Lua
 brew 'lua'
+brew 'luarocks'
+brew 'stylua'
 brew 'lua-language-server'
 
 # R
 cask 'r'
-cask 'rstudio'
 
 # Solidity
 brew 'Solidity'
@@ -81,26 +81,28 @@ brew 'Solidity'
 brew 'yaml-language-server'
 
 # ------------------------------ Editors & IDEs -------------------------------
-brew 'vim'
 brew 'neovim'
-cask 'sublime-text'
-cask 'pycharm'
+brew 'vim'
 cask 'datagrip'
+cask 'pycharm'
+cask 'rstudio'
+cask 'sublime-text'
 
 # --------------------------------- Others ------------------------------------
 # Browsers
 cask 'brave-browser'
-cask 'firefox'
 cask 'chromium'
+cask 'firefox'
 
 # Apps
 cask '1password'
 cask 'flux'
 cask 'karabiner-elements'
+cask 'notion'
 cask 'obsidian'
 cask 'rectangle'
 cask 'signal'
-cask 'slack'
+cask 'slackluarocks'
 cask 'spotify'
 cask 'telegram'
 cask 'whatsapp'
