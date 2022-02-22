@@ -2,8 +2,16 @@
 
 all: install_packages symlink_files
 
-install: install_packages change_shells symlink_files mac_settings
+install: install_homebrew install_packages change_shells symlink_files mac_settings
 	@echo "Setup complete"
+
+install_homebrew:
+	@echo "========================================"
+	@echo "Installing Homebrew"
+	if [ -z "$$(command -v brew)" ]; then \
+	  /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+	fi
+	@echo "========================================"
 
 install_packages:
 	@echo "========================================"
