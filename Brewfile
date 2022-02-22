@@ -16,9 +16,6 @@ brew 'zsh-completions'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 
-# Version Control System
-brew 'git'
-
 # Binaries
 brew 'autojump'
 brew 'bat'
@@ -46,6 +43,10 @@ brew 'wget'
 brew 'youtube-dl'
 
 # ----------------------------------- Dev -------------------------------------
+## Version Control System
+brew 'git'
+brew 'lazygit'
+
 # Python
 cask 'miniconda'
 brew 'pyright'
