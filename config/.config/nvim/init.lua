@@ -16,7 +16,7 @@ require("jj.plugins")
 -- Plugins configs
 require("jj.lspconfig")
 require("jj.cmp")
--- require("jj.null-ls")
+require("jj.null-ls")
 require("jj.treesitter")
 require("jj.telescope")
 require("jj.nvimtree")

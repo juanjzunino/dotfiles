@@ -70,7 +70,7 @@ local custom_capabilities = vim.lsp.protocol.make_client_capabilities()
 custom_capabilities = require("cmp_nvim_lsp").update_capabilities(custom_capabilities)
 
 -- Language Server Protocol
-local servers = { "pyright", "rust_analyzer", "gopls", "clangd", "yamlls", "vimls" }
+local servers = { "pyright", "rust_analyzer", "gopls", "clangd", "sumneko_lua", "yamlls", "vimls" }
 
 for _, server in pairs(servers) do
 	lspconfig[server].setup({
