@@ -7,7 +7,6 @@ bindkey -v
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERMINAL="alacritty"
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
