@@ -1,5 +1,6 @@
 --[[ Notes:
-./lua/jj/*.lua: This is where configuration/extensions for new style plugins live.
+./lua/jj/*.lua: This is where configuration/extensions for new plugins live.
+./after/ftplugin/*.vim: This is where all specific file type configurations live.
 --]]
 
 -- Globals
