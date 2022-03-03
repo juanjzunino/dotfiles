@@ -2,15 +2,12 @@
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
-tap 'ethereum/ethereum'
 
 # ----------------------------------- Shell -----------------------------------
 # Terminal emulator
 cask 'alacritty'
 
 # Shell
-brew 'bash'
-brew 'bash-completion'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'zsh-autosuggestions'
@@ -25,7 +22,6 @@ brew 'exa'
 brew 'fd'
 brew 'ffmpeg'
 brew 'fzf'
-brew 'grex'
 brew 'htop'
 brew 'neofetch'
 brew 'pandoc'
@@ -84,7 +80,6 @@ brew 'yaml-language-server'
 # ------------------------------ Editors & IDEs -------------------------------
 brew 'neovim'
 brew 'vim'
-cask 'datagrip'
 cask 'pycharm'
 cask 'rstudio'
 cask 'sublime-text'
@@ -92,7 +87,6 @@ cask 'sublime-text'
 # --------------------------------- Others ------------------------------------
 # Browsers
 cask 'brave-browser'
-cask 'chromium'
 cask 'firefox'
 cask 'google-chrome'
 
