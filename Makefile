@@ -22,7 +22,6 @@ install_packages:
 change_shells:
 	@echo "========================================"
 	@echo "Adding shells"
-	echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
 	echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 	chsh -s $(shell which zsh)
 	@echo "========================================"
