@@ -68,9 +68,6 @@ brew 'luarocks'
 brew 'stylua'
 brew 'lua-language-server'
 
-# Solidity
-brew 'Solidity'
-
 # Yaml
 brew 'yaml-language-server'
 
