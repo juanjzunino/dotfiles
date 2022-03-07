@@ -82,7 +82,6 @@ cask 'sublime-text'
 
 # --------------------------------- Others ------------------------------------
 # Browsers
-cask 'brave-browser'
 cask 'firefox'
 cask 'google-chrome'
 
@@ -93,13 +92,9 @@ cask 'karabiner-elements'
 cask 'logitech-options'
 cask 'notion'
 cask 'obinskit'
-cask 'obsidian'
 cask 'rectangle'
-cask 'signal'
 cask 'slack'
 cask 'spotify'
-cask 'telegram'
-cask 'whatsapp'
 
 # Fonts
 cask 'font-sauce-code-pro-nerd-font'
