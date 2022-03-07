@@ -68,9 +68,6 @@ brew 'luarocks'
 brew 'stylua'
 brew 'lua-language-server'
 
-# R
-cask 'r'
-
 # Solidity
 brew 'Solidity'
 
@@ -81,7 +78,6 @@ brew 'yaml-language-server'
 brew 'neovim'
 brew 'vim'
 cask 'pycharm'
-cask 'rstudio'
 cask 'sublime-text'
 
 # --------------------------------- Others ------------------------------------
