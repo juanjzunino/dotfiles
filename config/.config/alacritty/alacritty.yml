@@ -2,11 +2,9 @@
 env:
   TERM: xterm-256color
 
-# Background configuration
-window_opacity: 1
-
 # Window configuration
 window:
+  opacity: 0.98
   dimensions:
     columns: 0
     lines: 0
