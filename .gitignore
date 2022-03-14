@@ -1,5 +1,12 @@
 # macOS Files
 .DS_Store
 .DS_Store?
+
+# Homebrew
 Brewfile.lock.json
+
+# Karabiner
 automatic_backups/
+
+# Neovim
+plugin/
