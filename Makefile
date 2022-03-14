@@ -2,11 +2,18 @@
 
 all: install_packages symlink_files
 
-install: install_homebrew install_packages change_shells symlink_files mac_settings
+install: install_homebrew install_packages change_shells modify_files symlink_files mac_settings
 	@echo "Setup complete"
 
 install_homebrew:
 	@echo "========================================"
+	@echo "Updating PATH"
+	if [ ! -f ~/.zshrc ]; then \
+		export PATH="/opt/homebrew/bin:$$PATH"; \
+		echo 'export PATH="/opt/homebrew/bin:$$PATH"' >> $$HOME/.zshrc; \
+		echo "Restart process"; \
+		exec zsh; \
+	fi
 	@echo "Installing Homebrew"
 	if [ -z "$$(command -v brew)" ]; then \
 	  /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
@@ -22,8 +29,17 @@ install_packages:
 change_shells:
 	@echo "========================================"
 	@echo "Adding shells"
-	echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
-	chsh -s $(shell which zsh)
+	echo "/opt/homebrew/bin/zsh" | sudo tee -a /etc/shells
+	chsh -s /opt/homebrew/bin/zsh
+	@echo "========================================"
+
+modify_files:
+	@echo "========================================"
+	@echo "Updating directories"
+	if [ ! -d ~/.config ]; then \
+	    mkdir -p ~/.config; \
+	fi
+	rm -rf ~/.zshrc
 	@echo "========================================"
 
 symlink_files:
