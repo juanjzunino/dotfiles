@@ -2,7 +2,7 @@
 
 all: install_packages symlink_files
 
-install: install_homebrew install_packages change_shells modify_files symlink_files mac_settings
+install: install_homebrew install_packages modify_files symlink_files mac_settings
 	@echo "Setup complete"
 
 install_homebrew:
@@ -24,13 +24,6 @@ install_packages:
 	@echo "========================================"
 	@echo "Installing packages"
 	brew bundle --file=~/dotfiles/Brewfile
-	@echo "========================================"
-
-change_shells:
-	@echo "========================================"
-	@echo "Adding shells"
-	echo "/opt/homebrew/bin/zsh" | sudo tee -a /etc/shells
-	chsh -s /opt/homebrew/bin/zsh
 	@echo "========================================"
 
 modify_files:
