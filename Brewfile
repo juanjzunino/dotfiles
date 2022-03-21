@@ -7,8 +7,7 @@ tap 'homebrew/cask-fonts'
 # Terminal emulator
 cask 'alacritty'
 
-# Shell
-brew 'zsh'
+# Zsh Plugins
 brew 'zsh-completions'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
