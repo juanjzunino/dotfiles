@@ -33,8 +33,8 @@ keymap("", "<C-a>", "<Nop>", {})
 keymap("", "<C-x>", "<Nop>", {})
 
 -- Split panes tmux styles
-keymap("n", "<Leader>-", ":sp<CR>", opts)
-keymap("n", "<Leader>|", ":vsp<CR>", opts)
+keymap("n", "<C-w>-", ":sp<CR>", opts)
+keymap("n", "<C-w>|", ":vsp<CR>", opts)
 
 -- Move easily between panes
 keymap("n", "<C-j>", "<C-w>j", opts)
