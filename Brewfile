@@ -31,6 +31,7 @@ brew 'sd'
 brew 'starship'
 brew 'stow'
 brew 'tealdeer'
+brew 'thefuck'
 brew 'tmux'
 brew 'tokei'
 brew 'tree'
@@ -80,6 +81,10 @@ cask 'sublime-text'
 # Browsers
 cask 'brave-browser'
 cask 'google-chrome'
+
+# Microsoft
+cask 'microsoft-excel'
+cask 'microsoft-word'
 
 # Apps
 cask '1password'
