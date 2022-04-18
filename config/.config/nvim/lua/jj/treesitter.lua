@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 nvim_treesitter.setup({
-	ensure_installed = "maintained",
+	ensure_installed = "all",
 	ignore_install = { "haskell" },
 	highlight = {
 		enable = true,
