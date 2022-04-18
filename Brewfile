@@ -79,7 +79,6 @@ cask 'sublime-text'
 
 # --------------------------------- Others ------------------------------------
 # Browsers
-cask 'brave-browser'
 cask 'google-chrome'
 
 # Microsoft
