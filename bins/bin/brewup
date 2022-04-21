@@ -1,7 +1,3 @@
 #!/usr/bin/env  bash
 
-# Homebrew
 brew update && brew upgrade && brew cleanup
-
-# Neovim
-nvim -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
