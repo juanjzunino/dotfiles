@@ -57,9 +57,6 @@ alias desk="cd ~/Desktop"
 alias loads="cd ~/Downloads"
 alias docs="cd ~/Documents"
 alias projects="cd ~/projects"
-alias books="cd ~/Documents/Knowledge/Books"
-alias papers="cd ~/Documents/Knowledge/Papers"
-alias mim="cd ~/Documents/Education/UTDT/MiM+Analytics"
 
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
