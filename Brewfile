@@ -68,7 +68,6 @@ brew 'prettier'
 # Lua
 brew 'lua'
 brew 'luarocks'
-brew 'stylua'
 brew 'lua-language-server'
 
 # Yaml
