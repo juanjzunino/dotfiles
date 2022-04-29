@@ -13,7 +13,6 @@ null_ls.setup({
 		formatting.yapf,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.prettier.with({ extra_filetypes = { "toml" } }),
-		formatting.stylua,
 		diagnostics.flake8,
 	},
 	on_attach = function(client)
