@@ -82,6 +82,7 @@ cask 'sublime-text'
 # --------------------------------- Others ------------------------------------
 # Browsers
 cask 'google-chrome'
+cask 'brave-browser'
 
 # Microsoft
 cask 'microsoft-excel'
