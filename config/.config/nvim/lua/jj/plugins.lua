@@ -50,7 +50,6 @@ return packer.startup(function(use)
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-treesitter/playground")
-	use("p00f/nvim-ts-rainbow")
 
 	-- Explore
 	use("kyazdani42/nvim-tree.lua")

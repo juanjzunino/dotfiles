@@ -8,5 +8,4 @@ nvim_treesitter.setup({
 	ensure_installed = "all",
 	ignore_install = { "haskell", "phpdoc" },
 	highlight = { enable = true },
-	rainbow = { enable = false },
 })
