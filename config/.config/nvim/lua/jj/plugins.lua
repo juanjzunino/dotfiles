@@ -80,7 +80,6 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("godlygeek/tabular")
 	use("plasticboy/vim-markdown")
-	use({ "iamcco/markdown-preview.nvim", ft = "markdown", run = "cd app && yarn install" })
 
 	-- Syntax Language Support
 	use("tomlion/vim-solidity")
