@@ -77,6 +77,7 @@ brew 'yaml-language-server'
 brew 'neovim'
 brew 'vim'
 cask 'pycharm'
+cask 'visual-studio-code'
 cask 'sublime-text'
 
 # --------------------------------- Others ------------------------------------
