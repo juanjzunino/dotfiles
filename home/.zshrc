@@ -98,6 +98,10 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin 
 
 # Python
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
 __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -109,6 +113,8 @@ else
     fi
 fi
 unset __conda_setup
+
+[[ -z $TMUX ]] || conda deactivate; conda activate base
 
 # Starship
 eval "$(starship init zsh)"

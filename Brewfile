@@ -48,6 +48,7 @@ brew 'lazygit'
 
 # Python
 cask 'miniconda'
+brew 'pyenv'
 brew 'pyright'
 
 # Rust
@@ -95,10 +96,14 @@ cask 'flux'
 cask 'karabiner-elements'
 cask 'logitech-options'
 cask 'notion'
+cask 'numi'
 cask 'obinskit'
 cask 'rectangle'
 cask 'slack'
 cask 'spotify'
+cask 'telegram'
+cask 'whatsapp'
+cask 'zoom'
 
 # Fonts
 cask 'font-sauce-code-pro-nerd-font'
