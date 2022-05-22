@@ -8,6 +8,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
+export MANPAGER='nvim +Man!'
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
@@ -18,7 +19,7 @@ alias mv="mv -i"
 alias rm="rm -i"
 
 # Optimization
-alias cplex='/Applications/CPLEX_Studio129/cplex/bin/x86-64_osx/cplex'
+alias cplex='/Applications/CPLEX_Studio221/cplex/bin/x86-64_osx/cplex'
 
 # Editor
 if [ "$(command -v nvim)" ]; then
