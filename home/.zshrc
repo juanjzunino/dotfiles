@@ -5,12 +5,14 @@ bindkey -v
 
 # Exports
 export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="$PATH:/opt/homebrew/bin"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export MANPAGER='nvim +Man!'
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ----------------------------------- Alias -----------------------------------
 # Sane defaults
@@ -98,12 +100,10 @@ source "$HOME/.cargo/env"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin 
 
-# Python
-# [[ -z $TMUX ]] || conda deactivate; conda activate base
-
 # Starship
 eval "$(starship init zsh)"
 
+# Python
 __conda_setup="$('/Users/juanjzunino/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
