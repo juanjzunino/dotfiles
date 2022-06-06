@@ -73,16 +73,13 @@ return packer.startup(function(use)
 
 	-- Color
 	use("norcalli/nvim-colorizer.lua")
-	use("folke/tokyonight.nvim")
+	use("norcalli/nvim-base16.lua")
 
 	-- Writing
 	use("tpope/vim-commentary")
 	use("windwp/nvim-autopairs")
 	use("godlygeek/tabular")
 	use("plasticboy/vim-markdown")
-
-	-- Syntax Language Support
-	use("tomlion/vim-solidity")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	if Packer_Bootstrap then

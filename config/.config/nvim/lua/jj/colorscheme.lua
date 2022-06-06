@@ -6,11 +6,11 @@ vim.o.background = "dark"
 local colorizer_status_ok, colorizer = pcall(require, "colorizer")
 
 if not colorizer_status_ok then
-    return
+	return
 end
 
 colorizer.setup()
 
--- Tokyonight
-vim.g.tokyonight_style = "night"
-vim.cmd "colorscheme tokyonight"
+-- Colorscheme
+local base16 = require 'base16'
+base16(base16.themes["atelier-dune"], true)
