@@ -4,9 +4,6 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 
 # ----------------------------------- Shell -----------------------------------
-# Terminal emulator
-cask 'alacritty'
-
 # Bash
 brew 'bash'
 
@@ -18,8 +15,6 @@ brew 'zsh-syntax-highlighting'
 # Binaries
 brew 'autojump'
 brew 'bat'
-brew 'bottom'
-brew 'dust'
 brew 'exa'
 brew 'fd'
 brew 'ffmpeg'
@@ -27,19 +22,14 @@ brew 'fzf'
 brew 'htop'
 brew 'neofetch'
 brew 'pandoc'
-brew 'procs'
 brew 'ranger'
 brew 'ripgrep'
 brew 'sd'
 brew 'starship'
 brew 'stow'
 brew 'tealdeer'
-brew 'thefuck'
 brew 'tmux'
-brew 'tokei'
-brew 'tree'
 brew 'wget'
-brew 'youtube-dl'
 
 # ----------------------------------- Dev -------------------------------------
 ## Version Control System
@@ -47,8 +37,6 @@ brew 'git'
 brew 'lazygit'
 
 # Python
-cask 'miniconda'
-brew 'pyenv'
 brew 'pyright'
 
 # Rust
@@ -74,36 +62,10 @@ brew 'lua-language-server'
 # Yaml
 brew 'yaml-language-server'
 
-# ------------------------------ Editors & IDEs -------------------------------
+# --------------------------------- Editors -----------------------------------
 brew 'neovim'
 brew 'vim'
-cask 'pycharm'
-cask 'visual-studio-code'
-cask 'sublime-text'
 
-# --------------------------------- Others ------------------------------------
-# Browsers
-cask 'google-chrome'
-cask 'brave-browser'
 
-# Microsoft
-cask 'microsoft-excel'
-cask 'microsoft-word'
-
-# Apps
-cask '1password'
-cask 'flux'
-cask 'karabiner-elements'
-cask 'logitech-options'
-cask 'notion'
-cask 'numi'
-cask 'obinskit'
-cask 'rectangle'
-cask 'slack'
-cask 'spotify'
-cask 'telegram'
-cask 'whatsapp'
-cask 'zoom'
-
-# Fonts
+# ---------------------------------- Fonts ------------------------------------
 cask 'font-sauce-code-pro-nerd-font'
