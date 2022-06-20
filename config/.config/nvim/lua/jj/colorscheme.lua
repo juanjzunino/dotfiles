@@ -12,5 +12,4 @@ end
 colorizer.setup()
 
 -- Colorscheme
-local base16 = require 'base16'
-base16(base16.themes["atelier-dune"], true)
+vim.cmd [[colorscheme vscode]]
