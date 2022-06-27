@@ -11,7 +11,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.yapf,
-		-- formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.black,
 		formatting.prettier.with({ extra_filetypes = { "toml" } }),
 		diagnostics.flake8,
 	},

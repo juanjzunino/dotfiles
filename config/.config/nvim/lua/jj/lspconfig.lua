@@ -59,7 +59,7 @@ local custom_attach = function(client, bufnr)
 		vim.cmd([[
 			augroup lsp_buf_format
         au! BufWritePre <buffer>
-        autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync()
+        autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync(nil, 2000)
       augroup END
 		]])
 	end
