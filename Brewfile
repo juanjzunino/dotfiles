@@ -8,8 +8,8 @@ tap 'homebrew/cask-fonts'
 brew 'bash'
 
 # Zsh Plugins
-brew 'zsh-completions'
 brew 'zsh-autosuggestions'
+brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
 # Binaries
@@ -65,7 +65,6 @@ brew 'yaml-language-server'
 # --------------------------------- Editors -----------------------------------
 brew 'neovim'
 brew 'vim'
-
 
 # ---------------------------------- Fonts ------------------------------------
 cask 'font-sauce-code-pro-nerd-font'
