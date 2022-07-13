@@ -12,4 +12,5 @@ end
 colorizer.setup()
 
 -- Colorscheme
-vim.cmd [[colorscheme vscode]]
+vim.g.tokyonight_style = "night"
+vim.cmd [[colorscheme tokyonight]]

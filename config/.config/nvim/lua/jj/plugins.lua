@@ -73,7 +73,7 @@ return packer.startup(function(use)
 
 	-- Color
 	use("norcalli/nvim-colorizer.lua")
-	use("Mofiqul/vscode.nvim")
+	use("folke/tokyonight.nvim")
 
 	-- Writing
 	use("tpope/vim-commentary")
