@@ -10,10 +10,9 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.yapf,
-		-- formatting.black,
-		formatting.prettier.with({ extra_filetypes = { "toml" } }),
+		formatting.black,
 		diagnostics.flake8,
+		formatting.prettier.with({ extra_filetypes = { "toml" } }),
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
