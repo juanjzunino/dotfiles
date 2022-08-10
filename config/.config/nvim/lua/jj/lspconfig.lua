@@ -5,11 +5,20 @@ if not status_ok then
 	return
 end
 
-local status_ok, lsp_signature = pcall(require, "lsp_signature")
+local signature_status_ok, lsp_signature = pcall(require, "lsp_signature")
 
-if not status_ok then
+if not signature_status_ok then
 	return
 end
+
+-- LSP Saga
+local saga_status_ok, saga = pcall(require, "lspsaga")
+
+if not saga_status_ok then
+	return
+end
+
+saga.init_lsp_saga()
 
 -- On attach
 local custom_attach = function(client, bufnr)
@@ -29,11 +38,14 @@ local custom_attach = function(client, bufnr)
 
 	buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	-- buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	buf_set_keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	-- buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	buf_set_keymap("n", "<C-k>", "<Cmd>Lspsaga signature_help<CR>", opts)
 	buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-	buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+	-- buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+	buf_set_keymap("n", "<space>rn", "<cmd>Lspsaga rename<CR>", opts)
 	buf_set_keymap("n", "<space>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	buf_set_keymap("n", "gr", '<cmd>lua require("telescope.builtin").lsp_references()<CR>', opts)
 	buf_set_keymap("n", "gh", "<cmd>Trouble lsp_references<cr>", opts)
