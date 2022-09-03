@@ -10,7 +10,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.black,
+		-- formatting.black,
 		diagnostics.flake8,
 		formatting.prettier.with({ extra_filetypes = { "toml" } }),
 	},
