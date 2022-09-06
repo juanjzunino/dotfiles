@@ -12,7 +12,9 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -d /opt/homebrew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # ----------------------------------- Alias -----------------------------------
 # Sane defaults
@@ -116,3 +118,7 @@ else
 fi
 unset __conda_setup
 
+# ------------------------------- Local Config --------------------------------
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
