@@ -1,2 +1,4 @@
+set number
+set relativenumber
 Plug 'tpope/vim-commentary'
 Plug 'vim-highlightedyank'
