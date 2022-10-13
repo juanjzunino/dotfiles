@@ -94,6 +94,7 @@ fi
 # ----------------------------------- Path ------------------------------------
 # Local scripts
 export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/local_bin"
 
 # Rust
 source "$HOME/.cargo/env"
