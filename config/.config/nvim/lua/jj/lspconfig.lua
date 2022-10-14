@@ -67,7 +67,7 @@ local custom_attach = function(client, bufnr)
 	})
 
 	-- Autoformat
-	if client.resolved_capabilities.document_formatting then
+	if client.server_capabilities.document_formatting then
 		vim.cmd([[
 			augroup lsp_buf_format
         au! BufWritePre <buffer>
