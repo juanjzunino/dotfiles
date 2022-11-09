@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 nvim_treesitter.setup({
-	ensure_installed = "all",
+	ensure_installed = {"python", "rust", "go",  "c", "cpp", "lua"},
 	ignore_install = { "haskell", "phpdoc" },
 	highlight = { enable = true },
 	rainbow = { enable = false },
