@@ -34,28 +34,28 @@ local custom_attach = function(client, bufnr)
 	buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
 	-- Mappings
-	local opts = { noremap = true, silent = true }
+	local bufopts = { noremap=true, silent=true, buffer=bufnr }
 
-	buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	-- buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	buf_set_keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	-- buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-	buf_set_keymap("n", "<C-k>", "<Cmd>Lspsaga signature_help<CR>", opts)
-	buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-	-- buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	buf_set_keymap("n", "<space>rn", "<cmd>Lspsaga rename<CR>", opts)
-	buf_set_keymap("n", "<space>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	buf_set_keymap("n", "gr", '<cmd>lua require("telescope.builtin").lsp_references()<CR>', opts)
-	buf_set_keymap("n", "gh", "<cmd>Trouble lsp_references<cr>", opts)
-	buf_set_keymap("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-	buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-	buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-	buf_set_keymap("n", "<space>q", '<cmd>lua require("telescope.builtin").diagnostics()<CR>', opts)
-	buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-	buf_set_keymap("n", "<space>wd", '<cmd>lua require("telescope.builtin").lsp_document_symbols()<CR>', opts)
-	buf_set_keymap("n", "<space>ww", '<cmd>lua require("telescope.builtin").lsp_workspace_symbols()<CR>', opts)
+	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+	vim.keymap.set("n", "gd",  vim.lsp.buf.definition, bufopts)
+	-- vim.keymap.set("n", "K",  vim.lsp.buf.hover(), bufopts)
+	vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts)
+	vim.keymap.set("n", "gi",  vim.lsp.buf.implementation, bufopts)
+	-- vim.keymap.set("n", "<C-k>",  vim.lsp.buf.signature_help(), bufopts)
+	vim.keymap.set("n", "<C-k>", "<cmd>Lspsaga signature_help<CR>", bufopts)
+	vim.keymap.set("n", "<space>D",  vim.lsp.buf.type_definition, bufopts)
+	-- vim.keymap.set("n", "<space>rn",  vim.lsp.buf.rename(), bufopts)
+	vim.keymap.set("n", "<space>rn", "<cmd>Lspsaga rename<CR>", bufopts)
+	vim.keymap.set("n", "<space>a",  vim.lsp.buf.code_action, bufopts)
+	vim.keymap.set("n", "gr", '<cmd> require("telescope.builtin").lsp_references()<CR>', bufopts)
+	vim.keymap.set("n", "gh", "<cmd>Trouble lsp_references<cr>", bufopts)
+	vim.keymap.set("n", "<space>e",  vim.diagnostic.open_float, bufopts)
+	vim.keymap.set("n", "[d",  vim.diagnostic.goto_prev, bufopts)
+	vim.keymap.set("n", "]d",  vim.diagnostic.goto_next, bufopts)
+	vim.keymap.set("n", "<space>q",  '<cmd>require("telescope.builtin").diagnostics()<CR>', bufopts)
+	vim.keymap.set("n", "<space>f", function() vim.lsp.buf.format { async = true } end, bufopts)
+	vim.keymap.set("n", "<space>wd",  '<cmd>require("telescope.builtin").lsp_document_symbols()<CR>', bufopts)
+	vim.keymap.set("n", "<space>ww",  '<cmd>require("telescope.builtin").lsp_workspace_symbols()<CR>', bufopts)
 
 	-- Signature help
 	lsp_signature.on_attach({
@@ -71,8 +71,8 @@ local custom_attach = function(client, bufnr)
 		vim.cmd([[
 			augroup lsp_buf_format
         au! BufWritePre <buffer>
-        autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync(nil, 2000)
-      augroup END
+        autocmd BufWritePre <buffer> :lua function() vim.lsp.buf.format { async = true } end
+			augroup END
 		]])
 	end
 end
