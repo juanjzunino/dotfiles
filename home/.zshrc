@@ -25,11 +25,6 @@ alias rm="rm -i"
 # Optimization
 alias cplex='/Applications/CPLEX_Studio221/cplex/bin/x86-64_osx/cplex'
 
-# Editor
-if [ "$(command -v nvim)" ]; then
-    alias vim='nvim'
-fi
-
 # Open files
 alias finder="open -R"
 

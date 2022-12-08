@@ -47,7 +47,6 @@ set undodir=~/.vim/undodir
 set undofile
 
 set background=dark
-colorscheme default
 highlight Comment ctermfg=green
 " highlight Normal ctermbg=none guibg=none
 
