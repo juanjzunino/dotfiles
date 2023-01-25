@@ -12,5 +12,4 @@ end
 colorizer.setup()
 
 -- Colorscheme
-vim.g.tokyonight_style = "night"
-vim.cmd [[colorscheme catppuccin-mocha]]
+vim.cmd([[colorscheme adwaita]])

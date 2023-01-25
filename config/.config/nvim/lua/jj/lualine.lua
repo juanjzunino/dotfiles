@@ -34,7 +34,7 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "catppuccin",
+		theme = "adwaita",
 		component_separators = { "|", "|" },
 		section_separators = "",
 		disabled_filetypes = {},
