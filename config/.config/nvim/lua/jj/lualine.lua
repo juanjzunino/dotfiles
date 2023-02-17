@@ -34,9 +34,10 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "adwaita",
-		component_separators = { "|", "|" },
-		section_separators = "",
+		theme = "vscode",
+		component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+		-- section_separators = "",
 		disabled_filetypes = {},
 	},
 	sections = {
