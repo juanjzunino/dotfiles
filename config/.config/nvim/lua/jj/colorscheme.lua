@@ -12,4 +12,4 @@ end
 colorizer.setup()
 
 -- Colorscheme
-vim.cmd([[colorscheme adwaita]])
+require('vscode').setup({})
