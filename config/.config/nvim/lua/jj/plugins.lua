@@ -35,7 +35,6 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("glepnir/lspsaga.nvim")
 	use("onsails/lspkind-nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
 	use("ray-x/lsp_signature.nvim")
 
 	-- Autocomplete and Snippets
@@ -49,8 +48,6 @@ return packer.startup(function(use)
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("p00f/nvim-ts-rainbow")
-	use("nvim-treesitter/playground")
 
 	-- Explore
 	use("kyazdani42/nvim-tree.lua")
