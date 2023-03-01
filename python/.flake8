@@ -1,6 +1,0 @@
-[flake8]
-
-ignore = 
-    E226,   # Missing whitespace around arithmetic operator
-    E501,   # Line too long
-    W503,   # Line break before binary operator
