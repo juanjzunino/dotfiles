@@ -5,8 +5,5 @@
 # Homebrew
 Brewfile.lock.json
 
-# Karabiner
-automatic_backups/
-
 # Neovim
 plugin/
