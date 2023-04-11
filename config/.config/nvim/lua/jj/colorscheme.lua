@@ -13,3 +13,4 @@ colorizer.setup()
 
 -- Colorscheme
 require('vscode').setup({})
+require('vscode').load()
