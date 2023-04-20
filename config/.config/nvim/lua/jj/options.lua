@@ -46,7 +46,7 @@ vim.o.clipboard = "unnamedplus"
 -- Swap files
 vim.o.swapfile = false
 vim.o.undofile = true
-vim.o.undodir = "/Users/juanjzunino/.cache"
+vim.o.undodir = "/Users/juanjozunino/.cache"
 
 -- Spell
 vim.o.spell = false

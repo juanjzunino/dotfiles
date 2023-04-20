@@ -61,7 +61,7 @@ local custom_capabilities = vim.lsp.protocol.make_client_capabilities()
 custom_capabilities = require("cmp_nvim_lsp").default_capabilities(custom_capabilities)
 
 -- LSP Setup
-local servers = { "pyright", "rust_analyzer", "gopls", "ccls", "yamlls" }
+local servers = { "pyright", "rust_analyzer", "gopls" }
 
 for _, server in pairs(servers) do
 	lspconfig[server].setup({

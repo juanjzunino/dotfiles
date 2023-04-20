@@ -2,6 +2,7 @@
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
+tap 'dbt-labs/dbt'
 cask 'font-sauce-code-pro-nerd-font'
 
 # Zsh Plugins
@@ -27,17 +28,13 @@ brew 'wget'
 # Dev
 brew 'git'
 brew 'pyright'
-brew 'rustup-init'
 brew 'rust-analyzer'
 brew 'go'
 brew 'gopls'
-brew 'llvm'
 brew 'node'
 brew 'prettier'
 brew 'lua'
 brew 'luarocks'
 brew 'lua-language-server'
-brew 'yaml-language-server'
 brew 'neovim'
 brew 'vim'
-

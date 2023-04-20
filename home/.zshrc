@@ -102,17 +102,21 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 eval "$(starship init zsh)"
 
 # Python
-__conda_setup="$('/Users/juanjzunino/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/juanjozunino/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/juanjzunino/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/juanjzunino/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/juanjozunino/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/juanjozunino/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/juanjzunino/opt/anaconda3/bin:$PATH"
+        export PATH="/Users/juanjozunino/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+# Java
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ------------------------------- Local Config --------------------------------
 if [ -f ~/.zshrc_local ]; then
