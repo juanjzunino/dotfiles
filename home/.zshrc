@@ -91,6 +91,9 @@ fi
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/local_bin"
 
+# Sublime
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+
 # Rust
 source "$HOME/.cargo/env"
 
