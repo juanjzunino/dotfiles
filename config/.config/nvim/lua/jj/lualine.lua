@@ -34,9 +34,9 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "vscode",
-		component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+		theme = "tokyonight",
+		component_separators = { left = '', right = '' },
+		section_separators = { left = '', right = '' },
 		-- section_separators = "",
 		disabled_filetypes = {},
 	},
@@ -48,7 +48,7 @@ lualine.setup({
 			{ "branch", icon = "" },
 		},
 		lualine_c = {
-			{ "filename", file_status = true },
+			{ "filename",    file_status = true },
 			{ "diagnostics", sources = { "nvim_diagnostic" } },
 		},
 		lualine_x = {
