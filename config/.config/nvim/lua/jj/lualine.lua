@@ -45,7 +45,7 @@ lualine.setup({
 			{ "mode", upper = true },
 		},
 		lualine_b = {
-			{ "branch", icon = "" },
+			{ "branch" },
 		},
 		lualine_c = {
 			{ "filename",    file_status = true },
