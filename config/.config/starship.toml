@@ -1,41 +1,40 @@
-[directory]
-read_only = " "
-
-[memory_usage]
-symbol = " "
-
-[package]
-symbol = " "
-
-[docker_context]
-symbol = " "
-
-[aws]
-symbol = "  "
-
-[conda]
-symbol = " "
-
-[python]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[golang]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[scala]
-symbol = " "
-
-[ruby]
-symbol = " "
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$shell\
+$character"""
