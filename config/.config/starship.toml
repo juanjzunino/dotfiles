@@ -20,6 +20,7 @@ $package\
 $c\
 $cmake\
 $memory_usage\
+$conda\
 $aws\
 $gcloud\
 $openstack\
