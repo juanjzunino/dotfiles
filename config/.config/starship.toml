@@ -40,3 +40,6 @@ $character"""
 
 [git_branch]
 style = 'bold #c994eb'
+
+[git_status]
+style = 'bold yellow'
