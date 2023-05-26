@@ -21,7 +21,11 @@ if not saga_status_ok then
 	return
 end
 
-saga.setup({})
+saga.setup({
+	symbol_in_winbar = {
+		enable = false,
+	},
+})
 
 -- On attach
 local custom_attach = function(client, bufnr)
