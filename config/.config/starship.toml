@@ -17,8 +17,6 @@ $hg_branch\
 $pijul_channel\
 $docker_context\
 $package\
-$c\
-$cmake\
 $memory_usage\
 $conda\
 $aws\
@@ -39,3 +37,6 @@ $os\
 $container\
 $shell\
 $character"""
+
+[git_branch]
+style = 'bold #c994eb'
