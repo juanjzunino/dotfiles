@@ -104,6 +104,10 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # Starship
 eval "$(starship init zsh)"
 
+# Node
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+
 # Python
 __conda_setup="$('/Users/juanjozunino/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
