@@ -19,6 +19,7 @@ $docker_context\
 $package\
 $memory_usage\
 $conda\
+$python\
 $aws\
 $gcloud\
 $openstack\
@@ -43,3 +44,7 @@ style = 'bold #c994eb'
 
 [git_status]
 style = 'bold yellow'
+
+[python]
+style = 'bold green'
+format = '[(\($virtualenv\) )]($style)'
