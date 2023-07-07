@@ -12,4 +12,13 @@ end
 colorizer.setup()
 
 -- Colorscheme
-vim.cmd [[colorscheme vscode]]
+require("tokyonight").setup({
+	style = "night",
+	transparent = true,
+	styles = {
+		sidebars = "light",
+		floats = "transparent",
+	}
+})
+
+vim.cmd [[colorscheme tokyonight]]
