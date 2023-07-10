@@ -56,7 +56,6 @@ alias jn="jupyter notebook"
 alias desk="cd ~/Desktop"
 alias loads="cd ~/Downloads"
 alias docs="cd ~/Documents"
-alias projects="cd ~/projects"
 
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
