@@ -22,9 +22,6 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 
-# Neovim
-alias vim="nvim"
-
 # Optimization
 alias cplex='/Applications/CPLEX_Studio221/cplex/bin/x86-64_osx/cplex'
 
