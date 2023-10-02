@@ -107,6 +107,11 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "$HOME/bun/_bun" ] && source "$HOME/bun/_bun"
+
+
 # Python
 __conda_setup="$('/Users/juanjozunino/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -128,3 +133,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
+
