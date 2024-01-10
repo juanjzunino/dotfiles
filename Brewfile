@@ -38,3 +38,6 @@ brew 'luarocks'
 brew 'lua-language-server'
 brew 'neovim'
 brew 'vim'
+
+# Screens
+brew 'MonitorControl'
