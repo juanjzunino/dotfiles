@@ -11,7 +11,7 @@ brew 'zsh-syntax-highlighting'
 
 # Binaries
 brew 'autojump'
-brew 'exa'
+brew 'eza'
 brew 'fd'
 brew 'fzf'
 brew 'htop'

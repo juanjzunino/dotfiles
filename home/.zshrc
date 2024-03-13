@@ -31,9 +31,9 @@ alias finder="open -R"
 # Exa
 if [ "$(command -v exa)" ];
 then
-    alias ls="exa -a"
-    alias l="exa -la"
-    alias tree="exa --tree"
+    alias ls="eza -a"
+    alias l="eza -la"
+    alias tree="eza --tree"
 else
     alias ls="ls -aG"
     alias l="ls -laG"
