@@ -107,20 +107,19 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-[ -s "$HOME/bun/_bun" ] && source "$HOME/bun/_bun"
-
-
 # Python
-__conda_setup="$('/Users/juanjozunino/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/juanjozunino/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/juanjozunino/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/juanjozunino/anaconda3/bin:$PATH"
+        export PATH="/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
