@@ -26,12 +26,12 @@ brew 'wget'
 
 # Dev
 brew 'git'
+brew 'pyenv'
 brew 'pyright'
-brew 'poetry'
+brew 'nvm'
 brew 'rust-analyzer'
 brew 'go'
 brew 'gopls'
-brew 'nvm'
 brew 'prettier'
 brew 'lua'
 brew 'luarocks'
@@ -39,5 +39,3 @@ brew 'lua-language-server'
 brew 'neovim'
 brew 'vim'
 
-# Screens
-brew 'MonitorControl'
