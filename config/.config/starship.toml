@@ -15,7 +15,6 @@ $git_metrics\
 $git_status\
 $hg_branch\
 $pijul_channel\
-$docker_context\
 $package\
 $memory_usage\
 $conda\
@@ -48,3 +47,6 @@ style = 'bold yellow'
 [python]
 style = 'bold green'
 format = '[(\($virtualenv\) )]($style)'
+
+[conda]
+ignore_base = false
