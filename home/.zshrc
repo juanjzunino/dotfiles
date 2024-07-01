@@ -45,12 +45,8 @@ alias gs="git status"
 alias ga="git add ."
 alias gc="git commit"
 alias gp="git push"
-alias gu="git pull"
 alias gg="git log --graph --pretty=oneline"
 alias lg="lazygit"
-
-# Jupyter Notebooks
-alias jn="jupyter notebook"
 
 # Folder's shortcuts
 alias desk="cd ~/Desktop"
