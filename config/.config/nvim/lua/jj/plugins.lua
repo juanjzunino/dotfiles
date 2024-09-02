@@ -70,7 +70,6 @@ return packer.startup(function(use)
 	use("ryanoasis/vim-devicons")
 
 	-- Color
-	use("norcalli/nvim-colorizer.lua")
 	use("folke/tokyonight.nvim")
 
 	-- Writing

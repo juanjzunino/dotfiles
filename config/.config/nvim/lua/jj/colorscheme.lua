@@ -2,17 +2,14 @@
 vim.o.termguicolors = true
 vim.o.background = "dark"
 
--- Colorizer
-local colorizer_status_ok, colorizer = pcall(require, "colorizer")
+-- Colorscheme
+local tokyo_status_ok, tokyo = pcall(require, "tokyonight")
 
-if not colorizer_status_ok then
+if not tokyo_status_ok then
 	return
 end
 
-colorizer.setup()
-
--- Colorscheme
-require("tokyonight").setup({
+tokyo.setup({
 	style = "night",
 	transparent = true,
 	styles = {
