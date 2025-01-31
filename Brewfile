@@ -1,7 +1,4 @@
-# Taps
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
+# Fonts
 cask 'font-sauce-code-pro-nerd-font'
 
 # Zsh Plugins
@@ -18,6 +15,7 @@ brew 'btop'
 brew 'pandoc'
 brew 'ripgrep'
 brew 'sd'
+brew 'jq'
 brew 'starship'
 brew 'stow'
 brew 'tmux'
@@ -27,11 +25,12 @@ brew 'wget'
 brew 'git'
 brew 'neovim'
 brew 'vim'
+brew 'tree-sitter'
 
 # Python
 brew 'uv'
+brew 'ruff'
 brew 'pyenv'
-brew 'pyright'
 
 # Node
 brew 'nvm'
