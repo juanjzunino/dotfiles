@@ -29,7 +29,7 @@ alias cplex='/Applications/CPLEX_Studio221/cplex/bin/x86-64_osx/cplex'
 alias finder="open -R"
 
 # Exa
-if [ "$(command -v exa)" ];
+if [ "$(command -v eza)" ];
 then
     alias ls="eza -a"
     alias l="eza -la"
@@ -42,9 +42,12 @@ fi
 # Git
 alias g="git"
 alias gs="git status"
+alias gd="git diff"
 alias ga="git add ."
 alias gc="git commit"
 alias gp="git push"
+alias gba="git branch -a"
+alias gco="git checkout"
 alias gg="git log --graph --pretty=oneline"
 alias lg="lazygit"
 
