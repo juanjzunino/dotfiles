@@ -1,10 +1,9 @@
 return {
 	{
 		"folke/tokyonight.nvim",
-		enabled = false,
 		config = function()
-			vim.cmd.colorscheme "tokyonight-night"
-		end
+			vim.cmd.colorscheme("tokyonight-night")
+		end,
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -29,12 +28,11 @@ return {
 				inverse = true,
 				contrast = "hard",
 				palette_overrides = {},
-				overrides = {
-				},
+				overrides = {},
 				dim_inactive = false,
 				transparent_mode = false,
 			})
-			vim.cmd.colorscheme "gruvbox"
+			vim.cmd.colorscheme("gruvbox")
 		end,
-	}
+	},
 }

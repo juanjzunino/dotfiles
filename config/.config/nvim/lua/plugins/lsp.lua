@@ -21,12 +21,12 @@ return {
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					javascript = { "prettierd" },
-					typescript = { "prettierd" },
-					json = { "prettierd" },
-					yaml = { "prettierd" },
-					markdown = { "prettierd" },
-					html = { "prettierd" },
+					javascript = { "prettier" },
+					typescript = { "prettier" },
+					json = { "prettier" },
+					yaml = { "prettier" },
+					markdown = { "prettier" },
+					html = { "prettier" },
 					python = { "ruff" },
 				},
 				format_on_save = {
