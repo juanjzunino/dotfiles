@@ -1,7 +1,7 @@
 # Dotfiles
 
-Configurations files:
-- Alacritty
+Configurations files (macOS):
+- Ghostty
 - Nvim
 - Starship
 - Tmux
@@ -12,3 +12,8 @@ Requirements:
 - Git
 - Homebrew
 - Stow
+
+
+## Steps
+1. Install develop tools 
+2. Install homebrew
