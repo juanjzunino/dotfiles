@@ -10,6 +10,7 @@ export VISUAL="nvim"
 export MANPAGER='nvim +Man!'
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+export BAT_THEME="gruvbox-dark"
 
 # Homebrew
 if [ -d /opt/homebrew ]; then
@@ -55,6 +56,9 @@ alias lg="lazygit"
 alias desk="cd ~/Desktop"
 alias loads="cd ~/Downloads"
 alias docs="cd ~/Documents"
+
+# Tailscale
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 # ---------------------------------- Plugins ----------------------------------
 # Autosuggestions
