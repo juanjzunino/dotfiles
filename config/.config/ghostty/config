@@ -1,0 +1,7 @@
+theme = GruvboxDarkHard
+background = #000000
+split-divider-color = #282828
+cursor-style = block
+background-opacity = 1
+unfocused-split-opacity = 1
+macos-titlebar-style = tabs
