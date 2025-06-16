@@ -1,14 +1,26 @@
-# Fonts
-cask 'font-sauce-code-pro-nerd-font'
-
-# Zsh Plugins
+# Shell
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
+# Dev
+brew 'git'
+brew 'vim'
+brew 'neovim'
+brew 'awscli'
+brew 'tree-sitter'
+cask 'docker'
+brew 'docker-compose'
+cask 'ghostty'
+cask 'wireshark'
+brew 'postgresql'
+brew 'redis'
+brew 'pre-commit'
+
 # Binaries
 brew 'autojump'
 brew 'eza'
+brew 'bat'
 brew 'fd'
 brew 'fzf'
 brew 'btop'
@@ -20,12 +32,7 @@ brew 'starship'
 brew 'stow'
 brew 'tmux'
 brew 'wget'
-
-# Dev
-brew 'git'
-brew 'neovim'
-brew 'vim'
-brew 'tree-sitter'
+brew 'watch'
 
 # Python
 brew 'uv'
@@ -34,9 +41,12 @@ brew 'pyenv'
 
 # Node
 brew 'nvm'
-brew 'prettier'
+brew 'pnpm'
+brew 'yarn'
+brew 'oven-sh/bun/bun'
 
 # Rust
+brew 'rustup'
 brew 'rust-analyzer'
 
 # Go
