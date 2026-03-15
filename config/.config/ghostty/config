@@ -1,7 +1,9 @@
-theme = GruvboxDarkHard
-background = #000000
+theme = "Gruvbox Dark Hard"
+background = #161819
 split-divider-color = #282828
 cursor-style = block
 background-opacity = 1
 unfocused-split-opacity = 1
 macos-titlebar-style = tabs
+
+keybind = shift+enter=text:\x1b\r
