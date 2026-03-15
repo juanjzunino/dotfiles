@@ -1,51 +1,22 @@
 format = """
-$username\
-$hostname\
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
 $directory\
-$vcsh\
-$fossil_branch\
 $git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
 $git_status\
-$hg_branch\
-$pijul_channel\
-$memory_usage\
-$conda\
-$python\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-$env_var\
-$crystal\
-$custom\
-$sudo\
 $cmd_duration\
-$line_break\
 $jobs\
-$battery\
-$time\
-$status\
-$os\
-$container\
-$shell\
 $character"""
 
+[directory]
+style = 'cyan'
+
 [git_branch]
-style = 'bold #c994eb'
+style = '#c994eb'
+format = 'on [$branch]($style) '
 
 [git_status]
-style = 'bold yellow'
+style = 'bright-white'
+format = '([$all_status$ahead_behind]($style) )'
 
-[python]
-style = 'bold green'
-format = '[(\($virtualenv\) )]($style)'
-
-[conda]
-ignore_base = false
+[character]
+success_symbol = '[|](bold blue)'
+error_symbol = '[|](bold red)'
