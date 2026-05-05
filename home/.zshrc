@@ -47,9 +47,12 @@ alias gd="git diff"
 alias ga="git add ."
 alias gc="git commit"
 alias gp="git push"
+alias gf="git fetch --all --tags --prune"
+alias gb="git branch"
 alias gba="git branch -a"
 alias gco="git checkout"
 alias gg="git log --graph --pretty=oneline"
+alias gw="git worktree"
 alias lg="lazygit"
 
 # Folder's shortcuts
@@ -71,21 +74,26 @@ if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
 fi
 
-# Autojump
-if [ -f /opt/homebrew/etc/profile.d/autojump.sh ]; then
-    source /opt/homebrew/etc/profile.d/autojump.sh
+# Zoxide
+if [ -f /opt/homebrew/bin/zoxide ]; then
+    eval "$(zoxide init zsh)"
 fi
 
 # Syntax highlighting
 if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#8ec07c'
+    ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#8ec07c'
 fi
 
 # Completions
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
     autoload -Uz compinit
-    compinit
+    for dump in ~/.zcompdump(N.mh+24); do
+      compinit
+    done
+    compinit -C
 fi
 
 # ----------------------------------- Path ------------------------------------
@@ -104,11 +112,16 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin 
 
 # Starship
-eval "$(starship init zsh)"
+if [ -f /opt/homebrew/bin/starship ]; then
+    eval "$(starship init zsh)"
+fi
 
 # Node
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+if [ -f /opt/homebrew/bin/fnm ]; then
+    eval "$(fnm env --use-on-cd --shell zsh)"
+fi
 
 # Bun
 [ -s "/Users/juanjozunino/.bun/_bun" ] && source "/Users/juanjozunino/.bun/_bun"
@@ -116,6 +129,9 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Python
+# uv
+export PATH="/Users/juanjozunino/.local/bin:$PATH"
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"

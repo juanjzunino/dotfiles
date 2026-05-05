@@ -17,3 +17,8 @@ Requirements:
 ## Steps
 1. Install develop tools 
 2. Install homebrew
+
+```sh
+stow -vt ~/ -S home config bins
+```
+
