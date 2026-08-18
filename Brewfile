@@ -12,13 +12,12 @@ brew 'tree-sitter'
 cask 'docker'
 brew 'docker-compose'
 cask 'ghostty'
-cask 'wireshark'
 brew 'postgresql'
 brew 'redis'
 brew 'pre-commit'
 
 # Binaries
-brew 'autojump'
+brew 'zoxide'
 brew 'eza'
 brew 'bat'
 brew 'fd'
@@ -40,7 +39,7 @@ brew 'ruff'
 brew 'pyenv'
 
 # Node
-brew 'nvm'
+brew 'fnm'
 brew 'pnpm'
 brew 'yarn'
 brew 'oven-sh/bun/bun'
@@ -51,7 +50,6 @@ brew 'rust-analyzer'
 
 # Go
 brew 'go'
-brew 'gopls'
 
 # Lua
 brew 'lua'
