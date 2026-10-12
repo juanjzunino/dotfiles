@@ -117,8 +117,6 @@ if [ -f /opt/homebrew/bin/starship ]; then
 fi
 
 # Node
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 if [ -f /opt/homebrew/bin/fnm ]; then
     eval "$(fnm env --use-on-cd --shell zsh)"
 fi
@@ -156,4 +154,3 @@ export SDKMAN_DIR="$HOME/.sdkman"
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
-
