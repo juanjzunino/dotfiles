@@ -29,10 +29,5 @@ return {
       }
       vim.cmd.colorscheme("gruvbox-material")
     end,
-  },
-  {
-    "leaf",
-    dir = vim.fn.stdpath("config") .. "/lua/leaf",
-    lazy = true,
   }
 }
