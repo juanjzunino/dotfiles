@@ -7,7 +7,7 @@ return {
     config = function()
       local treesitter = require("nvim-treesitter")
       treesitter.setup({})
-      treesitter.install({ "python", "typescript", "javascript", "go", "rust", "lua" })
+      treesitter.install({ "python", "typescript", "javascript", "go", "rust", "lua", "json" })
 
       local available = treesitter.get_available()
       vim.api.nvim_create_autocmd("FileType", {
