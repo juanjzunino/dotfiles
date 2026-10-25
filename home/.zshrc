@@ -150,6 +150,9 @@ unset __conda_setup
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Orbstack (docker)
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
 # ------------------------------- Local Config --------------------------------
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
